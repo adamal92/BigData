@@ -122,6 +122,18 @@ json = {
 Elasticsearch_Handler.exec(fn=lambda url: requests.put(url=url+"utubecommerce/", json=json), print_recursively=True,
                            print_form=DataTypesHandler.PRINT_DICT)
 
+print("-----------------------------------------")
+
+json: dict = {
+   "query": {
+      "query_string": {
+         "query": "any_string"
+      }
+   }
+}
+
+Elasticsearch_Handler.exec(fn=lambda url: requests.post(url+"school/_all/_search", json=json), print_recursively=True,
+                           print_form=DataTypesHandler.PRINT_DICT)
 
 # try:
 #     # resp = requests.get(URL)
