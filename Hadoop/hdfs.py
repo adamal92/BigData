@@ -4,6 +4,7 @@
 # imports
 import os, time
 
+
 # global
 
 
@@ -13,12 +14,16 @@ class HDFS_handler:
 
     """
     # static
-    HDFS_PATH: str = r"C:\Hadoop\hadoop-3.2.1\sbin\start-dfs.cmd"
-    START_HDFS: str = r"start " + HDFS_PATH
+    HDFS_START_PATH: str = r"C:\Hadoop\hadoop-3.2.1\sbin\start-dfs.cmd"
+    HDFS_STOP_PATH: str = r"C:\Hadoop\hadoop-3.2.1\sbin\stop-dfs.cmd"
+    START_HDFS: str = r"start " + HDFS_START_PATH
+    STOP_HDFS: str = r"start " + HDFS_STOP_PATH
     LIST_ALL: str = "hdfs dfs -ls /"
     LIST_FILES: str = r"hdfs dfs -ls /user/hduser"
     HELP = "hdfs dfs -help"
     MIN_START_TIME: int = 7  # minimum time that hdfs takes to start
+
+    stop = lambda : os.system(HDFS_handler.STOP_HDFS)
 
     @staticmethod
     def start() -> int:
