@@ -3,6 +3,8 @@
 # imports
 from pyspark import SparkContext, RDD
 from typing import Any, Union
+
+from pyspark.python.pyspark.shell import spark
 from pyspark.sql import SparkSession
 
 
@@ -29,7 +31,10 @@ class Spark_handler:
         :param log_level :type str:
         :return :type pyspark.SparkContext:
         """
-        sc = SparkContext(master, app_name)
+        try:
+            sc = SparkContext(master, app_name)
+        except ValueError:
+            sc: SparkContext = spark.sparkContext
         sc.setLogLevel(log_level)
         print("---------------------------------------------------------------------------------\n\r")
         return sc
