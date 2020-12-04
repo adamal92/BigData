@@ -48,7 +48,7 @@ from Spark.Spark_handler_class import Spark_handler
 
 table: list = SQLite_handler.get_table(tablename="branch", db_path=sqlithndlr.db_path)
 print(table)
-Spark_handler.matrix_spark(sc=Spark_handler.spark_setup(), table=table)
+Spark_handler.matrix_spark(sc=Spark_handler.spark_context_setup(), table=table)
 
 # ----------------------------------------------------------------------
 # hdfs

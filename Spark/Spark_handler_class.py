@@ -3,6 +3,8 @@
 # imports
 from pyspark import SparkContext, RDD
 from typing import Any, Union
+from pyspark.sql import SparkSession
+
 
 # global
 
@@ -13,13 +15,13 @@ class Spark_handler:
     """
 
     def __init__(self, appname: str = "MyApp", master: str = "local"):
-        Spark_handler.spark_setup(app_name=appname, master=master)
+        Spark_handler.spark_context_setup(app_name=appname, master=master)
 
     def __str__(self):
         print("spark handler")
 
     @staticmethod
-    def spark_setup(app_name: str="MyApp", master: str = "local", log_level: str = "ERROR") -> SparkContext:
+    def spark_context_setup(app_name: str = "MyApp", master: str = "local", log_level: str = "ERROR") -> SparkContext:
         """
         Create a new spark context & return it
         :param app_name :type str:
@@ -31,6 +33,26 @@ class Spark_handler:
         sc.setLogLevel(log_level)
         print("---------------------------------------------------------------------------------\n\r")
         return sc
+
+    @staticmethod
+    def spark_session_setup(app_name: str = "MyApp", master: str = "local", log_level: str = "ERROR") -> SparkSession:
+        """
+        Create a new spark session & return it
+        :param app_name :type str:
+        :param master :type str:
+        :param log_level :type str:
+        :return :type pyspark.sql.SparkSession:
+        """
+        sparkSession: SparkSession = SparkSession \
+            .builder \
+            .appName(app_name) \
+            .config("spark.some.config.option", "some-value") \
+            .getOrCreate()
+        print("---------------------------------------------------------------------------------\n\r")
+
+        # SparkSession.stop(sparkSession)
+        # sparkSession.stop()
+        return sparkSession
 
     # : clean
     @staticmethod
