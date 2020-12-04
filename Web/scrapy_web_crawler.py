@@ -7,7 +7,7 @@ class QuotesSpider(scrapy.Spider):
         'http://quotes.toscrape.com/tag/humor/',
     ]
 
-    def parse(self, response):
+    def parse(self, response, **kwargs):
         for quote in response.css('div.quote'):
             yield {
                 'author': quote.xpath('span/small/text()').get(),
