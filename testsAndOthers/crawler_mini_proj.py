@@ -2,7 +2,7 @@ import logging
 import os
 import time
 from io import TextIOWrapper
-from typing import Any, Union, List
+from typing import Any, Union, List, KeysView
 
 import py4j
 import pyspark
@@ -35,7 +35,7 @@ def save_file_to_hdfs(file_path: str):
 
 
 # TODO:
-def process_data(data_frame: DataFrame):
+def process_data(data_frame: DataFrame) -> dict:
     sc: SparkContext = Spark_handler.spark_context_setup(log_level="WARN")
 
     pickle: list = data_frame.collect()  # Union[List[Any], Any] = list
@@ -48,15 +48,16 @@ def process_data(data_frame: DataFrame):
     #     temp_dict: Accumulator = sc.accumulator(dict())
     quotes_list = quotes.collect()
 
-    # create values list
+    # create values list (clean data)
     for row in quotes_list:
         dict_str: str = pyspark.sql.types.Row.asDict(row, True)["value"].split(",")[0][1:]  # .split("{")[1]
-        print(dict_str)
+        # print(dict_str)
         dict_list = dict_str.split(":")
-        print(dict_list[0], dict_list[1][1:])
+        # print(dict_list[0], dict_list[1][1:])
         temp_dict[dict_list[0].split("\"")[1]] = dict_list[1][1:].split("\"")[1]  # .replace(" ", "_")
         # temp_dict[dict_list[1][1:]] = temp_dict[dict_list[0]]
-        temp_list.append(dict_list[1][1:].split("\"")[1])
+        temp_list.append(dict_list[1][1:].split("\"")[1].split(" ")[0])  # first names
+        # temp_list.append(dict_list[1][1:].split("\"")[1])  # author names
 
     # create key-value pairs
 
@@ -72,39 +73,81 @@ def process_data(data_frame: DataFrame):
     # print(temp_dict)
 
     sc.emptyRDD()
-    print(temp_list)
+    # print(temp_list)
     author_names = sc.parallelize(temp_list)
 
-    # filter
+    # filter (lambda list.pop : bool)
     # os.environ["PYSPARK_PYTHON"] = "/usr/local/bin/python3"
     # os.environ["PYSPARK_DRIVER_PYTHON"] = "/usr/bin/ipython"
 
     # os.environ["PYSPARK_PYTHON"] = "C:\Spark\spark-3.0.1-bin-hadoop3.2\python"
     # os.environ["PYSPARK_DRIVER_PYTHON"] = "C:\Spark\spark-3.0.1-bin-hadoop3.2\python"
 
-    filtered: PipelinedRDD = author_names.filter(lambda name: "S" in name)  # create dictionary
-    # print("Fitered RDD -> %s" % filtered.collect())
-    print("Fitered RDD -> %s" % author_names.filter(lambda name: "S" in name).collect())
+    filtered: PipelinedRDD = author_names.filter(lambda name: name)  # all names
+    # filtered: PipelinedRDD = author_names.filter(lambda name: "S" in name)  # create dictionary
+    print("Fitered RDD -> %s" % filtered.collect())
+    # print("Fitered RDD -> %s" % author_names.filter(lambda name: "S" in name).collect())
 
-    # TODO
-    # # map
-    # print("Key value pair -> %s" % filtered.map(lambda x: (x, 1)).collect())
+    # map (lambda list.pop : key_value_tuple)
+    # map (lambda old_element : new_element)
+    mapped: PipelinedRDD = filtered.map(lambda x: (x, 0))
+    print("Key value pair -> %s" % mapped.collect())
     # quotes = quotes.map(lambda x: print(x))
+    logging.critical(dict(mapped.collect()))
+
+    # unique_vals: list = []
+    # # for tuple_item in mapped.collect():
+    # #     if not tuple_item in unique_vals:
+    # #         unique_vals.append(tuple_item)
+    # #     else:
+    # #         for item in unique_vals:
+    # #             if item[0] == tuple_item[0]:
+    # #                 item[1] = int(item[1]) + int(tuple_item[1])
+    # dictionary_vals: dict = dict(mapped.collect())
+    # print(dictionary_vals)
+    # for key in dictionary_vals:
+    #     if not key in unique_vals:
+    #         # print(key, type(key), dictionary_vals[key], type(dictionary_vals[key]))
+    #         unique_vals.append((key, dictionary_vals[key]))
+    #     else:
+    #         for item in unique_vals:
+    #             if item[0] == key:
+    #                 dictionary_vals[key] = int(dictionary_vals[key]) + int(item[1])
+    # logging.critical(unique_vals)
+
+    # count number of items (reduce)
+    dictionary_vals: dict = dict(mapped.collect())  # without duplicates
+    for item in mapped.collect():
+        dictionary_vals[item[0]] += 1
+
+
+    logging.critical(dictionary_vals)
+    sc.emptyRDD()
+
+    return dictionary_vals
+
+    # mapped = sc.parallelize(unique_vals)
+    # print(mapped.collect())
     #
-    # # reduce
+    # # reduce (lambda key, values_list : reduced_tuple)
     # from operator import add
-    # adding = quotes.reduce(add)
-    #
-    # print(type(quotes.filter(lambda : None)), type(quotes.map(lambda : None)), type(quotes.reduce(lambda a,b: None)))
+    # # adding: tuple = quotes.reduce(add)
+    # # print(adding, type(adding))
+    # adding: tuple = mapped.reduce(f=lambda key, values_list: print(key, values_list))
+    # print(adding)
+    # print(mapped.collect())
+    # # print(type(quotes.filter(lambda : None)), type(quotes.map(lambda : None)), type(quotes.reduce(lambda a,b: None)))
 
 
-def pass_to_spark(file_path: str):
+def pass_to_spark(file_path: str) -> dict:
     try:
         sc: SparkContext = Spark_handler.spark_context_setup(log_level="WARN")
         df: DataFrame = spark.read.text(f"{HDFS_handler.DEFAULT_CLUSTER_PATH}user/hduser/quotes.jl")  # core-site.xml
-        df.show()
+        # df.show()
 
-        process_data(data_frame=df)
+        count_names: dict = process_data(data_frame=df)
+        sc.stop()
+        return count_names
 
     except Py4JJavaError as e:
         logging.debug(type(e.java_exception))
@@ -121,13 +164,13 @@ def pass_to_spark(file_path: str):
 # TODO: web crawler (scrapy) -> cluster (HDFS) ->
 # TODO: map-reduce (spark) -> NoSQL (elasticsearch) -> SQL (SQLite) -> visualization (matplotlib)
 def main():
-    # file: TextIOWrapper = get_file()
-    # file_path: str = f"{os.getcwd()}\\{file.name}"
-    file_path: str = f"{os.getcwd()}\\quotes.jl"
+    file: TextIOWrapper = get_file()
+    file_path: str = f"{os.getcwd()}\\{file.name}"
+    # file_path: str = f"{os.getcwd()}\\quotes.jl"
     HDFS_handler.start()
-    # save_file_to_hdfs(file_path=file_path)
-    os.system("hdfs dfsadmin -safemode leave")  # safe mode off
-    pass_to_spark(file_path=file_path)
+    save_file_to_hdfs(file_path=file_path)
+    # os.system("hdfs dfsadmin -safemode leave")  # safe mode off
+    count_names: dict = pass_to_spark(file_path=file_path)
     HDFS_handler.stop()
 
 
