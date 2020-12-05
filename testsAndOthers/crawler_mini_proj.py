@@ -170,8 +170,9 @@ def main():
     HDFS_handler.start()
     save_file_to_hdfs(file_path=file_path)
     # os.system("hdfs dfsadmin -safemode leave")  # safe mode off
-    count_names: dict = pass_to_spark(file_path=file_path)
+    json_count_names: dict = pass_to_spark(file_path=file_path)
     HDFS_handler.stop()
+
 
 
 if __name__ == '__main__':

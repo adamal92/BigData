@@ -1,6 +1,7 @@
 import requests, logging, os, sys
 from requests import Response
 
+from NoSQL.ElasticSearch import start_search
 from NoSQL.ElasticSearch.elasticsearch_handler import Elasticsearch_Handler
 from SQL.SQLite_database_handler import SQLite_handler
 
@@ -8,8 +9,19 @@ from SQL.SQLite_database_handler import SQLite_handler
 Run elasticsearch commands
 """
 
+
+# os.system(f'python "{os.getcwd()}\\start_search.py"')  # search
+# os.system(f'python "{os.getcwd()}\\start_kibana.py"')  # kibana
+
 # os.system("start http://localhost:5601/")  # kibana
 # os.system("start http://localhost:9200/")  # search
+
+import subprocess, sys, time
+p = subprocess.Popen(["python", f'{os.getcwd()}\\start_search.py'], stdout=sys.stdout)  # search
+p2 = subprocess.Popen(["python", f'{os.getcwd()}\\start_kibana.py'], stdout=sys.stdout)  # kibana
+# p.communicate()  # wait for process to end
+
+time.sleep(13)
 
 Elasticsearch_Handler.exec(fn=lambda url: requests.get(url))
 Elasticsearch_Handler.exec(fn=lambda url: requests.get(url + "_search"))
