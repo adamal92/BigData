@@ -36,7 +36,6 @@ class Spark_handler:
         except ValueError:
             sc: SparkContext = spark.sparkContext
         sc.setLogLevel(log_level)
-        print("---------------------------------------------------------------------------------\n\r")
         return sc
 
     @staticmethod
