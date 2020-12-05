@@ -2,24 +2,28 @@ import logging
 import os
 import time
 from io import TextIOWrapper
+import subprocess, sys, time
 from typing import Any, Union, List, KeysView
 
 import py4j
 import pyspark
+import requests
 from py4j.protocol import Py4JJavaError
 from pyspark import SparkContext, RDD
 from pyspark.python.pyspark.shell import spark
 from pyspark.rdd import PipelinedRDD
 from pyspark.sql import DataFrame
 
+from NoSQL.ElasticSearch.elasticsearch_handler import Elasticsearch_Handler
 from Spark.Spark_handler_class import Spark_handler
 from Hadoop.hdfs import HDFS_handler
+from testsAndOthers.data_types_and_structures import DataTypesHandler
 
 
 def get_file() -> TextIOWrapper:
     path: str = r"C:\Users\adam l\Desktop\python files\BigData\Web\scrapy_web_crawler.py"
 
-    os.system(f'scrapy runspider "{path}" -O quotes.jl -L INFO')  # O for overriding, o for appending to file
+    os.system(f'scrapy runspider "{path}" -O quotes.jl -L ERROR')  # O for overriding, o for appending to file
 
     with open("quotes.jl") as file: return file
 
@@ -36,7 +40,7 @@ def save_file_to_hdfs(file_path: str):
 
 # TODO:
 def process_data(data_frame: DataFrame) -> dict:
-    sc: SparkContext = Spark_handler.spark_context_setup(log_level="WARN")
+    sc: SparkContext = Spark_handler.spark_context_setup(log_level="ERROR")
 
     pickle: list = data_frame.collect()  # Union[List[Any], Any] = list
     logging.warning(type(pickle))
@@ -141,7 +145,8 @@ def process_data(data_frame: DataFrame) -> dict:
 
 def pass_to_spark(file_path: str) -> dict:
     try:
-        sc: SparkContext = Spark_handler.spark_context_setup(log_level="WARN")
+        sc: SparkContext = Spark_handler.spark_context_setup(log_level="ERROR")
+
         df: DataFrame = spark.read.text(f"{HDFS_handler.DEFAULT_CLUSTER_PATH}user/hduser/quotes.jl")  # core-site.xml
         # df.show()
 
@@ -161,9 +166,43 @@ def pass_to_spark(file_path: str) -> dict:
         raise
 
 
+def upload_json_to_elastic(json: dict):
+    # print(os.path.dirname(__file__).split("/")[:-1])
+    elastic_path: str = ""
+    for directory in os.path.dirname(__file__).split("/")[:-1]:
+        elastic_path += f"{directory}\\"
+    elastic_path += "NoSQL\\ElasticSearch"
+    p = subprocess.Popen(["python", f'{elastic_path}\\start_search.py'], stdout=sys.stdout)  # search
+    # p2 = subprocess.Popen(["python", f'{elastic_path}\\start_kibana.py'], stdout=sys.stdout)  # kibana
+    # p.communicate()  # wait for process to end
+
+    time.sleep(14)  # minimum time that elasticsearch takes to start
+
+    Elasticsearch_Handler.exec(fn=lambda url: requests.put(url=url + f"school/_doc/quotes", json=json),
+                               print_recursively=True,
+                               print_form=DataTypesHandler.PRINT_DICT)
+
+
+def from_elastic_to_sqlite():
+    pass
+# TODO: response = Elasticsearch_Handler.exec(filename)
+# TODO: table = DataTypesHandler.json_to_table(table)
+# TODO: sqlitHandler.addTable(table)
+
+
+def visualize_sqlite():
+    pass
+# TODO: visualize_handler.visualizeTable(sqlite_handler.getTable())
+
+
 # TODO: web crawler (scrapy) -> cluster (HDFS) ->
 # TODO: map-reduce (spark) -> NoSQL (elasticsearch) -> SQL (SQLite) -> visualization (matplotlib)
 def main():
+    s_logger = logging.getLogger('py4j.java_gateway')  # py4j logs
+    s_logger.setLevel(logging.ERROR)
+
+    logging.basicConfig(level=logging.WARNING)
+
     file: TextIOWrapper = get_file()
     file_path: str = f"{os.getcwd()}\\{file.name}"
     # file_path: str = f"{os.getcwd()}\\quotes.jl"
@@ -173,6 +212,11 @@ def main():
     json_count_names: dict = pass_to_spark(file_path=file_path)
     HDFS_handler.stop()
 
+    upload_json_to_elastic(json=json_count_names)
+
+    from_elastic_to_sqlite()
+
+    visualize_sqlite()
 
 
 if __name__ == '__main__':
