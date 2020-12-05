@@ -22,6 +22,7 @@ class HDFS_handler:
     LIST_FILES: str = r"hdfs dfs -ls /user/hduser"
     HELP = "hdfs dfs -help"
     MIN_START_TIME: int = 7  # minimum time that hdfs takes to start
+    DEFAULT_CLUSTER_PATH: str = "hdfs://localhost:9820/"
 
     stop = lambda : os.system(HDFS_handler.STOP_HDFS)
 
