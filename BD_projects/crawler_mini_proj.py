@@ -13,17 +13,27 @@ from pyspark import SparkContext, RDD
 from pyspark.python.pyspark.shell import spark
 from pyspark.rdd import PipelinedRDD
 from pyspark.sql import DataFrame
+from requests import Response
 
 from NoSQL.ElasticSearch.elasticsearch_handler import Elasticsearch_Handler
+from SQL.SQLite_database_handler import SQLite_handler
 from Spark.Spark_handler_class import Spark_handler
 from Hadoop.hdfs import HDFS_handler
 from testsAndOthers.data_types_and_structures import DataTypesHandler
 
 
 def get_file() -> TextIOWrapper:
-    path: str = r"C:\Users\adam l\Desktop\python files\BigData\Web\scrapy_web_crawler.py"
+    # path: str = r"C:\Users\adam l\Desktop\python files\BigData\Web\scrapy_web_crawler.py"
+    # print(os.getcwd(), __file__, os.name)
 
-    os.system(f'scrapy runspider "{path}" -O quotes.jl -L ERROR')  # O for overriding, o for appending to file
+    scrapy_crawler_path: str = ""
+    for directory in os.path.dirname(__file__).split("/")[:-1]:
+        scrapy_crawler_path += f"{directory}\\"
+    scrapy_crawler_path += r"Web\scrapy_web_crawler.py"
+
+    # path: str = os.getcwd() + r"\scrapy_web_crawler.py"
+
+    os.system(f'scrapy runspider "{scrapy_crawler_path}" -O quotes.jl -L ERROR')  # O for overriding, o for appending to file
 
     with open("quotes.jl") as file: return file
 
@@ -124,7 +134,6 @@ def process_data(data_frame: DataFrame) -> dict:
     for item in mapped.collect():
         dictionary_vals[item[0]] += 1
 
-
     logging.critical(dictionary_vals)
     sc.emptyRDD()
 
@@ -176,7 +185,7 @@ def upload_json_to_elastic(json: dict):
     # p2 = subprocess.Popen(["python", f'{elastic_path}\\start_kibana.py'], stdout=sys.stdout)  # kibana
     # p.communicate()  # wait for process to end
 
-    time.sleep(14)  # minimum time that elasticsearch takes to start
+    time.sleep(15)  # minimum time that elasticsearch takes to start: 13
 
     Elasticsearch_Handler.exec(fn=lambda url: requests.put(url=url + f"school/_doc/quotes", json=json),
                                print_recursively=True,
@@ -184,7 +193,26 @@ def upload_json_to_elastic(json: dict):
 
 
 def from_elastic_to_sqlite():
-    pass
+    response: Response = Elasticsearch_Handler.exec(fn=lambda url: requests.get(url + "school/_doc/quotes"),
+                                                    print_recursively=True, print_form=DataTypesHandler.PRINT_DICT)
+    logging.warning(response.json()["_source"])
+    json_dict: dict = response.json()["_source"]
+    # print(json_dict, type(json_dict))
+    names_list: list = DataTypesHandler.dict_to_matrix(dictionary=json_dict)
+    logging.warning(names_list)
+
+    # insert table
+    sqlithndlr: SQLite_handler = \
+        SQLite_handler(db_path=r"C:\cyber\PortableApps\SQLiteDatabaseBrowserPortable\first_sqlite_db.db")
+
+    # SQLite_handler.exec_all(sqlithndlr.db_path, SQLite_handler.GET_TABLES, "SELECT * FROM sqlite_master;",
+                            # "DROP TABLE newtable;")
+
+    schema: str = "first_author_name VARCHAR(40), quotes_count INT"
+    print(SQLite_handler.sqlite_insert_table(tablename="crawler_names", table_schema=schema, matrix=names_list,
+                                             db_path=sqlithndlr.db_path))
+
+
 # TODO: response = Elasticsearch_Handler.exec(filename)
 # TODO: table = DataTypesHandler.json_to_table(table)
 # TODO: sqlitHandler.addTable(table)
@@ -192,12 +220,18 @@ def from_elastic_to_sqlite():
 
 def visualize_sqlite():
     pass
+
+    table: list = SQLite_handler.get_table(tablename="employee")
+
+
 # TODO: visualize_handler.visualizeTable(sqlite_handler.getTable())
 
 
 # TODO: web crawler (scrapy) -> cluster (HDFS) ->
 # TODO: map-reduce (spark) -> NoSQL (elasticsearch) -> SQL (SQLite) -> visualization (matplotlib)
 def main():
+    start = time.time()
+
     s_logger = logging.getLogger('py4j.java_gateway')  # py4j logs
     s_logger.setLevel(logging.ERROR)
 
@@ -208,6 +242,7 @@ def main():
     # file_path: str = f"{os.getcwd()}\\quotes.jl"
     HDFS_handler.start()
     save_file_to_hdfs(file_path=file_path)
+    time.sleep(2)
     # os.system("hdfs dfsadmin -safemode leave")  # safe mode off
     json_count_names: dict = pass_to_spark(file_path=file_path)
     HDFS_handler.stop()
@@ -217,6 +252,8 @@ def main():
     from_elastic_to_sqlite()
 
     visualize_sqlite()
+
+    print("OK Total Time: %s" % (time.time() - start))
 
 
 if __name__ == '__main__':

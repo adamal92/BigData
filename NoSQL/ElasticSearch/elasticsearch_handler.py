@@ -33,7 +33,7 @@ class Elasticsearch_Handler:
                 print(f"{key}: {value}")
 
     @staticmethod
-    def exec(fn, url=DEFAULT_URL, print_recursively: bool=False,
+    def exec(fn, url: str=DEFAULT_URL, print_recursively: bool=False,
              additional_args: bool=False, print_form: int=DataTypesHandler.PRINT_ARROWS, *args, **kwargs) -> Response:
         """
         Execute an ElasticSearch command.
