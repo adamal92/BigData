@@ -1,11 +1,15 @@
 import logging
 import os
+
 import time
 from io import TextIOWrapper
 import subprocess, sys, time
 from typing import Any, Union, List, KeysView
 
-import py4j
+import matplotlib
+import matplotlib.pyplot
+import pandas
+
 import pyspark
 import requests
 from py4j.protocol import Py4JJavaError
@@ -193,6 +197,7 @@ def upload_json_to_elastic(json: dict):
 
 
 def from_elastic_to_sqlite():
+    # get table from elastic
     response: Response = Elasticsearch_Handler.exec(fn=lambda url: requests.get(url + "school/_doc/quotes"),
                                                     print_recursively=True, print_form=DataTypesHandler.PRINT_DICT)
     logging.warning(response.json()["_source"])
@@ -201,13 +206,11 @@ def from_elastic_to_sqlite():
     names_list: list = DataTypesHandler.dict_to_matrix(dictionary=json_dict)
     logging.warning(names_list)
 
-    # insert table
+    # insert table into sqlite
     sqlithndlr: SQLite_handler = \
         SQLite_handler(db_path=r"C:\cyber\PortableApps\SQLiteDatabaseBrowserPortable\first_sqlite_db.db")
-
-    # SQLite_handler.exec_all(sqlithndlr.db_path, SQLite_handler.GET_TABLES, "SELECT * FROM sqlite_master;",
-                            # "DROP TABLE newtable;")
-
+    print(sqlithndlr.db_path)
+    SQLite_handler.exec_all(sqlithndlr.db_path, SQLite_handler.GET_TABLES, "DROP TABLE crawler_names;")
     schema: str = "first_author_name VARCHAR(40), quotes_count INT"
     print(SQLite_handler.sqlite_insert_table(tablename="crawler_names", table_schema=schema, matrix=names_list,
                                              db_path=sqlithndlr.db_path))
@@ -219,9 +222,23 @@ def from_elastic_to_sqlite():
 
 
 def visualize_sqlite():
-    pass
 
-    table: list = SQLite_handler.get_table(tablename="employee")
+    # table: list = SQLite_handler.get_table(tablename="crawler_names", db_path=SQLite_handler.db_path)
+    # DataTypesHandler.print_data_recursively(data=table, print_dict=DataTypesHandler.PRINT_ARROWS)
+    # VisualizationHandler.visualize_matrix(table)
+
+    # get data from elastic
+    response: Response = Elasticsearch_Handler.exec(fn=lambda url: requests.get(url + "school/_doc/quotes"),
+                                                    print_recursively=True, print_form=DataTypesHandler.PRINT_DICT)
+    logging.warning(response.json()["_source"])
+    pass_dict: dict = response.json()["_source"]
+
+    # visualize data
+    # dataframe: pandas.DataFrame = pandas.DataFrame(data=pass_dict, index=[0])
+    dataframe = pandas.DataFrame.from_records( [pass_dict] )
+    df_lists = dataframe[list(pass_dict.keys())].unstack().apply(pandas.Series)
+    df_lists.plot.bar(rot=0, cmap=matplotlib.pyplot.cm.jet, fontsize=8, width=0.7, figsize=(8, 4))
+    matplotlib.pyplot.show()
 
 
 # TODO: visualize_handler.visualizeTable(sqlite_handler.getTable())
@@ -232,14 +249,21 @@ def visualize_sqlite():
 def main():
     start = time.time()
 
-    s_logger = logging.getLogger('py4j.java_gateway')  # py4j logs
-    s_logger.setLevel(logging.ERROR)
+    # loggers
+    py4j_logger = logging.getLogger('py4j.java_gateway')  # py4j logs
+    py4j_logger.setLevel(logging.ERROR)
+
+    matplotlib_logger = logging.getLogger('matplotlib')  # matplotlib logs
+    matplotlib_logger.setLevel(logging.ERROR)
 
     logging.basicConfig(level=logging.WARNING)
 
+    # scrapy
     file: TextIOWrapper = get_file()
     file_path: str = f"{os.getcwd()}\\{file.name}"
     # file_path: str = f"{os.getcwd()}\\quotes.jl"
+
+    # hdfs & spark
     HDFS_handler.start()
     save_file_to_hdfs(file_path=file_path)
     time.sleep(2)
@@ -247,10 +271,12 @@ def main():
     json_count_names: dict = pass_to_spark(file_path=file_path)
     HDFS_handler.stop()
 
+    # elastic
     upload_json_to_elastic(json=json_count_names)
 
     from_elastic_to_sqlite()
 
+    # matplotlib
     visualize_sqlite()
 
     print("OK Total Time: %s" % (time.time() - start))
