@@ -89,7 +89,7 @@ class SQLite_handler(object):
 
     # : clean
     @staticmethod
-    def sqlite_insert_table(matrix: list, db_path: str, table_schema: str=None, *args: str, **kwargs) -> int:
+    def sqlite_insert_table(matrix: list, db_path: str=db_path, table_schema: str=None, *args: str, **kwargs) -> int:
         """
         Write a given matrix to SQLite db as a table
         If the given table doesn't exist in the db, then create it according to given schema

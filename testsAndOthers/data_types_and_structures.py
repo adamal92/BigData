@@ -74,7 +74,7 @@ class DataTypesHandler:
         """
         matrix: list = []
         for key in dictionary:
-            list.append([key, dictionary[key]])
+            matrix.append([key, dictionary[key]])
         return matrix
 
     @staticmethod
