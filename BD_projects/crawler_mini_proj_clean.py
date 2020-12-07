@@ -1,10 +1,9 @@
+# imports
 import logging
 import os
 
-import time
 from io import TextIOWrapper
 import subprocess, sys, time
-from typing import Any, Union, List, KeysView
 
 import matplotlib
 import matplotlib.pyplot
@@ -26,23 +25,28 @@ from Hadoop.hdfs import HDFS_handler
 from testsAndOthers.data_types_and_structures import DataTypesHandler
 
 
-def get_file() -> TextIOWrapper:
-    # path: str = r"C:\Users\adam l\Desktop\python files\BigData\Web\scrapy_web_crawler.py"
-    # print(os.getcwd(), __file__, os.name)
+def get_file(save_as: str="quotes.jl") -> TextIOWrapper:
+    """
 
+    :return:
+    """
     scrapy_crawler_path: str = ""
     for directory in os.path.dirname(__file__).split("/")[:-1]:
         scrapy_crawler_path += f"{directory}\\"
     scrapy_crawler_path += r"Web\scrapy_web_crawler.py"
 
-    # path: str = os.getcwd() + r"\scrapy_web_crawler.py"
-
-    os.system(f'scrapy runspider "{scrapy_crawler_path}" -O quotes.jl -L ERROR')  # O for overriding, o for appending to file
+    # O for overriding, o for appending to file
+    os.system(f'scrapy runspider "{scrapy_crawler_path}" -O {save_as} -L ERROR')
 
     with open("quotes.jl") as file: return file
 
 
 def save_file_to_hdfs(file_path: str):
+    """
+
+    :param file_path:
+    :return:
+    """
     os.system("hdfs dfsadmin -safemode leave")  # safe mode off
     os.system("hdfs dfs -rm -R -skipTrash /user/hduser/quotes.jl")  # delete file
     os.system(HDFS_handler.LIST_FILES)
@@ -52,8 +56,12 @@ def save_file_to_hdfs(file_path: str):
     os.system("hdfs dfsadmin -safemode enter")  # safe mode on
 
 
-# TODO:
 def process_data(data_frame: DataFrame) -> dict:
+    """
+
+    :param data_frame:
+    :return:
+    """
     sc: SparkContext = Spark_handler.spark_context_setup(log_level="ERROR")
 
     pickle: list = data_frame.collect()  # Union[List[Any], Any] = list
@@ -78,60 +86,18 @@ def process_data(data_frame: DataFrame) -> dict:
         # temp_list.append(dict_list[1][1:].split("\"")[1])  # author names
 
     # create key-value pairs
-
-    # def clean_data(row):
-    #     dict_str: str = pyspark.sql.types.Row.asDict(row, True)["value"].split(",")[0][1:]  # .split("{")[1]
-    #     # print(dict_str)
-    #     dict_list = dict_str.split(":")
-    #     print(dict_list[0], dict_list[1][1:])
-    #     # temp_dict[dict_list[0]] = dict_list[1][1:]
-    #     temp_list.append(dict_list[1][1:].split("\"")[1])
-    #
-    # quotes.foreach(clean_data)
-    # print(temp_dict)
-
     sc.emptyRDD()
-    # print(temp_list)
     author_names = sc.parallelize(temp_list)
 
     # filter (lambda list.pop : bool)
-    # os.environ["PYSPARK_PYTHON"] = "/usr/local/bin/python3"
-    # os.environ["PYSPARK_DRIVER_PYTHON"] = "/usr/bin/ipython"
-
-    # os.environ["PYSPARK_PYTHON"] = "C:\Spark\spark-3.0.1-bin-hadoop3.2\python"
-    # os.environ["PYSPARK_DRIVER_PYTHON"] = "C:\Spark\spark-3.0.1-bin-hadoop3.2\python"
-
     filtered: PipelinedRDD = author_names.filter(lambda name: name)  # all names
-    # filtered: PipelinedRDD = author_names.filter(lambda name: "S" in name)  # create dictionary
     print("Fitered RDD -> %s" % filtered.collect())
-    # print("Fitered RDD -> %s" % author_names.filter(lambda name: "S" in name).collect())
 
     # map (lambda list.pop : key_value_tuple)
     # map (lambda old_element : new_element)
     mapped: PipelinedRDD = filtered.map(lambda x: (x, 0))
     print("Key value pair -> %s" % mapped.collect())
-    # quotes = quotes.map(lambda x: print(x))
     logging.critical(dict(mapped.collect()))
-
-    # unique_vals: list = []
-    # # for tuple_item in mapped.collect():
-    # #     if not tuple_item in unique_vals:
-    # #         unique_vals.append(tuple_item)
-    # #     else:
-    # #         for item in unique_vals:
-    # #             if item[0] == tuple_item[0]:
-    # #                 item[1] = int(item[1]) + int(tuple_item[1])
-    # dictionary_vals: dict = dict(mapped.collect())
-    # print(dictionary_vals)
-    # for key in dictionary_vals:
-    #     if not key in unique_vals:
-    #         # print(key, type(key), dictionary_vals[key], type(dictionary_vals[key]))
-    #         unique_vals.append((key, dictionary_vals[key]))
-    #     else:
-    #         for item in unique_vals:
-    #             if item[0] == key:
-    #                 dictionary_vals[key] = int(dictionary_vals[key]) + int(item[1])
-    # logging.critical(unique_vals)
 
     # count number of items (reduce)
     dictionary_vals: dict = dict(mapped.collect())  # without duplicates
@@ -143,20 +109,13 @@ def process_data(data_frame: DataFrame) -> dict:
 
     return dictionary_vals
 
-    # mapped = sc.parallelize(unique_vals)
-    # print(mapped.collect())
-    #
-    # # reduce (lambda key, values_list : reduced_tuple)
-    # from operator import add
-    # # adding: tuple = quotes.reduce(add)
-    # # print(adding, type(adding))
-    # adding: tuple = mapped.reduce(f=lambda key, values_list: print(key, values_list))
-    # print(adding)
-    # print(mapped.collect())
-    # # print(type(quotes.filter(lambda : None)), type(quotes.map(lambda : None)), type(quotes.reduce(lambda a,b: None)))
-
 
 def pass_to_spark(file_path: str) -> dict:
+    """
+
+    :param file_path:
+    :return:
+    """
     try:
         sc: SparkContext = Spark_handler.spark_context_setup(log_level="ERROR")
 
@@ -180,11 +139,16 @@ def pass_to_spark(file_path: str) -> dict:
 
 
 def upload_json_to_elastic(json: dict):
-    # print(os.path.dirname(__file__).split("/")[:-1])
+    """
+
+    :param json:
+    :return:
+    """
     elastic_path: str = ""
     for directory in os.path.dirname(__file__).split("/")[:-1]:
         elastic_path += f"{directory}\\"
     elastic_path += "NoSQL\\ElasticSearch"
+    # TODO: close elastic
     p = subprocess.Popen(["python", f'{elastic_path}\\start_search.py'], stdout=sys.stdout)  # search
     # p2 = subprocess.Popen(["python", f'{elastic_path}\\start_kibana.py'], stdout=sys.stdout)  # kibana
     # p.communicate()  # wait for process to end
@@ -197,12 +161,15 @@ def upload_json_to_elastic(json: dict):
 
 
 def from_elastic_to_sqlite():
+    """
+
+    :return:
+    """
     # get table from elastic
     response: Response = Elasticsearch_Handler.exec(fn=lambda url: requests.get(url + "school/_doc/quotes"),
                                                     print_recursively=True, print_form=DataTypesHandler.PRINT_DICT)
     logging.warning(response.json()["_source"])
     json_dict: dict = response.json()["_source"]
-    # print(json_dict, type(json_dict))
     names_list: list = DataTypesHandler.dict_to_matrix(dictionary=json_dict)
     logging.warning(names_list)
 
@@ -222,11 +189,10 @@ def from_elastic_to_sqlite():
 
 
 def visualize_sqlite():
+    """
 
-    # table: list = SQLite_handler.get_table(tablename="crawler_names", db_path=SQLite_handler.db_path)
-    # DataTypesHandler.print_data_recursively(data=table, print_dict=DataTypesHandler.PRINT_ARROWS)
-    # VisualizationHandler.visualize_matrix(table)
-
+    :return:
+    """
     # get data from elastic
     response: Response = Elasticsearch_Handler.exec(fn=lambda url: requests.get(url + "school/_doc/quotes"),
                                                     print_recursively=True, print_form=DataTypesHandler.PRINT_DICT)
@@ -234,7 +200,6 @@ def visualize_sqlite():
     pass_dict: dict = response.json()["_source"]
 
     # visualize data
-    # dataframe: pandas.DataFrame = pandas.DataFrame(data=pass_dict, index=[0])
     dataframe = pandas.DataFrame.from_records( [pass_dict] , index="")
     df_lists = dataframe[list(pass_dict.keys())].unstack().apply(pandas.Series)
     df_lists.plot.bar(rot=0, cmap=matplotlib.pyplot.cm.jet, fontsize=8, width=0.7, figsize=(8, 4))
@@ -246,6 +211,7 @@ def visualize_sqlite():
 
 # TODO: web crawler (scrapy) -> cluster (HDFS) ->
 # TODO: map-reduce (spark) -> NoSQL (elasticsearch) -> SQL (SQLite) -> visualization (matplotlib)
+# TODO: create/add to lib
 def main():
     start = time.time()
 

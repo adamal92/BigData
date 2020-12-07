@@ -1,4 +1,11 @@
 import logging
+import os
+import signal
+import subprocess
+import sys
+import time
+from subprocess import Popen
+
 import requests
 from requests import Response
 
@@ -12,6 +19,43 @@ class Elasticsearch_Handler:
     """
     # static
     DEFAULT_URL: str = 'http://localhost:9200/'  # address of the default elastic search server
+
+    def __init__(self):
+        self._elastic_process = self.start_search()
+        self._kibana_process = Elasticsearch_Handler.start_kibana(self)
+        os.system("start http://localhost:9200/")  # search
+        os.system("start http://localhost:5601/")  # kibana
+
+    def start_search(self) -> Popen:
+        self._elastic_process: Popen = subprocess\
+            .Popen([sys.executable, f'{os.getcwd()}\\start_search.py'], stdout=sys.stdout, shell=True,
+                   creationflags=subprocess.CREATE_NEW_PROCESS_GROUP)  # search
+        # .Popen(["python", f'{os.getcwd()}\\start_search.py'], stdout=sys.stdout)  # search
+        # p.communicate()  # wait for process to end
+        print(type(self._elastic_process))
+        time.sleep(15)  # minimum time that elasticsearch takes to start: 13
+        return self._elastic_process
+
+    def start_kibana(self) -> Popen:
+        self._kibana_process = subprocess\
+            .Popen(["python", f'{os.getcwd()}\\start_kibana.py'], stdout=sys.stdout)  # kibana
+        # p.communicate()  # wait for process to end
+        time.sleep(30)  # minimum time that kibana takes to start:
+        return self._kibana_process
+
+    def stop_search(self):
+        self._elastic_process.kill()
+        self._elastic_process.terminate()
+        # os.kill(self._elastic_process.pid, signal.SIGTERM)  # or signal.SIGKILL, needs admin premissions
+        # os.killpg(self._elastic_process.pid, signal.SIGTERM)  # Send the signal to all the process groups
+        os.kill(self._elastic_process.pid, signal.CTRL_BREAK_EVENT)  # CTRL_BREAK_EVENT, CTRL_C_EVENT
+
+    def stop_kibana(self):
+        self._kibana_process.terminate()
+        self._kibana_process.kill()
+        # os.kill(self._kibana_process.pid, signal.SIGTERM)  # or signal.SIGKILL
+        # os.killpg(os.getpgid(pro.pid), signal.SIGTERM)  # Send the signal to all the process groups
+        # os.killpg(self._kibana_process.pid, signal.SIGTERM)  # Send the signal to all the process groups
 
     @staticmethod
     def print_dict(dictionary: dict):
