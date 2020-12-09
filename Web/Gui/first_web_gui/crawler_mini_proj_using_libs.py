@@ -157,7 +157,25 @@ def upload_json_to_elastic(json: dict):
     # p2 = subprocess.Popen(["python", f'{elastic_path}\\start_kibana.py'], stdout=sys.stdout)  # kibana
     # p.communicate()  # wait for process to end
 
-    time.sleep(15)  # minimum time that elasticsearch takes to start: 13
+    time.sleep(13)  # minimum time that elasticsearch takes to start: 13
+
+    max_tries = 5
+    counter = 0
+    page = ''
+    # for counter in range(0, max_tries):
+    while page == '':
+        try:
+            page = requests.get(Elasticsearch_Handler.DEFAULT_URL)
+            break
+        except:
+            print("Connection refused by the server..")
+            print("Let me sleep for 5 seconds")
+            print("ZZzzzz...")
+            time.sleep(5)
+            print("Was a nice sleep, now let me continue...")
+            if counter >= max_tries: break
+            counter += 1
+            continue
 
     Elasticsearch_Handler.exec(fn=lambda url: requests.put(url=url + f"school/_doc/quotes", json=json),
                                print_recursively=True,

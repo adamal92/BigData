@@ -1,3 +1,5 @@
+import logging
+
 from flask import Flask, render_template
 from flaskwebgui import FlaskUI   # get the FlaskUI class
 
@@ -30,4 +32,6 @@ def start_crawler():
 
 
 if __name__ == '__main__':
+    logging.getLogger('flaskwebgui').setLevel(logging.ERROR)
+    logging.getLogger('BaseHTTPRequestHandler').setLevel(logging.ERROR)
     ui.run()                           # call the 'run' method
