@@ -46,3 +46,31 @@ class VisualizationHandler:
                   " values. Please make sure that all the matrix's values are numbers")
             logging.error(e)
         except: raise
+
+    @staticmethod
+    def visualize_dictionary(dictionary: dict):
+        """
+        visualizes a dictionary as a column graph
+        :param dictionary :type dict: the dictionary to be visualized
+        :return :type None
+        """
+        """
+               The resulted graph:
+
+               values
+               3                                   |
+               2       |                           |
+               1       |               |           |
+                  (key, index)  (key, index)  (key, index)
+               """
+        try:
+            dataframe = pandas.DataFrame.from_records([dictionary], index="")
+            # dataframe: pandas.DataFrame = pandas.DataFrame(data=dictionary, index=[0])
+            df_lists = dataframe[list(dictionary.keys())].unstack().apply(pandas.Series)
+            df_lists.plot.bar(rot=0, cmap=matplotlib.pyplot.cm.jet, fontsize=8, width=0.7, figsize=(8, 4))
+            matplotlib.pyplot.show()
+        except TypeError as e:
+            print("The provided dictionary contains non-numeric"
+                  " values. Please make sure that all the dictionary's values are numbers")
+            logging.error(e)
+        except: raise

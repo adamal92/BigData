@@ -76,3 +76,27 @@ SQLite_handler.exec_all(SQLite_handler.db_path, SQLite_handler.GET_TABLES)
 
 VisualizationHandler.visualize_matrix(SQLite_handler
                                       .get_table(tablename="works_with", db_path=SQLite_handler.db_path))
+
+# -----------------------------------------------------------------------
+# admin
+
+# from testsAndOthers.administrator_handler import Admin_Handler
+import sys
+#
+# @Admin_Handler.start_as_admin
+
+#
+#
+# with open("administrator_handler.py", "r") as admin_file:
+#     with open(__file__, "a") as exec_file:
+#         exec_file.write(admin_file.read())
+#         exec_file.write('if __name__ == \'__main__\':\n\tsys.exit(Admin_Handler.start_as_admin(admin_func)')
+#     with open(__file__, "r") as exec_file:
+#         print(exec_file.read())
+#
+
+# if __name__ == '__main__':
+    # sys.exit(Admin_Handler.start_as_admin(func=fun))
+    # fun(Admin_Handler)
+    # fun()
+    # sys.exit(Admin_Handler.start_as_admin(lambda : print("ok")))

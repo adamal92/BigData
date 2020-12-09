@@ -9,6 +9,13 @@ from SQL.SQLite_database_handler import SQLite_handler
 Run elasticsearch commands
 """
 
+import subprocess, sys, time
+
+# elastic: Elasticsearch_Handler = Elasticsearch_Handler()
+# time.sleep(20)
+# elastic.stop_search()
+# elastic.stop_kibana()
+
 
 # os.system(f'python "{os.getcwd()}\\start_search.py"')  # search
 # os.system(f'python "{os.getcwd()}\\start_kibana.py"')  # kibana
@@ -16,7 +23,6 @@ Run elasticsearch commands
 # os.system("start http://localhost:5601/")  # kibana
 # os.system("start http://localhost:9200/")  # search
 
-import subprocess, sys, time
 p = subprocess.Popen(["python", f'{os.getcwd()}\\start_search.py'], stdout=sys.stdout)  # search
 p2 = subprocess.Popen(["python", f'{os.getcwd()}\\start_kibana.py'], stdout=sys.stdout)  # kibana
 # p.communicate()  # wait for process to end
@@ -203,3 +209,5 @@ Elasticsearch_Handler.exec(fn=lambda url: requests.post(url+"school/_all/_search
 #     sys.exit(test())
 
 # os.system(f"\"{sys.executable}\" \"{os.getcwd()}\\start_kibana.py\"")
+
+
