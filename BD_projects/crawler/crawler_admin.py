@@ -13,6 +13,7 @@ This file starts itself in administrative mode
 """
 
 import sys, os, traceback, types
+import time
 
 
 class Admin_Handler:
@@ -99,15 +100,38 @@ class Admin_Handler:
             print("You're not an admin.", os.getpid(), "params: ", sys.argv)
             #rc = runAsAdmin(["c:\\Windows\\notepad.exe"])
             rc = Admin_Handler.runAsAdmin()
+            print(dir())
+
         else:
             print("You are an admin!", os.getpid(), "params: ", sys.argv)
             rc = 0
 
             if func: fn = func()
 
+        print(Admin_Handler.isUserAdmin())
         x = input('Press Enter to exit.')
         return rc
 
 
-if __name__ == "__main__":
-    sys.exit(Admin_Handler.start_as_admin(lambda : print()))
+def admin_func():
+    from SQL.SQLite_database_handler import SQLite_handler
+    print(dir())
+
+    # get table & exec all
+    sqlithndlr: SQLite_handler = \
+        SQLite_handler(db_path=r"C:\cyber\PortableApps\SQLiteDatabaseBrowserPortable\first_sqlite_db.db")
+
+    SQLite_handler.exec_all(sqlithndlr.db_path, SQLite_handler.GET_TABLES)
+
+    # from NoSQL.ElasticSearch.elasticsearch_handler import Elasticsearch_Handler
+    #
+    # elastic: Elasticsearch_Handler = Elasticsearch_Handler()
+    # time.sleep(20)
+    # elastic.stop_search()
+    # elastic.stop_kibana()
+
+
+if __name__ == '__main__':
+    print(dir())
+    sys.exit(Admin_Handler.start_as_admin(admin_func))
+

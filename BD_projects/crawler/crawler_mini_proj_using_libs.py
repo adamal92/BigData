@@ -188,7 +188,7 @@ def from_elastic_to_sqlite():
 # TODO: sqlitHandler.addTable(table)
 
 
-def visualize_sqlite():
+def visualize_json():
     """
 
     :return:
@@ -200,10 +200,8 @@ def visualize_sqlite():
     pass_dict: dict = response.json()["_source"]
 
     # visualize data
-    dataframe = pandas.DataFrame.from_records( [pass_dict] , index="")
-    df_lists = dataframe[list(pass_dict.keys())].unstack().apply(pandas.Series)
-    df_lists.plot.bar(rot=0, cmap=matplotlib.pyplot.cm.jet, fontsize=8, width=0.7, figsize=(8, 4))
-    matplotlib.pyplot.show()
+    from visualization.visualization import VisualizationHandler
+    VisualizationHandler.visualize_dictionary(pass_dict)
 
 
 # TODO: visualize_handler.visualizeTable(sqlite_handler.getTable())
@@ -243,7 +241,7 @@ def main():
     from_elastic_to_sqlite()
 
     # matplotlib
-    visualize_sqlite()
+    visualize_json()
 
     print("OK Total Time: %s" % (time.time() - start))
 
