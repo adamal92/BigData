@@ -64,7 +64,7 @@ class VisualizationHandler:
                   (key, index)  (key, index)  (key, index)
                """
         try:
-            dataframe = pandas.DataFrame.from_records([dictionary], index="")
+            dataframe = pandas.DataFrame.from_records([dictionary], index=[""])
             # dataframe: pandas.DataFrame = pandas.DataFrame(data=dictionary, index=[0])
             df_lists = dataframe[list(dictionary.keys())].unstack().apply(pandas.Series)
             df_lists.plot.bar(rot=0, cmap=matplotlib.pyplot.cm.jet, fontsize=8, width=0.7, figsize=(8, 4))

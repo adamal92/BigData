@@ -22,5 +22,12 @@ def home():
     # return "ok"
 
 
+@app.route("/start", methods=['GET'])
+def start_crawler():
+    from Web.Gui.first_web_gui.crawler_mini_proj_using_libs import main as start
+    start()  # main()
+    return render_template('crawler.html')
+
+
 if __name__ == '__main__':
     ui.run()                           # call the 'run' method

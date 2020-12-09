@@ -24,6 +24,9 @@ from Spark.Spark_handler_class import Spark_handler
 from Hadoop.hdfs import HDFS_handler
 from testsAndOthers.data_types_and_structures import DataTypesHandler
 
+DIRS_TILL_ROOT: int = 3
+DELIMETER = "\\"  # "/"
+
 
 def get_file(save_as: str="quotes.jl") -> TextIOWrapper:
     """
@@ -31,14 +34,15 @@ def get_file(save_as: str="quotes.jl") -> TextIOWrapper:
     :return:
     """
     scrapy_crawler_path: str = ""
-    for directory in os.path.dirname(__file__).split("/")[:-2]:
+    for directory in os.path.dirname(__file__).split(DELIMETER)[:-DIRS_TILL_ROOT]:
         scrapy_crawler_path += f"{directory}\\"
+    cwd_path = scrapy_crawler_path
     scrapy_crawler_path += r"Web\scrapy_web_crawler.py"
 
     # O for overriding, o for appending to file
     os.system(f'scrapy runspider "{scrapy_crawler_path}" -O {save_as} -L ERROR')
 
-    with open("quotes.jl") as file: return file
+    with open(save_as) as file: return file
 
 
 def save_file_to_hdfs(file_path: str):
@@ -145,7 +149,7 @@ def upload_json_to_elastic(json: dict):
     :return:
     """
     elastic_path: str = ""
-    for directory in os.path.dirname(__file__).split("/")[:-2]:
+    for directory in os.path.dirname(__file__).split(DELIMETER)[:-DIRS_TILL_ROOT]:
         elastic_path += f"{directory}\\"
     elastic_path += "NoSQL\\ElasticSearch"
     # TODO: close elastic
@@ -199,7 +203,6 @@ def visualize_json():
     logging.warning(response.json()["_source"])
     pass_dict: dict = response.json()["_source"]
 
-    print(pass_dict)
     # visualize data
     from visualization.visualization import VisualizationHandler
     VisualizationHandler.visualize_dictionary(pass_dict)
@@ -224,7 +227,7 @@ def main():
     logging.basicConfig(level=logging.WARNING)
 
     # scrapy
-    file: TextIOWrapper = get_file(save_as=f'"{os.getcwd()}"\\quotes.jl')
+    file: TextIOWrapper = get_file()
     file_path: str = f"{os.getcwd()}\\{file.name}"
     # file_path: str = f"{os.getcwd()}\\quotes.jl"
 
