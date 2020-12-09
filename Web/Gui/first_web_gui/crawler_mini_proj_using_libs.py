@@ -24,6 +24,9 @@ from Spark.Spark_handler_class import Spark_handler
 from Hadoop.hdfs import HDFS_handler
 from testsAndOthers.data_types_and_structures import DataTypesHandler
 
+DIRS_TILL_ROOT: int = 3
+DELIMETER = "\\"  # "/"
+
 
 def get_file(save_as: str="quotes.jl") -> TextIOWrapper:
     """
@@ -31,14 +34,15 @@ def get_file(save_as: str="quotes.jl") -> TextIOWrapper:
     :return:
     """
     scrapy_crawler_path: str = ""
-    for directory in os.path.dirname(__file__).split("/")[:-2]:
+    for directory in os.path.dirname(__file__).split(DELIMETER)[:-DIRS_TILL_ROOT]:
         scrapy_crawler_path += f"{directory}\\"
+    cwd_path = scrapy_crawler_path
     scrapy_crawler_path += r"Web\scrapy_web_crawler.py"
 
     # O for overriding, o for appending to file
     os.system(f'scrapy runspider "{scrapy_crawler_path}" -O {save_as} -L ERROR')
 
-    with open("quotes.jl") as file: return file
+    with open(save_as) as file: return file
 
 
 def save_file_to_hdfs(file_path: str):
@@ -145,7 +149,7 @@ def upload_json_to_elastic(json: dict):
     :return:
     """
     elastic_path: str = ""
-    for directory in os.path.dirname(__file__).split("/")[:-2]:
+    for directory in os.path.dirname(__file__).split(DELIMETER)[:-DIRS_TILL_ROOT]:
         elastic_path += f"{directory}\\"
     elastic_path += "NoSQL\\ElasticSearch"
     # TODO: close elastic
@@ -153,7 +157,25 @@ def upload_json_to_elastic(json: dict):
     # p2 = subprocess.Popen(["python", f'{elastic_path}\\start_kibana.py'], stdout=sys.stdout)  # kibana
     # p.communicate()  # wait for process to end
 
-    time.sleep(15)  # minimum time that elasticsearch takes to start: 13
+    time.sleep(13)  # minimum time that elasticsearch takes to start: 13
+
+    max_tries = 5
+    counter = 0
+    page = ''
+    # for counter in range(0, max_tries):
+    while page == '':
+        try:
+            page = requests.get(Elasticsearch_Handler.DEFAULT_URL)
+            break
+        except:
+            print("Connection refused by the server..")
+            print("Let me sleep for 5 seconds")
+            print("ZZzzzz...")
+            time.sleep(5)
+            print("Was a nice sleep, now let me continue...")
+            if counter >= max_tries: break
+            counter += 1
+            continue
 
     Elasticsearch_Handler.exec(fn=lambda url: requests.put(url=url + f"school/_doc/quotes", json=json),
                                print_recursively=True,
@@ -199,7 +221,6 @@ def visualize_json():
     logging.warning(response.json()["_source"])
     pass_dict: dict = response.json()["_source"]
 
-    print(pass_dict)
     # visualize data
     from visualization.visualization import VisualizationHandler
     VisualizationHandler.visualize_dictionary(pass_dict)
@@ -224,7 +245,7 @@ def main():
     logging.basicConfig(level=logging.WARNING)
 
     # scrapy
-    file: TextIOWrapper = get_file(save_as=f'"{os.getcwd()}"\\quotes.jl')
+    file: TextIOWrapper = get_file()
     file_path: str = f"{os.getcwd()}\\{file.name}"
     # file_path: str = f"{os.getcwd()}\\quotes.jl"
 
