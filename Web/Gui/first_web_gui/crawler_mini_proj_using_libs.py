@@ -247,7 +247,7 @@ def main():
     # matplotlib
     visualize_json()
 
-    print("OK Total Time: %s" % (time.time() - start))
+    print("OK Total Time: %s seconds" % (time.time() - start))
 
 
 if __name__ == '__main__':

@@ -5,15 +5,9 @@ import os
 from io import TextIOWrapper
 import subprocess, sys, time
 
-import matplotlib
-import matplotlib.pyplot
-import pandas
-
 import pyspark
 import requests
-from py4j.protocol import Py4JJavaError
-from pyspark import SparkContext, RDD
-from pyspark.python.pyspark.shell import spark
+from pyspark import SparkContext
 from pyspark.rdd import PipelinedRDD
 from pyspark.sql import DataFrame
 from requests import Response
@@ -24,6 +18,9 @@ from Spark.Spark_handler_class import Spark_handler
 from Hadoop.hdfs import HDFS_handler
 from testsAndOthers.data_types_and_structures import DataTypesHandler
 
+DIRS_TILL_ROOT: int = 2
+DELIMETER = "/"  # "\\"
+
 
 def get_file(save_as: str="quotes.jl") -> TextIOWrapper:
     """
@@ -31,14 +28,14 @@ def get_file(save_as: str="quotes.jl") -> TextIOWrapper:
     :return:
     """
     scrapy_crawler_path: str = ""
-    for directory in os.path.dirname(__file__).split("/")[:-2]:
+    for directory in os.path.dirname(__file__).split(DELIMETER)[:-DIRS_TILL_ROOT]:
         scrapy_crawler_path += f"{directory}\\"
     scrapy_crawler_path += r"Web\scrapy_web_crawler.py"
 
     # O for overriding, o for appending to file
     os.system(f'scrapy runspider "{scrapy_crawler_path}" -O {save_as} -L ERROR')
 
-    with open("quotes.jl") as file: return file
+    with open(save_as) as file: return file
 
 
 def save_file_to_hdfs(file_path: str):
@@ -117,7 +114,7 @@ def upload_json_to_elastic(json: dict):
     :return:
     """
     elastic_path: str = ""
-    for directory in os.path.dirname(__file__).split("/")[:-2]:
+    for directory in os.path.dirname(__file__).split(DELIMETER)[:-DIRS_TILL_ROOT]:
         elastic_path += f"{directory}\\"
     elastic_path += "NoSQL\\ElasticSearch"
     # TODO: close elastic
@@ -199,7 +196,7 @@ def main():
     logging.basicConfig(level=logging.WARNING)
 
     # scrapy
-    file: TextIOWrapper = get_file(save_as=f'"{os.getcwd()}"\\quotes.jl')
+    file: TextIOWrapper = get_file()  # save_as=f'"{os.getcwd()}"\\quotes.jl'
     file_path: str = f"{os.getcwd()}\\{file.name}"
     # file_path: str = f"{os.getcwd()}\\quotes.jl"
 
@@ -221,7 +218,7 @@ def main():
     # matplotlib
     visualize_json()
 
-    print("OK Total Time: %s" % (time.time() - start))
+    print("OK Total Time: %s seconds" % (time.time() - start))
 
 
 if __name__ == '__main__':
