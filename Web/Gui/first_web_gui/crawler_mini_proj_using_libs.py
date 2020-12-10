@@ -114,34 +114,6 @@ def process_data(data_frame: DataFrame) -> dict:
     return dictionary_vals
 
 
-def pass_to_spark(file_path: str) -> dict:
-    """
-
-    :param file_path:
-    :return:
-    """
-    try:
-        sc: SparkContext = Spark_handler.spark_context_setup(log_level="ERROR")
-
-        df: DataFrame = spark.read.text(f"{HDFS_handler.DEFAULT_CLUSTER_PATH}user/hduser/quotes.jl")  # core-site.xml
-        # df.show()
-
-        count_names: dict = process_data(data_frame=df)
-        sc.stop()
-        return count_names
-
-    except Py4JJavaError as e:
-        logging.debug(type(e.java_exception))
-        if "java.net.ConnectException" in e.java_exception.__str__():
-            logging.error("HDFS cluster is down")
-        else:
-            HDFS_handler.stop()
-            raise
-    except:
-        HDFS_handler.stop()
-        raise
-
-
 def upload_json_to_elastic(json: dict):
     """
 
@@ -159,27 +131,31 @@ def upload_json_to_elastic(json: dict):
 
     time.sleep(13)  # minimum time that elasticsearch takes to start: 13
 
-    max_tries = 5
-    counter = 0
-    page = ''
-    # for counter in range(0, max_tries):
-    while page == '':
-        try:
-            page = requests.get(Elasticsearch_Handler.DEFAULT_URL)
-            break
-        except:
-            print("Connection refused by the server..")
-            print("Let me sleep for 5 seconds")
-            print("ZZzzzz...")
-            time.sleep(5)
-            print("Was a nice sleep, now let me continue...")
-            if counter >= max_tries: break
-            counter += 1
-            continue
+    # max_tries = 5
+    # counter = 0
+    # page = ''
+    # # for counter in range(0, max_tries):
+    # while page == '':
+    #     try:
+    #         page = requests.get(Elasticsearch_Handler.DEFAULT_URL)
+    #         break
+    #     except:
+    #         print("Connection refused by the server..")
+    #         print("Let me sleep for 5 seconds")
+    #         print("ZZzzzz...")
+    #         time.sleep(5)
+    #         print("Was a nice sleep, now let me continue...")
+    #         if counter >= max_tries: break
+    #         counter += 1
+    #         continue
+    #
+    # Elasticsearch_Handler.exec(fn=lambda url: requests.put(url=url + f"school/_doc/quotes", json=json),
+    #                            print_recursively=True,
+    #                            print_form=DataTypesHandler.PRINT_DICT)
 
-    Elasticsearch_Handler.exec(fn=lambda url: requests.put(url=url + f"school/_doc/quotes", json=json),
-                               print_recursively=True,
-                               print_form=DataTypesHandler.PRINT_DICT)
+    Elasticsearch_Handler.send_request(fn=lambda url: requests.put(url=url + f"school/_doc/quotes", json=json),
+                                       print_recursively=True, max_tries=5,
+                                       print_form=DataTypesHandler.PRINT_DICT)
 
 
 def from_elastic_to_sqlite():
@@ -188,8 +164,9 @@ def from_elastic_to_sqlite():
     :return:
     """
     # get table from elastic
-    response: Response = Elasticsearch_Handler.exec(fn=lambda url: requests.get(url + "school/_doc/quotes"),
-                                                    print_recursively=True, print_form=DataTypesHandler.PRINT_DICT)
+    response: Response = Elasticsearch_Handler.send_request(fn=lambda url: requests.get(url + "school/_doc/quotes"),
+                                                            print_recursively=True,
+                                                            print_form=DataTypesHandler.PRINT_DICT, max_tries=5)
     logging.warning(response.json()["_source"])
     json_dict: dict = response.json()["_source"]
     names_list: list = DataTypesHandler.dict_to_matrix(dictionary=json_dict)
@@ -216,8 +193,11 @@ def visualize_json():
     :return:
     """
     # get data from elastic
-    response: Response = Elasticsearch_Handler.exec(fn=lambda url: requests.get(url + "school/_doc/quotes"),
-                                                    print_recursively=True, print_form=DataTypesHandler.PRINT_DICT)
+    response: Response = Elasticsearch_Handler.send_request(
+        fn=lambda url: requests.get(url + "school/_doc/quotes"),
+        print_recursively=True, print_form=DataTypesHandler.PRINT_DICT, max_tries=5
+    )
+
     logging.warning(response.json()["_source"])
     pass_dict: dict = response.json()["_source"]
 
@@ -254,7 +234,9 @@ def main():
     save_file_to_hdfs(file_path=file_path)
     time.sleep(2)
     # os.system("hdfs dfsadmin -safemode leave")  # safe mode off
-    json_count_names: dict = pass_to_spark(file_path=file_path)
+    json_count_names: dict = Spark_handler.pass_to_spark(
+        file_path=f"{HDFS_handler.DEFAULT_CLUSTER_PATH}user/hduser/quotes.jl", process_fn=process_data
+    )
     HDFS_handler.stop()
 
     # elastic
