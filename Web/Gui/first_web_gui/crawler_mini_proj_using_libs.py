@@ -212,6 +212,9 @@ def visualize_json():
 # TODO: web crawler (scrapy) -> cluster (HDFS) ->
 # TODO: map-reduce (spark) -> NoSQL (elasticsearch) -> SQL (SQLite) -> visualization (matplotlib)
 # TODO: create/add to lib
+
+# TODO: client (js) -> web crawler (scrapy) -> cluster (HDFS) ->
+# TODO: map-reduce (spark) -> NoSQL (elasticsearch)/SQL (SQLite) -> client visualization (js)
 def main():
     start = time.time()
 
