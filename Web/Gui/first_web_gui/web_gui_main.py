@@ -33,6 +33,7 @@ def start_crawler():
     from Web.Gui.first_web_gui.crawler_mini_proj_using_libs import main as start
     start()  # main()
     return render_template('crawler.html')
+    # return "ok"
 
 
 @app.route("/crawl", methods=['GET'])
@@ -48,6 +49,16 @@ def react():
 @app.route("/react_app.js", methods=['GET'])
 def get_like():
     return open("static/react_app.js", "r").read()
+
+
+@app.route("/react/json", methods=['GET'])
+def react_json():
+    return render_template('react_json.html')
+
+
+@app.route("/react/react_json.js", methods=['GET'])
+def get_json_react():
+    return open("static/react_json.js", "r").read()
 
 
 @app.route("/get_json")

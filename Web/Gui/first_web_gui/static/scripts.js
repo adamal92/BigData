@@ -1,21 +1,21 @@
 // Custom js
-console.log("fuck");
+console.log("script");
 
-try{
-  // Get user with id 2
-  fetch('https://jsonplaceholder.typicode.com/users/2')
-    .then(response => response.json())
-    .then(data => console.log(data))
+// try{
+//   // Get user with id 2
+//   fetch('https://jsonplaceholder.typicode.com/users/2')
+//     .then(response => response.json())
+//     .then(data => console.log(data))
 
-  document.addEventListener('DOMContentLoaded', function() {
-      var url = 'http://127.0.0.1:5001/GUI-is-still-open';
-      fetch(url, { mode: 'no-cors'});
-      setInterval(function(){ fetch(url, { mode: 'no-cors'});}, 5000)();
-  });
+//   document.addEventListener('DOMContentLoaded', function() {
+//       var url = 'http://127.0.0.1:5001/GUI-is-still-open';
+//       fetch(url, { mode: 'no-cors'});
+//       setInterval(function(){ fetch(url, { mode: 'no-cors'});}, 5000)();
+//   });
 
-}catch(e){
-  console.log(e);
-}
+// }catch(e){
+//   console.log(e);
+// }
 
 
 /*try{
