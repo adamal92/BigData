@@ -46,9 +46,9 @@ def react():
     return render_template('react_app.html')
 
 
-@app.route("/react_app.js", methods=['GET'])
+@app.route("/react_app.jsx", methods=['GET'])
 def get_like():
-    return open("static/react_app.js", "r").read()
+    return open("static/react_app.jsx", "r").read()
 
 
 @app.route("/react/json", methods=['GET'])
@@ -81,6 +81,11 @@ def get_json():
     except ConnectionError as e:
         logging.error(e)
         return render_template('Error.html')
+
+
+@app.route("/chart", methods=['GET'])
+def chart():
+    return render_template("chart.html")
 
 
 # TODO: get data from db (sqlite/elastic) & visualise it at client side (js/kibana)
