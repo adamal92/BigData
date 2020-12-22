@@ -8,7 +8,7 @@ from requests import Response
 from NoSQL.ElasticSearch.elasticsearch_handler import Elasticsearch_Handler
 from testsAndOthers.data_types_and_structures import DataTypesHandler
 
-app = Flask(__name__)
+app: Flask = Flask(__name__)
 
 # Feed it the flask app instance
 ui = FlaskUI(app)                 # feed the parameters
@@ -35,6 +35,21 @@ def start_crawler():
     return render_template('crawler.html')
 
 
+@app.route("/crawl", methods=['GET'])
+def get_crawler_html():
+    return render_template('crawler.html')
+
+
+@app.route("/react", methods=['GET'])
+def react():
+    return render_template('react_app.html')
+
+
+@app.route("/react_app.js", methods=['GET'])
+def get_like():
+    return open("static/react_app.js", "r").read()
+
+
 @app.route("/get_json")
 def get_json():
     # return "It works!"
@@ -48,9 +63,12 @@ def get_json():
         # names_list: list = DataTypesHandler.dict_to_matrix(dictionary=json_dict)
         # logging.warning(names_list)
         # return {"name": "ok"}  # TODO: return the json from elastic
-        return json_dict
+        # return "<p><br />"+str(json_dict)+"</p>"
+        html = "<p><br />"+str(json_dict)+r'</p> <a href="\" class="button">Go back</a>'
+        return html  # string, dict, tuple, Response instance, or WSGI callable
 
-    except ConnectionError:
+    except ConnectionError as e:
+        logging.error(e)
         return render_template('Error.html')
 
 
@@ -58,4 +76,7 @@ def get_json():
 if __name__ == '__main__':
     logging.getLogger('flaskwebgui').setLevel(logging.ERROR)
     logging.getLogger('BaseHTTPRequestHandler').setLevel(logging.ERROR)
+    logging.getLogger('matplotlib').setLevel(logging.ERROR)
+    logging.getLogger('py4j').setLevel(logging.ERROR)
+
     ui.run()                           # call the 'run' method

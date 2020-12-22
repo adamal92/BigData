@@ -1,3 +1,17 @@
+const url = 'http://127.0.0.1:5000/get_json';
+
+const func = async () => {
+  const response = await fetch(url)
+  .then(response => response.text())
+  .then(contents => console.log(contents))
+  .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"));
+
+  // const data = await response.text;
+
+  // console.log(data);
+}
+
+// func();
 console.log("ok crawler");
 /*
 try{
@@ -31,10 +45,12 @@ fetch(url, {mode: 'no-cors', method: 'GET', headers: headers}) // https://cors-a
 .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
 // TODO: get json from server
 */
-fetch("http://localhost:5000/get_json")
-.then(response => response.text())
-.then(contents => console.log(contents))
-.catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
+// fetch("http://localhost:5000/get_json")
+// .then(response => response.text())
+// .then(contents => console.log(contents))
+// .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
+
+
 
 /*
 try{
