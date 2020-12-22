@@ -1,14 +1,18 @@
 # WARNING: before running this script make sure that Spark core is installed on your machine
 
 # imports
+import logging
+
+from py4j.protocol import Py4JJavaError
 from pyspark import SparkContext, RDD
 from typing import Any, Union
 
 from pyspark.python.pyspark.shell import spark
-from pyspark.sql import SparkSession
+from pyspark.sql import SparkSession, DataFrame
 
 
 # global
+from Hadoop.hdfs import HDFS_handler
 
 
 class Spark_handler:
@@ -77,3 +81,32 @@ class Spark_handler:
             print(row)
         sc.stop()
         return rdd_elements
+
+    @staticmethod
+    def pass_to_spark(process_fn, file_path: str) -> dict:
+        """
+        Passes a given file to spark and processes it with a given function
+        :param process_fn :type function(data_frame: DataFrame) -> dict: the function that processes the given file
+        :param file_path :type str: the path of the file that should be processed
+        :return :type dict:
+        """
+        try:
+            sc: SparkContext = Spark_handler.spark_context_setup(log_level="ERROR")
+
+            df: DataFrame = spark.read.text(file_path)  # core-site.xml
+            # df.show()
+
+            count_names: dict = process_fn(data_frame=df)
+            sc.stop()
+            return count_names
+
+        except Py4JJavaError as e:
+            logging.debug(type(e.java_exception))
+            if "java.net.ConnectException" in e.java_exception.__str__():
+                logging.error("HDFS cluster is down")
+            else:
+                HDFS_handler.stop()
+                raise
+        except:
+            HDFS_handler.stop()
+            raise

@@ -82,11 +82,11 @@ class Elasticsearch_Handler:
         """
         Execute an ElasticSearch command.
         Call a given function with ElasticSearch url as its' argument & print the resulted json file (of the response)
-        :param print_form:
+        :param print_form :type int, one of the DataTypesHandler.PRINT constants:
         :param additional_args :type bool: True if additional arguments are passed to the function as *args or **kwargs
         :param print_recursively :type bool: determines how the json is printed to the console
-        :param fn: a function that gets a url string and returns a requests.Response object containing a json file
-        :param url: the url that gets passed to the given function
+        :param fn :type function: a function that gets a url string and returns a requests.Response object containing a json file
+        :param url :type str: the url that gets passed to the given function
         :param args:
         :param kwargs:
         :return :type requests.Response: The received HTTP response
@@ -119,7 +119,7 @@ class Elasticsearch_Handler:
                                              *args, **kwargs) -> requests.Response:
         """
         Retrieve an SQLite table from database and create a copy of it in elastic search using json format
-        :param url: the url that gets passed to the given function
+        :param url :type str: the url that gets passed to the given function
         :param tablename :type str: name of desired sqlite table
         :param db_path :type str: location of the database in memory, path of the database (.db) file
         :param filters :type str: additional sql commands
@@ -158,3 +158,39 @@ class Elasticsearch_Handler:
         Elasticsearch_Handler.exec(fn=lambda url: requests.get(url), print_recursively=True,
                                    url=url, print_form=print_form)
         return resp
+
+    @staticmethod
+    def send_request(fn, max_tries: int, url: str=DEFAULT_URL, print_recursively: bool=False,
+             additional_args: bool=False, print_form: int=DataTypesHandler.PRINT_ARROWS,
+                      *args, **kwargs) -> Response:
+        """
+        Execute an ElasticSearch command (an http request).
+        Call a given function with ElasticSearch url as its' argument & print the resulted json file (of the response),
+        using the Elasticsearch_Handler.exec function
+        :param max_tries :type int: max amount of requests that would be sent before raising a ConnectionError
+        :param print_form :type int, one of the DataTypesHandler.PRINT constants:
+        :param additional_args :type bool: True if additional arguments are passed to the function as *args or **kwargs
+        :param print_recursively :type bool: determines how the json is printed to the console
+        :param fn :type function: a function that gets a url string and returns a requests.Response object containing
+        a json file
+        :param url :type str: the url that gets passed to the given function
+        :param args:
+        :param kwargs:
+        :return :type requests.Response: The received HTTP response
+        """
+
+        for counter in range(0, max_tries):
+            try:
+                return Elasticsearch_Handler.exec(fn=fn, url=url, print_recursively=print_recursively,
+                                                  additional_args=additional_args, print_form=print_form)
+            except:
+                print("Connection refused by the server..")
+                print("Let me sleep for 5 seconds")
+                print("ZZzzzz...")
+                time.sleep(5)
+                print("Was a nice sleep, now let me continue...")
+                continue
+
+        # if counter >= max_tries
+        raise ConnectionError("Max tries reached, can't connect to Elastic")
+

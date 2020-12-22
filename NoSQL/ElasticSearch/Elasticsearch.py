@@ -103,12 +103,190 @@ Elasticsearch_Handler.sqlite_upload_table_to_elasticsearch(
 )
 
 print("-----------------------------------------")
+# json = {
+#     "mappings": {
+#         "products": {
+#             "properties": {
+#                 "name": {
+#                     "type": "string"
+#                 },
+#                 "price": {
+#                     "type": "double"
+#                 },
+#                 "description": {
+#                     "type": "string"
+#                 },
+#                 "status": {
+#                     "type": "string"
+#                 },
+#                 "quantity": {
+#                     "type": "integer"
+#                 },
+#                 "categories": {
+#                     "type": "nested",
+#                     "properties": {
+#                         "name": {
+#                             "type": "string"
+#                         }
+#                     }
+#                 },
+#                 "tags": {
+#                     "type": "string"
+#                 }
+#             }
+#         }
+#     }
+# }
+
+# json = {
+#   "mappings": {
+#     "_doc": {
+#       "properties": {
+#         "<class 'int'> row 0 item 0": {
+#           "type": "long"
+#         },
+#         "<class 'int'> row 0 item 2": {
+#           "type": "long"
+#         },
+#         "<class 'int'> row 1 item 0": {
+#           "type": "long"
+#         },
+#         "<class 'int'> row 1 item 2": {
+#           "type": "long"
+#         },
+#         "<class 'int'> row 2 item 0": {
+#           "type": "long"
+#         },
+#         "<class 'int'> row 2 item 2": {
+#           "type": "long"
+#         },
+#         "<class 'int'> row 3 item 0": {
+#           "type": "long"
+#         },
+#         "<class 'str'> row 0 item 1": {
+#           "type": "text",
+#           "fields": {
+#             "keyword": {
+#               "type": "keyword",
+#               "ignore_above": 256
+#             }
+#           }
+#         },
+#         "<class 'str'> row 0 item 3": {
+#           "type": "date"
+#         },
+#         "<class 'str'> row 1 item 1": {
+#           "type": "text",
+#           "fields": {
+#             "keyword": {
+#               "type": "keyword",
+#               "ignore_above": 256
+#             }
+#           }
+#         },
+#         "<class 'str'> row 1 item 3": {
+#           "type": "date"
+#         },
+#         "<class 'str'> row 2 item 1": {
+#           "type": "text",
+#           "fields": {
+#             "keyword": {
+#               "type": "keyword",
+#               "ignore_above": 256
+#             }
+#           }
+#         },
+#         "<class 'str'> row 2 item 3": {
+#           "type": "date"
+#         },
+#         "<class 'str'> row 3 item 1": {
+#           "type": "text",
+#           "fields": {
+#             "keyword": {
+#               "type": "keyword",
+#               "ignore_above": 256
+#             }
+#           }
+#         },
+#         "int row 0 item 0": {
+#           "type": "long"
+#         },
+#         "int row 0 item 2": {
+#           "type": "long"
+#         },
+#         "int row 1 item 0": {
+#           "type": "long"
+#         },
+#         "int row 1 item 2": {
+#           "type": "long"
+#         },
+#         "int row 2 item 0": {
+#           "type": "long"
+#         },
+#         "int row 2 item 2": {
+#           "type": "long"
+#         },
+#         "int row 3 item 0": {
+#           "type": "long"
+#         },
+#         "str row 0 item 1": {
+#           "type": "text",
+#           "fields": {
+#             "keyword": {
+#               "type": "keyword",
+#               "ignore_above": 256
+#             }
+#           }
+#         },
+#         "str row 0 item 3": {
+#           "type": "date"
+#         },
+#         "str row 1 item 1": {
+#           "type": "text",
+#           "fields": {
+#             "keyword": {
+#               "type": "keyword",
+#               "ignore_above": 256
+#             }
+#           }
+#         },
+#         "str row 1 item 3": {
+#           "type": "date"
+#         },
+#         "str row 2 item 1": {
+#           "type": "text",
+#           "fields": {
+#             "keyword": {
+#               "type": "keyword",
+#               "ignore_above": 256
+#             }
+#           }
+#         },
+#         "str row 2 item 3": {
+#           "type": "date"
+#         },
+#         "str row 3 item 1": {
+#           "type": "text",
+#           "fields": {
+#             "keyword": {
+#               "type": "keyword",
+#               "ignore_above": 256
+#             }
+#           }
+#         }
+#       }
+#     }
+#   }
+# }
+
 json = {
-    "mappings": {
-        "products": {
+  "mappings": {
+    "_doc": {
+       "products": {
             "properties": {
                 "name": {
-                    "type": "string"
+                    "type": "string",
+                    "fields": {}
                 },
                 "price": {
                     "type": "double"
@@ -136,6 +314,7 @@ json = {
             }
         }
     }
+  }
 }
 Elasticsearch_Handler.exec(fn=lambda url: requests.put(url=url+"utubecommerce/", json=json), print_recursively=True,
                            print_form=DataTypesHandler.PRINT_DICT)

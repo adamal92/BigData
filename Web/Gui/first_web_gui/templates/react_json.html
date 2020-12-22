@@ -11,17 +11,26 @@
 <body>
 
 <!---->
-<h1>Home</h1>
+<h1>React</h1>
 <a href="\" class="button">Go back</a>
-<a href="\get_json" class="button">Get Json</a>
-<a href="\react" class="button">React</a>
 
 
 <script src="../static/jquery-3.4.1.min.js"></script>
 <script src="../static/metro.min.js"></script>
 <script src="../static/scripts.js"></script>
-<script src="../static/home.js"></script>
 
+
+<!-- React -->
+<div id="get_json_button_container"></div>
+ <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Load our React component. -->
+  <script src="react_json.js"></script>
+
+<!---->
 
 </body>
 </html>

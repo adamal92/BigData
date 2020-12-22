@@ -5,15 +5,9 @@ import os
 from io import TextIOWrapper
 import subprocess, sys, time
 
-import matplotlib
-import matplotlib.pyplot
-import pandas
-
 import pyspark
 import requests
-from py4j.protocol import Py4JJavaError
-from pyspark import SparkContext, RDD
-from pyspark.python.pyspark.shell import spark
+from pyspark import SparkContext
 from pyspark.rdd import PipelinedRDD
 from pyspark.sql import DataFrame
 from requests import Response
@@ -24,6 +18,9 @@ from Spark.Spark_handler_class import Spark_handler
 from Hadoop.hdfs import HDFS_handler
 from testsAndOthers.data_types_and_structures import DataTypesHandler
 
+DIRS_TILL_ROOT: int = 2
+DELIMETER = "/"  # "\\"
+
 
 def get_file(save_as: str="quotes.jl") -> TextIOWrapper:
     """
@@ -31,14 +28,14 @@ def get_file(save_as: str="quotes.jl") -> TextIOWrapper:
     :return:
     """
     scrapy_crawler_path: str = ""
-    for directory in os.path.dirname(__file__).split("/")[:-2]:
+    for directory in os.path.dirname(__file__).split(DELIMETER)[:-DIRS_TILL_ROOT]:
         scrapy_crawler_path += f"{directory}\\"
     scrapy_crawler_path += r"Web\scrapy_web_crawler.py"
 
     # O for overriding, o for appending to file
     os.system(f'scrapy runspider "{scrapy_crawler_path}" -O {save_as} -L ERROR')
 
-    with open("quotes.jl") as file: return file
+    with open(save_as) as file: return file
 
 
 def save_file_to_hdfs(file_path: str):
@@ -110,34 +107,6 @@ def process_data(data_frame: DataFrame) -> dict:
     return dictionary_vals
 
 
-def pass_to_spark(file_path: str) -> dict:
-    """
-
-    :param file_path:
-    :return:
-    """
-    try:
-        sc: SparkContext = Spark_handler.spark_context_setup(log_level="ERROR")
-
-        df: DataFrame = spark.read.text(f"{HDFS_handler.DEFAULT_CLUSTER_PATH}user/hduser/quotes.jl")  # core-site.xml
-        # df.show()
-
-        count_names: dict = process_data(data_frame=df)
-        sc.stop()
-        return count_names
-
-    except Py4JJavaError as e:
-        logging.debug(type(e.java_exception))
-        if "java.net.ConnectException" in e.java_exception.__str__():
-            logging.error("HDFS cluster is down")
-        else:
-            HDFS_handler.stop()
-            raise
-    except:
-        HDFS_handler.stop()
-        raise
-
-
 def upload_json_to_elastic(json: dict):
     """
 
@@ -145,7 +114,7 @@ def upload_json_to_elastic(json: dict):
     :return:
     """
     elastic_path: str = ""
-    for directory in os.path.dirname(__file__).split("/")[:-2]:
+    for directory in os.path.dirname(__file__).split(DELIMETER)[:-DIRS_TILL_ROOT]:
         elastic_path += f"{directory}\\"
     elastic_path += "NoSQL\\ElasticSearch"
     # TODO: close elastic
@@ -155,9 +124,9 @@ def upload_json_to_elastic(json: dict):
 
     time.sleep(15)  # minimum time that elasticsearch takes to start: 13
 
-    Elasticsearch_Handler.exec(fn=lambda url: requests.put(url=url + f"school/_doc/quotes", json=json),
-                               print_recursively=True,
-                               print_form=DataTypesHandler.PRINT_DICT)
+    Elasticsearch_Handler.send_request(fn=lambda url: requests.put(url=url + f"school/_doc/quotes", json=json),
+                                       print_recursively=True, max_tries=5,
+                                       print_form=DataTypesHandler.PRINT_DICT)
 
 
 def from_elastic_to_sqlite():
@@ -166,8 +135,9 @@ def from_elastic_to_sqlite():
     :return:
     """
     # get table from elastic
-    response: Response = Elasticsearch_Handler.exec(fn=lambda url: requests.get(url + "school/_doc/quotes"),
-                                                    print_recursively=True, print_form=DataTypesHandler.PRINT_DICT)
+    response: Response = Elasticsearch_Handler.send_request(fn=lambda url: requests.get(url + "school/_doc/quotes"),
+                                                            print_recursively=True,
+                                                            print_form=DataTypesHandler.PRINT_DICT, max_tries=5)
     logging.warning(response.json()["_source"])
     json_dict: dict = response.json()["_source"]
     names_list: list = DataTypesHandler.dict_to_matrix(dictionary=json_dict)
@@ -194,8 +164,10 @@ def visualize_json():
     :return:
     """
     # get data from elastic
-    response: Response = Elasticsearch_Handler.exec(fn=lambda url: requests.get(url + "school/_doc/quotes"),
-                                                    print_recursively=True, print_form=DataTypesHandler.PRINT_DICT)
+    response: Response = Elasticsearch_Handler\
+        .send_request(fn=lambda url: requests.get(url + "school/_doc/quotes"),
+                      print_recursively=True, print_form=DataTypesHandler.PRINT_DICT, max_tries=5)
+
     logging.warning(response.json()["_source"])
     pass_dict: dict = response.json()["_source"]
 
@@ -224,7 +196,7 @@ def main():
     logging.basicConfig(level=logging.WARNING)
 
     # scrapy
-    file: TextIOWrapper = get_file(save_as=f'"{os.getcwd()}"\\quotes.jl')
+    file: TextIOWrapper = get_file()  # save_as=f'"{os.getcwd()}"\\quotes.jl'
     file_path: str = f"{os.getcwd()}\\{file.name}"
     # file_path: str = f"{os.getcwd()}\\quotes.jl"
 
@@ -233,7 +205,9 @@ def main():
     save_file_to_hdfs(file_path=file_path)
     time.sleep(2)
     # os.system("hdfs dfsadmin -safemode leave")  # safe mode off
-    json_count_names: dict = pass_to_spark(file_path=file_path)
+    json_count_names: dict = Spark_handler.pass_to_spark(
+        file_path=f"{HDFS_handler.DEFAULT_CLUSTER_PATH}user/hduser/quotes.jl", process_fn=process_data
+    )
     HDFS_handler.stop()
 
     # elastic
@@ -244,7 +218,7 @@ def main():
     # matplotlib
     visualize_json()
 
-    print("OK Total Time: %s" % (time.time() - start))
+    print("OK Total Time: %s seconds" % (time.time() - start))
 
 
 if __name__ == '__main__':
