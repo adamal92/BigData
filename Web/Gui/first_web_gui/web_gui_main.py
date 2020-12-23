@@ -88,6 +88,27 @@ def chart():
     return render_template("chart.html")
 
 
+@app.route("/visualize_json", methods=['GET'])
+def visualize_json():
+    return render_template("visualize_json.html")
+
+
+@app.route("/get_json_visualization", methods=['GET'])
+def get_json_visualization():
+    # get json from elastic
+    try:
+        response: Response = Elasticsearch_Handler.send_request(fn=lambda url: requests.get(url + "school/_doc/quotes"),
+                                                                print_recursively=True,
+                                                                print_form=DataTypesHandler.PRINT_DICT, max_tries=5)
+        logging.warning(response.json()["_source"])
+        json_dict: dict = response.json()["_source"]
+        return json_dict  # string, dict, tuple, Response instance, or WSGI callable
+
+    except ConnectionError as e:
+        logging.error(e)
+        return render_template('Error.html')
+
+
 # TODO: get data from db (sqlite/elastic) & visualise it at client side (js/kibana)
 if __name__ == '__main__':
     logging.getLogger('flaskwebgui').setLevel(logging.ERROR)
