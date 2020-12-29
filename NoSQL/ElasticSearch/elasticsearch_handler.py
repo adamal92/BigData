@@ -186,7 +186,7 @@ class Elasticsearch_Handler:
             except:
                 print("Connection refused by the server..")
                 print("Let me sleep for 5 seconds")
-                print("ZZzzzz...")
+                print(f"Attempt no. {counter+1}       ZZzzzz...")
                 time.sleep(5)
                 print("Was a nice sleep, now let me continue...")
                 continue

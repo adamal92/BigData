@@ -99,14 +99,15 @@ def get_json_visualization():
     try:
         response: Response = Elasticsearch_Handler.send_request(fn=lambda url: requests.get(url + "school/_doc/quotes"),
                                                                 print_recursively=True,
-                                                                print_form=DataTypesHandler.PRINT_DICT, max_tries=5)
+                                                                print_form=DataTypesHandler.PRINT_DICT, max_tries=3)
         logging.warning(response.json()["_source"])
         json_dict: dict = response.json()["_source"]
         return json_dict  # string, dict, tuple, Response instance, or WSGI callable
 
     except ConnectionError as e:
         logging.error(e)
-        return render_template('Error.html')
+        raise e
+        # return render_template('Error.html')
 
 
 # TODO: get data from db (sqlite/elastic) & visualise it at client side (js/kibana)
