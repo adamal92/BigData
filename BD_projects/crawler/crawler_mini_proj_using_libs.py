@@ -4,6 +4,7 @@ import os
 
 from io import TextIOWrapper
 import subprocess, sys, time
+from typing import List, Any
 
 import pyspark
 import requests
@@ -69,7 +70,7 @@ def process_data(data_frame: DataFrame) -> dict:
     temp_dict = {}
     temp_list = []
     #     temp_dict: Accumulator = sc.accumulator(dict())
-    quotes_list = quotes.collect()
+    quotes_list: List[Any] = quotes.collect()
 
     # create values list (clean data)
     for row in quotes_list:
