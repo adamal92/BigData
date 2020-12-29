@@ -65,20 +65,35 @@ class BarChart extends React.Component {
   }
 
   componentDidUpdate() {
-    this.myChart.data.labels = this.props.data.map(d => d.label);
-    this.myChart.data.datasets[0].data = this.props.data.map(d => d.value);
+    // this.myChart.data.labels = this.props.data.map(d => d.label);
+    // this.myChart.data.datasets[0].data = this.props.data.map(d => d.value);
     this.myChart.update();
 
     // this.myChart.data.labels = this.props.data;
     // this.myChart.data.datasets[0].data = this.props.data;
     // this.myChart.update();
 
-    // this.myChart.data.labels = this.props.data;
+    // this.myChart.data.labels = "this.props.data";
     // this.myChart.data.datasets[0].data = this.props.data;
     // this.myChart.update();
   }
 
   componentDidMount() {
+    // console.log("data: "+this.props.data);
+    // console.log(this.props.title);
+    // console.log(this.props.data);
+    // console.log(this.props.color);
+    var retrieved_data = [];
+    
+    for (const [key, value] of Object.entries(this.props.data)) {
+      console.log(key, value);  // print the data to the console
+      retrieved_data.push(value);
+    }
+
+    for(const val of retrieved_data){
+      console.log(val);
+    }
+
     this.myChart = new Chart(this.canvasRef.current, {
       type: 'bar',
       options: {
@@ -104,12 +119,12 @@ class BarChart extends React.Component {
       // }
 
       data: {
-        labels: this.props.data  //-----------------------------------------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Error
-        // datasets: [{
-        //   label: this.props.title,
-        //   data: this.props.data,
-        //   backgroundColor: this.props.color
-        // }]
+        labels: retrieved_data,  //-----------------------------------------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Error
+        datasets: [{
+          label: this.props.title,
+          data: retrieved_data,
+          backgroundColor: this.props.color
+        }]
       }
 
     // data: {
