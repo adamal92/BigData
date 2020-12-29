@@ -97,6 +97,7 @@ def visualize_json():
 def get_json_visualization():
     # get json from elastic
     try:
+        logging.debug("get_json_visualization()")
         response: Response = Elasticsearch_Handler.send_request(fn=lambda url: requests.get(url + "school/_doc/quotes"),
                                                                 print_recursively=True,
                                                                 print_form=DataTypesHandler.PRINT_DICT, max_tries=3)

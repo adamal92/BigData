@@ -1,22 +1,22 @@
 Chart.defaults.global.defaultFontFamily = "Roboto, sans-serif";
 
-async function mineJson(get_json){
-  return get_json().then( 
-    async function(response){
-      var json_promise = response.json();
+// async function mineJson(get_json){
+//   return get_json().then( 
+//     async function(response){
+//       var json_promise = response.json();
 
-      // get mined json from within the json promise
-      var mined_json = null;
-      async function mineFunction(){
-        mined_json = await json_promise.then(data => mined_json = data);
-      }
-      await mineFunction();
+//       // get mined json from within the json promise
+//       var mined_json = null;
+//       async function mineFunction(){
+//         mined_json = await json_promise.then(data => mined_json = data);
+//       }
+//       await mineFunction();
 
-      console.log(mined_json);
-      return mined_json;        
-    }
-  )    
-}
+//       console.log(mined_json);
+//       return mined_json;        
+//     }
+//   )    
+// }
 
 // Data generation
 async function getData() {
@@ -88,6 +88,7 @@ class BarChart extends React.Component {
     for (const [key, value] of Object.entries(this.props.data)) {
       console.log(key, value);  // print the data to the console
       retrieved_data.push(value);
+      retrieved_data.push(key);
     }
 
     for(const val of retrieved_data){
