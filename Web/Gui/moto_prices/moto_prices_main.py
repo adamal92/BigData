@@ -121,5 +121,6 @@ if __name__ == '__main__':
     logging.getLogger('BaseHTTPRequestHandler').setLevel(logging.ERROR)
     logging.getLogger('matplotlib').setLevel(logging.ERROR)
     logging.getLogger('py4j').setLevel(logging.ERROR)
+    logging.getLogger('my_log').setLevel(logging.DEBUG)
 
     ui.run()                           # call the 'run' method

@@ -225,7 +225,7 @@ def main():
     matplotlib_logger = logging.getLogger('matplotlib')  # matplotlib logs
     matplotlib_logger.setLevel(logging.ERROR)
 
-    logging.basicConfig(level=logging.WARNING)
+    # logging.basicConfig(level=logging.WARNING)
 
     # scrapy
     file: TextIOWrapper = get_file()
