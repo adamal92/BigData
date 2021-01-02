@@ -1,5 +1,3 @@
-from typing import Dict, List, Any
-
 import scrapy
 
 
@@ -8,6 +6,24 @@ class MotorSpider(scrapy.Spider):
     start_urls = [
         'https://centro.co.il/en/bike/yamaha/',
     ]
+
+    def parse(self, response, **kwargs):
+        print(response.css('li.mdl-list__item'))
+
+        for motorcycle in response.css('li.mdl-list__item'):
+            print(motorcycle.xpath('div/a/strong/text()').get())
+            print(motorcycle.xpath('a/p/text()').get())
+
+            yield {
+                "model": motorcycle.xpath('div/a/strong/text()').get(),
+                "price": motorcycle.xpath('a/p/text()').get()
+            }
+
+        next_page = response.css('div.next a::attr("href")').get()
+        if next_page is not None:
+            yield response.follow(next_page, self.parse)
+
+
 
     # def parse(self, response, **kwargs):
     #     # yield {'price': response.css('p.price::text').extract()}  # ::text
@@ -57,17 +73,7 @@ class MotorSpider(scrapy.Spider):
     #
     #      yield motorcycles
 
-    def parse(self, response, **kwargs):
-        print(response.css('li.mdl-list__item'))
 
-        for motorcycle in response.css('li.mdl-list__item'):
-            print(motorcycle.xpath('div/a/strong/text()').get())
-            print(motorcycle.xpath('a/p/text()').get())
-
-            yield {
-                "model": motorcycle.xpath('div/a/strong/text()').get(),
-                "price": motorcycle.xpath('a/p/text()').get()
-            }
         # for name in response.css('a.name'):
         #     print(name.xpath('strong/text()').get())
         #     moto_name: str = name.xpath('strong/text()').get()

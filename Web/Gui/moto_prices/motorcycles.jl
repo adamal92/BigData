@@ -8,3 +8,11 @@
 {"model": "2016' Yamaha \u043c\u0442 07 \u0442\u0440\u0435\u0439\u0441\u0435\u0440", "price": "\u20aa35,000"}
 {"model": "2007' Yamaha \u05d9\u05de\u05d0\u05d4\u05d4 \u05e4\u05d9\u05d9\u05d6\u05e8 600", "price": "\u20aa19,000"}
 {"model": "2016' Yamaha \u05d9\u05de\u05d0\u05d4\u05d4 MT 07", "price": "\u20aa45,000"}
+{"model": "2016' Yamaha MT-03", "price": "\u20aa30,500"}
+{"model": "1998' Yamaha Dragstar", "price": "\u20aa21,000"}
+{"model": "2016' Yamaha", "price": "\u20aa27,000"}
+{"model": "2000' Yamaha XT", "price": "\u20aa9,000"}
+{"model": "2008' Yamaha XT", "price": "\u20aa7,500"}
+{"model": "2016' Yamaha WR", "price": "\u20aa55,000"}
+{"model": "2006' Yamaha R6", "price": "\u20aa26,000"}
+{"model": "2016' Yamaha WR", "price": "\u20aa39,500"}

@@ -63,8 +63,8 @@
           <entry key="html" value="196" />
           <entry key="js" value="189" />
           <entry key="md" value="58" />
-          <entry key="py" value="26414" />
-          <entry key="txt" value="724" />
+          <entry key="py" value="26423" />
+          <entry key="txt" value="730" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -72,8 +72,8 @@
           <entry key="HTML" value="196" />
           <entry key="JavaScript" value="189" />
           <entry key="Markdown" value="58" />
-          <entry key="PLAIN_TEXT" value="802" />
-          <entry key="Python" value="26439" />
+          <entry key="PLAIN_TEXT" value="808" />
+          <entry key="Python" value="26448" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -122,11 +122,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="68" column="61" selection-start-line="68" selection-start-column="61" selection-end-line="68" selection-end-column="61" />
+            <state>
               <folding>
-                <element signature="e#0#34#0" expanded="true" />
-                <marker date="1609607498413" expanded="true" signature="222:233" ph="..." />
+                <marker date="1609607905010" expanded="true" signature="790:801" ph="..." />
               </folding>
             </state>
           </provider>
@@ -135,8 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/motorcycles.jl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="172">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -144,8 +142,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/scrapy_web_crawler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-end-line="11" />
+            <state relative-caret-position="486">
+              <caret line="18" column="56" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="18" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -721,7 +719,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609606200636</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="spider works">
+      <created>1609607582732</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1609607582732</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -742,7 +747,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.2516269" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.37635574" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.20824295" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -765,7 +770,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="web scraper works" />
     <MESSAGE value="crawler project" />
     <MESSAGE value="pass quotes to spark" />
     <MESSAGE value="filtering works" />
@@ -790,7 +794,8 @@
     <MESSAGE value="minor changes to readme" />
     <MESSAGE value="spider init" />
     <MESSAGE value="spider got price &amp; name" />
-    <option name="LAST_COMMIT_MESSAGE" value="spider got price &amp; name" />
+    <MESSAGE value="spider works" />
+    <option name="LAST_COMMIT_MESSAGE" value="spider works" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1131,27 +1136,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/motorcycles.jl">
+    <entry file="file://$PROJECT_DIR$/Web/scrapy_web_crawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="486">
+          <caret line="18" column="56" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="18" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scrapy_web_crawler.py">
+    <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/motorcycles.jl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-end-line="11" />
+        <state relative-caret-position="172">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="68" column="61" selection-start-line="68" selection-start-column="61" selection-end-line="68" selection-end-column="61" />
+        <state>
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
-            <marker date="1609607498413" expanded="true" signature="222:233" ph="..." />
+            <marker date="1609607905010" expanded="true" signature="790:801" ph="..." />
           </folding>
         </state>
       </provider>
