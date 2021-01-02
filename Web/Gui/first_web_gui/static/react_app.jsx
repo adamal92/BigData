@@ -1,4 +1,6 @@
+// Code from: https://www.createwithdata.com/react-chartjs-dashboard/
 'use strict';
+
 
 // const e = React.createElement;
 

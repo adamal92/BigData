@@ -17,7 +17,7 @@ Chart.defaults.global.defaultFontFamily = "Roboto, sans-serif";
 //     }
 //   )    
 // }
-
+/*
 // Data generation
 async function getData() {
   const url = 'http://127.0.0.1:5000/get_json_visualization';
@@ -52,10 +52,10 @@ async function getData() {
       });
     }
   );
-  */
+  */ /*
   console.log(data);
   return data;
-}
+}*/
 
 // BarChart
 class BarChart extends React.Component {
@@ -65,6 +65,7 @@ class BarChart extends React.Component {
   }
 
   componentDidUpdate() {
+    //       await new Promise(r => setTimeout(r, 2000));
     // this.myChart.data.labels = this.props.data.map(d => d.label);
     // this.myChart.data.datasets[0].data = this.props.data.map(d => d.value);
     this.myChart.update();
@@ -155,7 +156,7 @@ class App extends React.Component {
 
   getJson = () => {
     fetch(this.Url, {})
-      .then(data => data.json())
+      .then(data => data.json())  // 
       .then(data => {
         console.log(data);
         this.setState({ data: data, isLoading: false });
