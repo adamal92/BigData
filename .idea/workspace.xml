@@ -2,612 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08479cfc-b3b1-4f27-b904-0ba7322af693" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/crawler_mini_proj_using_libs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/debug.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/chart.js/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/chart.js/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/chart.js/bower.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/chart.js/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/chart.js/dist/Chart.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/chart.js/dist/Chart.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/chart.js/dist/Chart.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/chart.js/dist/Chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/chart.js/dist/Chart.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/chart.js/dist/Chart.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/chart.js/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/chartjs-color-string/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/chartjs-color-string/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/chartjs-color-string/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/chartjs-color-string/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/chartjs-color-string/color-string.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/chartjs-color-string/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/chartjs-color-string/test/basic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/chartjs-color/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/chartjs-color/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/chartjs-color/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/chartjs-color/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/chartjs-color/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/color-convert/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/color-convert/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/color-convert/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/color-convert/conversions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/color-convert/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/color-convert/node_modules/color-name/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/color-convert/node_modules/color-name/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/color-convert/node_modules/color-name/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/color-convert/node_modules/color-name/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/color-convert/node_modules/color-name/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/color-convert/node_modules/color-name/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/color-convert/node_modules/color-name/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/color-convert/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/color-convert/route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/color-name/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/color-name/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/color-name/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/color-name/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/af.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ar-dz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ar-kw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ar-ly.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ar-ma.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ar-sa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ar-tn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/az.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/be.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/bg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/bm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/bn-bd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/bn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/bo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/br.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/bs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/cs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/cv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/cy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/da.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/de-at.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/de-ch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/dv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/el.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/en-au.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/en-ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/en-gb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/en-ie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/en-il.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/en-in.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/en-nz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/en-sg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/eo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/es-do.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/es-mx.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/es-us.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/et.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/eu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/fa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/fi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/fil.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/fo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/fr-ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/fr-ch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/fr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/fy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ga.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/gd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/gl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/gom-deva.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/gom-latn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/gu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/he.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/hi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/hr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/hu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/hy-am.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/id.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/is.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/it-ch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ja.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/jv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ka.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/kk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/km.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/kn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ko.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ku.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ky.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/lb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/lo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/lt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/lv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/me.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/mi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/mk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/mn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/mr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ms-my.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/mt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/my.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/nb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ne.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/nl-be.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/nn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/oc-lnc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/pa-in.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/pl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/pt-br.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/pt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/sd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/se.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/si.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/sk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/sl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/sq.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/sr-cyrl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/sr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ss.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/sv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/sw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ta.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/te.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/tet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/tg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/th.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/tk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/tl-ph.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/tlh.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/tzl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/tzm-latn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/tzm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ug-cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/ur.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/uz-latn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/uz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/vi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/x-pseudo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/yo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/zh-cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/zh-hk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/zh-mo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/locale/zh-tw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/dist/moment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/ender.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/af.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ar-dz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ar-kw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ar-ly.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ar-ma.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ar-sa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ar-tn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/az.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/be.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/bg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/bm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/bn-bd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/bn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/bo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/br.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/bs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/cs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/cv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/cy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/da.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/de-at.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/de-ch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/dv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/el.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/en-au.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/en-ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/en-gb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/en-ie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/en-il.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/en-in.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/en-nz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/en-sg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/eo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/es-do.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/es-mx.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/es-us.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/et.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/eu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/fa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/fi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/fil.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/fo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/fr-ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/fr-ch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/fr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/fy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ga.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/gd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/gl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/gom-deva.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/gom-latn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/gu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/he.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/hi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/hr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/hu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/hy-am.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/id.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/is.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/it-ch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ja.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/jv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ka.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/kk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/km.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/kn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ko.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ku.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ky.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/lb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/lo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/lt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/lv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/me.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/mi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/mk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/mn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/mr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ms-my.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/mt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/my.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/nb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ne.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/nl-be.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/nn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/oc-lnc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/pa-in.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/pl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/pt-br.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/pt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/sd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/se.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/si.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/sk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/sl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/sq.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/sr-cyrl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/sr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ss.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/sv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/sw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ta.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/te.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/tet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/tg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/th.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/tk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/tl-ph.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/tlh.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/tzl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/tzm-latn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/tzm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ug-cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/ur.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/uz-latn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/uz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/vi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/x-pseudo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/yo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/zh-cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/zh-hk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/zh-mo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/locale/zh-tw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/min/locales.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/min/locales.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/min/locales.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/min/moment-with-locales.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/min/moment-with-locales.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/min/moment-with-locales.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/min/moment.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/min/moment.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/moment.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/moment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/package.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/create/check-overflow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/create/date-from-array.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/create/from-anything.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/create/from-array.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/create/from-object.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/create/from-string-and-array.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/create/from-string-and-format.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/create/from-string.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/create/local.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/create/parsing-flags.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/create/utc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/create/valid.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/duration/abs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/duration/add-subtract.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/duration/as.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/duration/bubble.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/duration/clone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/duration/constructor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/duration/create.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/duration/duration.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/duration/get.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/duration/humanize.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/duration/iso-string.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/duration/prototype.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/duration/valid.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/format/format.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/locale/base-config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/locale/calendar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/locale/constructor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/locale/en.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/locale/formats.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/locale/invalid.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/locale/lists.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/locale/locale.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/locale/locales.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/locale/ordinal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/locale/pre-post-format.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/locale/prototype.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/locale/relative.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/locale/set.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/moment/add-subtract.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/moment/calendar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/moment/clone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/moment/compare.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/moment/constructor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/moment/creation-data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/moment/diff.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/moment/format.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/moment/from.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/moment/get-set.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/moment/locale.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/moment/min-max.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/moment/moment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/moment/now.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/moment/prototype.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/moment/start-end-of.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/moment/to-type.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/moment/to.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/moment/valid.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/parse/regex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/parse/token.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/units/aliases.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/units/constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/units/day-of-month.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/units/day-of-week.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/units/day-of-year.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/units/era.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/units/hour.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/units/millisecond.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/units/minute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/units/month.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/units/offset.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/units/priorities.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/units/quarter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/units/second.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/units/timestamp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/units/timezone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/units/units.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/units/week-calendar-utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/units/week-year.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/units/week.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/units/year.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/abs-ceil.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/abs-floor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/abs-round.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/compare-arrays.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/defaults.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/deprecate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/extend.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/has-own-prop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/hooks.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/index-of.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/is-array.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/is-calendar-spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/is-date.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/is-function.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/is-leap-year.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/is-moment-input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/is-number.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/is-object-empty.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/is-object.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/is-string.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/is-undefined.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/keys.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/map.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/mod.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/some.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/to-int.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/lib/utils/zero-fill.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/af.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ar-dz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ar-kw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ar-ly.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ar-ma.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ar-sa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ar-tn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/az.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/be.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/bg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/bm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/bn-bd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/bn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/bo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/br.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/bs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/cs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/cv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/cy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/da.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/de-at.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/de-ch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/dv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/el.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/en-au.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/en-ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/en-gb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/en-ie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/en-il.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/en-in.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/en-nz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/en-sg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/eo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/es-do.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/es-mx.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/es-us.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/et.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/eu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/fa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/fi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/fil.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/fo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/fr-ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/fr-ch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/fr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/fy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ga.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/gd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/gl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/gom-deva.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/gom-latn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/gu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/he.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/hi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/hr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/hu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/hy-am.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/id.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/is.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/it-ch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ja.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/jv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ka.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/kk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/km.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/kn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ko.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ku.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ky.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/lb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/lo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/lt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/lv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/me.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/mi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/mk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/mn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/mr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ms-my.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/mt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/my.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/nb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ne.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/nl-be.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/nn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/oc-lnc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/pa-in.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/pl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/pt-br.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/pt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/sd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/se.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/si.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/sk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/sl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/sq.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/sr-cyrl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/sr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ss.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/sv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/sw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ta.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/te.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/tet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/tg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/th.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/tk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/tl-ph.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/tlh.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/tzl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/tzm-latn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/tzm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ug-cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/ur.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/uz-latn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/uz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/vi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/x-pseudo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/yo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/zh-cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/zh-hk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/zh-mo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/locale/zh-tw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/src/moment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/ts3.1-typings/moment.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/quotes.jl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/static/book.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/static/crawler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/static/home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/static/jquery-3.4.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/static/metro-all.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/static/metro.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/static/react_app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/static/react_app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/static/react_app.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/static/react_json.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/static/scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/static/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/static/visualize_json copy.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/static/visualize_json.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/static/visualize_json.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/static/visualize_json2.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/templates/Error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/templates/chart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/templates/crawler.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/templates/react_app.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/templates/react_json.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/templates/visualize_json.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Gui/first_web_gui/static/react_app.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Gui/first_web_gui/static/react_app.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Gui/first_web_gui/static/visualize_json.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Gui/first_web_gui/static/visualize_json.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/Gui/moto_prices/crawler_mini_proj_using_libs.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/moto_prices/get_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/Gui/moto_prices/quotes.jl" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -643,7 +42,7 @@
           <entry key="jsx" value="2" />
           <entry key="md" value="1" />
           <entry key="ps1" value="3" />
-          <entry key="py" value="216" />
+          <entry key="py" value="220" />
           <entry key="untitled" value="1" />
         </counts>
       </usages-collector>
@@ -656,17 +55,17 @@
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="12" />
           <entry key="PowerShell file" value="2" />
-          <entry key="Python" value="216" />
+          <entry key="Python" value="220" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="25" />
-          <entry key="dummy" value="63" />
+          <entry key="dummy" value="78" />
           <entry key="html" value="196" />
           <entry key="js" value="189" />
           <entry key="md" value="58" />
-          <entry key="py" value="25698" />
+          <entry key="py" value="25826" />
           <entry key="txt" value="696" />
         </counts>
       </usages-collector>
@@ -675,8 +74,8 @@
           <entry key="HTML" value="196" />
           <entry key="JavaScript" value="189" />
           <entry key="Markdown" value="58" />
-          <entry key="PLAIN_TEXT" value="759" />
-          <entry key="Python" value="25723" />
+          <entry key="PLAIN_TEXT" value="774" />
+          <entry key="Python" value="25851" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -698,13 +97,41 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2748">
+            <state relative-caret-position="351">
+              <caret line="34" column="37" lean-forward="true" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/get_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/scrapy_web_crawler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="6" column="46" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -714,9 +141,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -738,9 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/random_proj.py" />
-        <option value="$PROJECT_DIR$/pandas_visualization.py" />
-        <option value="$PROJECT_DIR$/SQLite_database_handler.py" />
         <option value="$PROJECT_DIR$/gui.py" />
         <option value="$PROJECT_DIR$/SQLite.py" />
         <option value="$PROJECT_DIR$/main.py" />
@@ -789,6 +213,9 @@
         <option value="$PROJECT_DIR$/Web/Gui/first_web_gui/web_gui_main.py" />
         <option value="$PROJECT_DIR$/BD_projects/crawler/crawler_mini_proj_using_libs.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider.py" />
+        <option value="$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py" />
+        <option value="$PROJECT_DIR$/BD_projects/moto_prices/get_data.py" />
       </list>
     </option>
   </component>
@@ -815,6 +242,12 @@
               <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
               <item name="BigData" type="462c0819:PsiDirectoryNode" />
               <item name="BD_projects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BigData" type="462c0819:PsiDirectoryNode" />
+              <item name="BD_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="moto_prices" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
@@ -873,13 +306,6 @@
               <item name="BigData" type="462c0819:PsiDirectoryNode" />
               <item name="Web" type="462c0819:PsiDirectoryNode" />
               <item name="Gui" type="462c0819:PsiDirectoryNode" />
-              <item name="first_web_gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="Gui" type="462c0819:PsiDirectoryNode" />
               <item name="moto_prices" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -903,11 +329,11 @@
       <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\moto_prices" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\jupyter_notebooks" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\first_web_gui" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\crawler" />
-      <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -977,7 +403,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\moto_prices\moto_prices_main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -1281,14 +707,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49874687" visible="true" weight="0.17597471" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49874687" visible="true" weight="0.17597471" />
       <window_info id="Structure" order="1" sideWeight="0.50062734" side_tool="true" weight="0.1548999" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.19414316" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.13882864" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.20824295" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1360,20 +785,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SQL/SQLite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="157" column="67" selection-start-line="157" selection-start-column="67" selection-end-line="157" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../spotify/python_383/Lib/subprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="731" column="8" selection-start-line="731" selection-start-column="8" selection-end-line="731" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testsAndOthers/administrator_handler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
@@ -1446,13 +857,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Web/Gui/first_web_gui/static/styles.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/start_scrapy_crawler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../spotify/python_383/Lib/site-packages/pandas/core/frame.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1647,13 +1051,6 @@
     <entry file="file://$PROJECT_DIR$/Web/Gui/first_web_gui/static/react_json.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scrapy_web_crawler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/crawler/crawler_mini_proj_using_libs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2501">
@@ -1685,12 +1082,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices.py">
+    <entry file="file://$PROJECT_DIR$/Web/scrapy_web_crawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2748">
+        <state relative-caret-position="162">
+          <caret line="6" column="46" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="34" column="37" lean-forward="true" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/start_scrapy_crawler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="109" selection-start-line="9" selection-start-column="109" selection-end-line="9" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/get_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>

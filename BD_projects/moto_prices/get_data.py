@@ -28,7 +28,7 @@ DIRS_TILL_ROOT: int = 3
 DELIMETER = "\\"  # "/"
 
 
-def get_file(save_as: str="quotes.jl") -> TextIOWrapper:
+def get_file(save_as: str="motorcycles.jl") -> TextIOWrapper:
     """
 
     :return:
@@ -37,7 +37,7 @@ def get_file(save_as: str="quotes.jl") -> TextIOWrapper:
     for directory in os.path.dirname(__file__).split(DELIMETER)[:-DIRS_TILL_ROOT]:
         scrapy_crawler_path += f"{directory}\\"
     cwd_path = scrapy_crawler_path
-    scrapy_crawler_path += r"Web\scrapy_web_crawler.py"
+    scrapy_crawler_path += r"BigData\BD_projects\moto_prices\scrapy_spider.py"
 
     # O for overriding, o for appending to file
     os.system(f'scrapy runspider "{scrapy_crawler_path}" -O {save_as} -L ERROR')
@@ -231,24 +231,25 @@ def main():
     file: TextIOWrapper = get_file()
     file_path: str = f"{os.getcwd()}\\{file.name}"
     # file_path: str = f"{os.getcwd()}\\quotes.jl"
+    logging.debug(file_path)
 
-    # hdfs & spark
-    HDFS_handler.start()
-    save_file_to_hdfs(file_path=file_path)
-    time.sleep(2)
-    # os.system("hdfs dfsadmin -safemode leave")  # safe mode off
-    json_count_names: dict = Spark_handler.pass_to_spark(
-        file_path=f"{HDFS_handler.DEFAULT_CLUSTER_PATH}user/hduser/quotes.jl", process_fn=process_data
-    )
-    HDFS_handler.stop()
-
-    # elastic
-    upload_json_to_elastic(json=json_count_names)
-
-    from_elastic_to_sqlite()
-
-    # matplotlib
-    visualize_json()
+    # # hdfs & spark
+    # HDFS_handler.start()
+    # save_file_to_hdfs(file_path=file_path)
+    # time.sleep(2)
+    # # os.system("hdfs dfsadmin -safemode leave")  # safe mode off
+    # json_count_names: dict = Spark_handler.pass_to_spark(
+    #     file_path=f"{HDFS_handler.DEFAULT_CLUSTER_PATH}user/hduser/quotes.jl", process_fn=process_data
+    # )
+    # HDFS_handler.stop()
+    #
+    # # elastic
+    # upload_json_to_elastic(json=json_count_names)
+    #
+    # from_elastic_to_sqlite()
+    #
+    # # matplotlib
+    # visualize_json()
 
     print("OK Total Time: %s seconds" % (time.time() - start))
 

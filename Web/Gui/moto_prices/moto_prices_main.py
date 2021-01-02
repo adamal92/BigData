@@ -1,3 +1,7 @@
+"""
+This is the moto_prices projects' entry point
+"""
+
 import logging
 
 import requests
@@ -30,7 +34,7 @@ def home():
 
 @app.route("/start", methods=['GET'])
 def start_crawler():
-    from Web.Gui.first_web_gui.crawler_mini_proj_using_libs import main as start
+    from BD_projects.moto_prices.get_data import main as start
     start()  # main()
     return render_template('crawler.html')
     # return "ok"
