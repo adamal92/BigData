@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08479cfc-b3b1-4f27-b904-0ba7322af693" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Gui/moto_prices/crawler_mini_proj_using_libs.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/moto_prices/get_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Gui/moto_prices/quotes.jl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD_projects/moto_prices/get_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/moto_prices/get_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/Gui/moto_prices/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/debug.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +36,7 @@
           <entry key="css" value="4" />
           <entry key="html" value="14" />
           <entry key="ipynb" value="5" />
-          <entry key="jl" value="7" />
+          <entry key="jl" value="9" />
           <entry key="js" value="12" />
           <entry key="jsx" value="2" />
           <entry key="md" value="1" />
@@ -53,7 +52,7 @@
           <entry key="IPNB" value="5" />
           <entry key="JavaScript" value="12" />
           <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="PLAIN_TEXT" value="14" />
           <entry key="PowerShell file" value="2" />
           <entry key="Python" value="220" />
         </counts>
@@ -65,8 +64,8 @@
           <entry key="html" value="196" />
           <entry key="js" value="189" />
           <entry key="md" value="58" />
-          <entry key="py" value="25826" />
-          <entry key="txt" value="696" />
+          <entry key="py" value="26207" />
+          <entry key="txt" value="708" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -74,8 +73,8 @@
           <entry key="HTML" value="196" />
           <entry key="JavaScript" value="189" />
           <entry key="Markdown" value="58" />
-          <entry key="PLAIN_TEXT" value="774" />
-          <entry key="Python" value="25851" />
+          <entry key="PLAIN_TEXT" value="786" />
+          <entry key="Python" value="26232" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -91,7 +90,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NoSQL/ElasticSearch/start_search.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
+            <state relative-caret-position="618">
               <caret line="106" selection-start-line="106" selection-end-line="106" />
             </state>
           </provider>
@@ -112,8 +111,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/get_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+            <state relative-caret-position="137">
+              <caret line="113" column="28" lean-forward="true" selection-start-line="62" selection-start-column="2" selection-end-line="113" selection-end-column="28" />
+              <folding>
+                <element signature="e#10#24#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,8 +123,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="308">
+              <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+              <folding>
+                <marker date="1609606072936" expanded="true" signature="184:193" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/motorcycles.jl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -130,8 +144,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/scrapy_web_crawler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="46" selection-end-line="19" />
+            <state relative-caret-position="92">
+              <caret line="12" column="58" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -213,9 +227,9 @@
         <option value="$PROJECT_DIR$/Web/Gui/first_web_gui/web_gui_main.py" />
         <option value="$PROJECT_DIR$/BD_projects/crawler/crawler_mini_proj_using_libs.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider.py" />
         <option value="$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py" />
         <option value="$PROJECT_DIR$/BD_projects/moto_prices/get_data.py" />
+        <option value="$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider.py" />
       </list>
     </option>
   </component>
@@ -693,7 +707,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609269883573</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="spider init">
+      <created>1609601593575</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1609601593575</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -707,13 +728,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49874687" visible="true" weight="0.17597471" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49874687" visible="true" weight="0.17597471" />
       <window_info id="Structure" order="1" sideWeight="0.50062734" side_tool="true" weight="0.1548999" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.13882864" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.55531454" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.20824295" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -736,7 +758,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="web scraper added" />
     <MESSAGE value="web scraper main added" />
     <MESSAGE value="web scraper works" />
     <MESSAGE value="crawler project" />
@@ -761,7 +782,8 @@
     <MESSAGE value="visualize_json is clean" />
     <MESSAGE value="added names" />
     <MESSAGE value="minor changes to readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor changes to readme" />
+    <MESSAGE value="spider init" />
+    <option name="LAST_COMMIT_MESSAGE" value="spider init" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -785,13 +807,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/testsAndOthers/administrator_handler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="105" column="20" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/451996891/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -1075,17 +1090,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NoSQL/ElasticSearch/start_search.py">
+    <entry file="file://$PROJECT_DIR$/Web/start_scrapy_crawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="106" selection-start-line="106" selection-end-line="106" />
+        <state relative-caret-position="243">
+          <caret line="9" column="109" selection-start-line="9" selection-start-column="109" selection-end-line="9" selection-end-column="109" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scrapy_web_crawler.py">
+    <entry file="file://$PROJECT_DIR$/NoSQL/ElasticSearch/start_search.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="46" selection-end-line="19" />
+        <state relative-caret-position="618">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
         </state>
       </provider>
     </entry>
@@ -1099,24 +1114,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/start_scrapy_crawler.py">
+    <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/motorcycles.jl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="109" selection-start-line="9" selection-start-column="109" selection-end-line="9" selection-end-column="109" />
+        <state relative-caret-position="27">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/get_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+        <state relative-caret-position="137">
+          <caret line="113" column="28" lean-forward="true" selection-start-line="62" selection-start-column="2" selection-end-line="113" selection-end-column="28" />
+          <folding>
+            <element signature="e#10#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scrapy_web_crawler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="12" column="58" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="308">
+          <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+          <folding>
+            <marker date="1609606072936" expanded="true" signature="184:193" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

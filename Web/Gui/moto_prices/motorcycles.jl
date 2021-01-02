@@ -1,0 +1,10 @@
+{"price": "\u20aa10,000"}
+{"price": "\u20aa33,000"}
+{"price": "\u20aa30,000"}
+{"price": "\u20aa30,000"}
+{"price": "\u20aa9,000"}
+{"price": "\u20aa20,922"}
+{"price": "\u20aa25,000"}
+{"price": "\u20aa35,000"}
+{"price": "\u20aa19,000"}
+{"price": "\u20aa45,000"}
