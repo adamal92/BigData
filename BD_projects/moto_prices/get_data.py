@@ -182,9 +182,9 @@ def from_elastic_to_sqlite():
                                              db_path=sqlithndlr.db_path))
 
 
-# TODO: response = Elasticsearch_Handler.exec(filename)
-# TODO: table = DataTypesHandler.json_to_table(table)
-# TODO: sqlitHandler.addTable(table)
+# : response = Elasticsearch_Handler.exec(filename)
+# : table = DataTypesHandler.json_to_table(table)
+# : sqlitHandler.addTable(table)
 
 
 def visualize_json():
@@ -206,15 +206,15 @@ def visualize_json():
     VisualizationHandler.visualize_dictionary(pass_dict)
 
 
-# TODO: visualize_handler.visualizeTable(sqlite_handler.getTable())
+# : visualize_handler.visualizeTable(sqlite_handler.getTable())
 
 
-# TODO: web crawler (scrapy) -> cluster (HDFS) ->
-# TODO: map-reduce (spark) -> NoSQL (elasticsearch) -> SQL (SQLite) -> visualization (matplotlib)
-# TODO: create/add to lib
+# : web crawler (scrapy) -> cluster (HDFS) ->
+# : map-reduce (spark) -> NoSQL (elasticsearch) -> SQL (SQLite) -> visualization (matplotlib)
+# : create/add to lib
 
-# TODO: client (js) -> web crawler (scrapy) -> cluster (HDFS) ->
-# TODO: map-reduce (spark) -> NoSQL (elasticsearch)/SQL (SQLite) -> client visualization (js)
+# : client (js) -> web crawler (scrapy) -> cluster (HDFS) ->
+# : map-reduce (spark) -> NoSQL (elasticsearch)/SQL (SQLite) -> client visualization (js)
 def main():
     start = time.time()
 

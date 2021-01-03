@@ -8,3 +8,31 @@ web crawler -> cluster -> map-reduce -> NoSQL -> visualization
 scrapy -> HDFS -> spark -> elasticsearch -> js react client
 
 TODO: web crawler (scrapy) -> cluster (HDFS) -> map-reduce (spark) -> NoSQL (elasticsearch) -> SQL (SQLite) -> visualization (matplotlib)
+
+# Projects
+#
+## moto prices 
+<h3> Pseudo Code </h3>
+```python
+for site in sites_list:
+    for html_element.text():
+        type = filter/diagnose(element)
+        sql.insert("INSERT VALUES(type element);")
+HDFS.save_file(moto_list.db)
+json = Spark.process(HDFS.get(moto_list.db))
+Elastic.save(json)
+react.fetch(json).visualize()
+```
+
+<h1> tasks </h1>
+- [ ] לרוץ על כל span
+- [ ] damn
+- [x] damn
+
+* site with moto prices
+* scrape model & prices
+* save to HDFS
+* map-reduce/process & mine/analyze/(ML?)
+* save to elastic
+* Flask
+* visualize in react
