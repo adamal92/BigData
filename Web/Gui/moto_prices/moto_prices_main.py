@@ -115,6 +115,18 @@ def get_json_visualization():
         # return render_template('Error.html')
 
 
+@app.route("/crawl_motorcycles", methods=['GET'])
+def moto_crawler_html():
+    return render_template('moto_crawler.html')
+
+
+@app.route("/moto_spider", methods=['GET'])
+def moto_spider_html():
+    from BD_projects.moto_prices.moto_crawler import MotoCrawler
+    MotoCrawler.get_file()
+    return render_template('moto_crawler.html')
+
+
 # TODO: get data from db (sqlite/elastic) & visualise it at client side (js/kibana)
 if __name__ == '__main__':
     logging.getLogger('flaskwebgui').setLevel(logging.ERROR)

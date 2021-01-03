@@ -41,20 +41,17 @@ class MotorSpider(scrapy.Spider):
 
             yield motorcycle_obj
 
-            # yield {
-            #     "model": motorcycle.xpath('div/a/strong/text()').get(),
-            #     "price": motorcycle.xpath('a/p/text()').get(),
-            #     "engine": motorcycle.xpath('div/p/span.engine/text()').get(),
-            #     "mileage": motorcycle.xpath('div/p/span.mileage/text()').get(),
-            #     "gears": motorcycle.xpath('div/p/span.gears/text()').get()
-            # }
-
         next_page = response.css('div.next a::attr("href")').get()
         if next_page is not None:
             yield response.follow(next_page, self.parse)
 
-
-
+    # yield {
+    #     "model": motorcycle.xpath('div/a/strong/text()').get(),
+    #     "price": motorcycle.xpath('a/p/text()').get(),
+    #     "engine": motorcycle.xpath('div/p/span.engine/text()').get(),
+    #     "mileage": motorcycle.xpath('div/p/span.mileage/text()').get(),
+    #     "gears": motorcycle.xpath('div/p/span.gears/text()').get()
+    # }
     # def parse(self, response, **kwargs):
     #     # yield {'price': response.css('p.price::text').extract()}  # ::text
     #     for price in response.css('p.price::text').extract():
