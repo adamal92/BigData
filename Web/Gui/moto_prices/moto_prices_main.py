@@ -39,7 +39,7 @@ def start_crawler():
     start()  # main()
     return render_template('crawler.html')
     # return "ok"
-
+# TODO: start elastic button
 
 @app.route("/crawl", methods=['GET'])
 def get_crawler_html():
@@ -78,7 +78,7 @@ def get_json():
         json_dict: dict = response.json()["_source"]
         # names_list: list = DataTypesHandler.dict_to_matrix(dictionary=json_dict)
         # logging.warning(names_list)
-        # return {"name": "ok"}  # TODO: return the json from elastic
+        # return {"name": "ok"}  # : return the json from elastic
         # return "<p><br />"+str(json_dict)+"</p>"
         html = "<p><br />"+str(json_dict)+r'</p> <a href="\" class="button">Go back</a>'
         return html  # string, dict, tuple, Response instance, or WSGI callable
@@ -169,11 +169,11 @@ def moto_spark():
     logging.debug(f"spark total time: {time.time() - st} seconds")
 
     # # elastic
-    # upload_json_to_elastic(json=json_count_names)
+    # TODO: upload_json_to_elastic(json=json_count_names)
     return render_template('moto_crawler.html')
 
 
-# TODO: get data from db (sqlite/elastic) & visualise it at client side (js/kibana)
+# : get data from db (sqlite/elastic) & visualise it at client side (js/kibana)
 if __name__ == '__main__':
     logging.getLogger('flaskwebgui').setLevel(logging.ERROR)
     logging.getLogger('BaseHTTPRequestHandler').setLevel(logging.ERROR)

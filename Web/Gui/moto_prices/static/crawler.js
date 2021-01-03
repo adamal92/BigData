@@ -45,7 +45,7 @@ fetch(url, {mode: 'no-cors', method: 'GET', headers: headers}) // https://cors-a
 .then(response => response.text())
 .then(contents => console.log(contents))
 .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
-// TODO: get json from server
+// : get json from server
 */
 // fetch("http://localhost:5000/get_json")
 // .then(response => response.text())
