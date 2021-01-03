@@ -3,10 +3,11 @@ This is the moto_prices projects' entry point
 """
 
 import logging
+import time
 
 import requests
 from flask import Flask, render_template
-from flaskwebgui import FlaskUI   # get the FlaskUI class
+from flaskwebgui import FlaskUI  # get the FlaskUI class
 from requests import Response
 
 from NoSQL.ElasticSearch.elasticsearch_handler import Elasticsearch_Handler
@@ -124,6 +125,51 @@ def moto_crawler_html():
 def moto_spider_html():
     from BD_projects.moto_prices.moto_crawler import MotoCrawler
     MotoCrawler.get_file()
+    return render_template('moto_crawler.html')
+
+
+@app.route("/moto_hdfs", methods=['GET'])
+def moto_hdfs():
+    # hdfs & spark
+    from BD_projects.moto_prices.moto_crawler import MotoCrawler
+    from Hadoop.hdfs import HDFS_handler
+    HDFS_handler.start()
+    MotoCrawler.save_file_to_hdfs(file_path=MotoCrawler.motorcycle_file.name,
+                                  filename=MotoCrawler.motorcycle_file.name)
+    time.sleep(2)
+    # json_count_names: dict = Spark_handler.pass_to_spark(
+    #     file_path=f"{HDFS_handler.DEFAULT_CLUSTER_PATH}user/hduser/quotes.jl", process_fn=process_data
+    # )
+    HDFS_handler.stop()
+    return render_template('moto_crawler.html')
+
+
+@app.route("/moto_spark", methods=['GET'])
+def moto_spark():
+    st = time.time()
+
+    from BD_projects.moto_prices.moto_crawler import MotoCrawler
+    from Hadoop.hdfs import HDFS_handler
+    from Spark.Spark_handler_class import Spark_handler
+    import os
+    HDFS_handler.start()
+    os.system("hdfs dfsadmin -safemode leave")  # safe mode off
+    time.sleep(2)
+
+    json_count_names: dict = Spark_handler.pass_to_spark(
+        file_path=f"{HDFS_handler.DEFAULT_CLUSTER_PATH}user/hduser/{MotoCrawler.motorcycle_file.name}",
+        process_fn=MotoCrawler.process_data
+    )
+
+    os.system("hdfs dfsadmin -safemode enter")  # safe mode on
+    HDFS_handler.stop()
+
+    from testsAndOthers.data_types_and_structures import DataTypesHandler
+    DataTypesHandler.print_data_recursively(data=json_count_names)
+    logging.debug(f"spark total time: {time.time() - st} seconds")
+
+    # # elastic
+    # upload_json_to_elastic(json=json_count_names)
     return render_template('moto_crawler.html')
 
 
