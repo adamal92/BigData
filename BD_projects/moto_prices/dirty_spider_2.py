@@ -7,7 +7,12 @@ import logging
 class DirtyMotoSpider(scrapy.Spider):
     name = 'motors'
     start_urls = [
-        'https://centro.co.il/en/bike/yamaha/'
+        # 'https://centro.co.il/en/bike/yamaha/'
+        # ,
+        # 'https://centro.co.il/en/auto/'
+        # ,
+        'https://www.kawasaki.co.il/motorbikes/supernaked/z900_35kw/?_'
+        'ga=2.193938925.1786289935.1609773572-1769228414.1609773572'
     ]
 
     def parse(self, response, **kwargs):
@@ -45,4 +50,5 @@ class DirtyMotoSpider(scrapy.Spider):
                 DirtyMotoSpider.recurse_over_html_tree(child)
         except:
             print("\n---------child-----------------------------------------\n")
-            print(soup_Tag.prettify())
+            # print(soup_Tag.prettify())
+            print(soup_Tag.string)
