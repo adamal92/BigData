@@ -178,7 +178,7 @@ def moto_spark():
 def crawl_motorcycles_dirty():
     from BD_projects.moto_prices.moto_crawler import MotoCrawler
     MotoCrawler.start_scrapy_spider(save_as="moto_dirty.json",
-                                    spider_py=r'BigData\BD_projects\moto_prices\dirty_spider.py',
+                                    spider_py=r'BigData\BD_projects\moto_prices\dirty_spider_2.py',
                                     delimeter=True, dirs_till_root=3)
     return render_template('index.html')
 
