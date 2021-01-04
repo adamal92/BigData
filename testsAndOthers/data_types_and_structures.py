@@ -90,7 +90,7 @@ class DataTypesHandler:
         # check for supported types
         supported_types: tuple = (list, dict, tuple)
         if not type(data) in supported_types:
-            raise Exception("data must be a list, a dictionary or a tuple")
+            raise Exception(f'data must be a list, a dictionary or a tuple. got {type(data)}')
 
         # handle lists & tuples
         elif type(data) in (list, tuple):

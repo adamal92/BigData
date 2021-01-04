@@ -41,6 +41,7 @@ def start_crawler():
     # return "ok"
 # TODO: start elastic button
 
+
 @app.route("/crawl", methods=['GET'])
 def get_crawler_html():
     return render_template('crawler.html')
@@ -171,6 +172,15 @@ def moto_spark():
     # # elastic
     # TODO: upload_json_to_elastic(json=json_count_names)
     return render_template('moto_crawler.html')
+
+
+@app.route("/crawl_motorcycles_dirty", methods=['GET'])
+def crawl_motorcycles_dirty():
+    from BD_projects.moto_prices.moto_crawler import MotoCrawler
+    MotoCrawler.start_scrapy_spider(save_as="moto_dirty.json",
+                                    spider_py=r'BigData\BD_projects\moto_prices\dirty_spider.py',
+                                    delimeter=True, dirs_till_root=3)
+    return render_template('index.html')
 
 
 # : get data from db (sqlite/elastic) & visualise it at client side (js/kibana)

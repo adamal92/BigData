@@ -18,7 +18,7 @@ class MotoCrawler:
     motorcycle_file: TextIOWrapper = None
 
     @staticmethod
-    def get_file(save_as: str="motorcycles.jl") -> TextIOWrapper:
+    def get_file(save_as: str="motorcycles.json") -> TextIOWrapper:
         """
 
         :return:
@@ -28,6 +28,30 @@ class MotoCrawler:
             scrapy_crawler_path += f"{directory}\\"
         cwd_path = scrapy_crawler_path
         scrapy_crawler_path += r"BigData\BD_projects\moto_prices\scrapy_spider.py"
+
+        # O for overriding, o for appending to file
+        os.system(f'scrapy runspider "{scrapy_crawler_path}" -O {save_as} -L ERROR')
+
+        with open(save_as) as file:
+            MotoCrawler.motorcycle_file = file
+            return file
+
+    @staticmethod
+    def start_scrapy_spider(save_as: str = "motorcycles.json",
+                            spider_py: str = r"BigData\BD_projects\moto_prices\scrapy_spider.py",
+                            dirs_till_root: int = 3, delimeter: bool = True) -> TextIOWrapper:
+        """
+
+        :return:
+        """
+        if delimeter: delim = "\\"
+        else: delim = "/"
+
+        scrapy_crawler_path: str = ""
+        for directory in os.path.dirname(__file__).split(delim)[:-dirs_till_root]:
+            scrapy_crawler_path += f"{directory}\\"
+        cwd_path = scrapy_crawler_path
+        scrapy_crawler_path += spider_py
 
         # O for overriding, o for appending to file
         os.system(f'scrapy runspider "{scrapy_crawler_path}" -O {save_as} -L ERROR')
@@ -72,10 +96,15 @@ class MotoCrawler:
         temp_dict = {}
         temp_list = []
         #     temp_dict: Accumulator = sc.accumulator(dict())
-        moto_bikes_list: List[Any] = quotes.collect()
+        moto_bikes_list: List[pyspark.Row] = quotes.collect()
+        # print(moto_bikes_list)
+        # from testsAndOthers.data_types_and_structures import DataTypesHandler
+        # DataTypesHandler.print_data_recursively(moto_bikes_list)
 
         # create values list (clean data)
         for row in moto_bikes_list:
+            if row.value == "[" or row.value == "]": continue
+
             dict_str: str = pyspark.sql.types.Row.asDict(row, True)["value"].split(",")[0][1:]  # .split("{")[1]
             # print(dict_str)
             dict_list = dict_str.split(":")
