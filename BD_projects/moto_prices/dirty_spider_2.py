@@ -78,7 +78,7 @@ class DirtyMotoSpider(scrapy.Spider):
         has_special_chars: bool = False
 
         for string in tag.stripped_strings:
-            if string is None and not string.strip():
+            if string is None or not string.strip():
                 has_special_chars = True
 
         return not has_special_chars
