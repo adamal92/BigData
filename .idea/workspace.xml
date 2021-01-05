@@ -4,6 +4,7 @@
     <list default="true" id="08479cfc-b3b1-4f27-b904-0ba7322af693" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/Gui/moto_prices/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/debug.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,17 +16,17 @@
     <session id="1321443422">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.3" value="4" />
-          <entry key="project.open.time.4" value="9" />
+          <entry key="project.open.time.4" value="10" />
           <entry key="project.open.time.5" value="7" />
           <entry key="project.open.time.59" value="1" />
           <entry key="project.open.time.6" value="8" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="34" />
+          <entry key="project.opened" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -64,8 +65,8 @@
           <entry key="html" value="213" />
           <entry key="js" value="189" />
           <entry key="md" value="1152" />
-          <entry key="py" value="28504" />
-          <entry key="txt" value="880" />
+          <entry key="py" value="29022" />
+          <entry key="txt" value="903" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -73,8 +74,8 @@
           <entry key="HTML" value="213" />
           <entry key="JavaScript" value="189" />
           <entry key="Markdown" value="1146" />
-          <entry key="PLAIN_TEXT" value="958" />
-          <entry key="Python" value="28535" />
+          <entry key="PLAIN_TEXT" value="981" />
+          <entry key="Python" value="29053" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -90,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="18" column="70" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="18" selection-end-column="70" />
+            <state relative-caret-position="1998">
+              <caret line="77" column="105" selection-start-line="75" selection-start-column="13" selection-end-line="77" selection-end-column="105" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -102,8 +103,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider_2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="267">
+              <caret line="76" column="64" lean-forward="true" selection-start-line="76" selection-start-column="64" selection-end-line="76" selection-end-column="64" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,7 +115,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
+            <state relative-caret-position="4617">
               <caret line="180" column="94" selection-start-line="180" selection-start-column="94" selection-end-line="180" selection-end-column="94" />
               <folding>
                 <element signature="e#55#69#0" expanded="true" />
@@ -123,13 +127,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/moto_crawler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1728">
-              <caret line="112" column="67" lean-forward="true" selection-start-line="112" selection-start-column="67" selection-end-line="112" selection-end-column="67" />
+            <state relative-caret-position="2781">
+              <caret line="112" column="67" selection-start-line="112" selection-start-column="67" selection-end-line="112" selection-end-column="67" />
               <folding>
                 <element signature="e#10#24#0" expanded="true" />
                 <marker date="1609763032150" expanded="true" signature="332:333" ph="..." />
-                <marker date="1609763032150" expanded="true" signature="2561:2634" ph="..." />
-                <marker date="1609763032150" expanded="true" signature="2704:7366" ph="..." />
               </folding>
             </state>
           </provider>
@@ -800,7 +802,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609782270916</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="got string from recurse">
+      <created>1609783296567</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1609783296567</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TodoView">
@@ -821,7 +830,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.14750542" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.29284164" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.20824295" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -844,7 +853,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="first_web_gui and metro4-theme where added" />
     <MESSAGE value="crawler with gui works" />
     <MESSAGE value="cleaned unnecessary logger &amp; waiting for elastic server to answer" />
     <MESSAGE value="cleaned crawler_mini_proj_using_libs and added functionality to handlers" />
@@ -869,7 +877,8 @@
     <MESSAGE value="README table" />
     <MESSAGE value="moto dirty init" />
     <MESSAGE value="recurse works!" />
-    <option name="LAST_COMMIT_MESSAGE" value="recurse works!" />
+    <MESSAGE value="got string from recurse" />
+    <option name="LAST_COMMIT_MESSAGE" value="got string from recurse" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1035,9 +1044,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2501">
           <caret line="107" column="26" selection-start-line="107" selection-start-column="26" selection-end-line="107" selection-end-column="26" />
-          <folding>
-            <element signature="e#10#24#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1099,9 +1105,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="75" column="35" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1171,9 +1174,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
           <caret line="126" column="6" selection-start-line="126" selection-start-column="6" selection-end-line="126" selection-end-column="6" />
-          <folding>
-            <element signature="e#10#24#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1188,19 +1188,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-54">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1998">
+          <caret line="77" column="105" selection-start-line="75" selection-start-column="13" selection-end-line="77" selection-end-column="105" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1609611597244" expanded="true" signature="2496:2507" ph="..." />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/moto_dirty.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
+        <state relative-caret-position="4617">
           <caret line="180" column="94" selection-start-line="180" selection-start-column="94" selection-end-line="180" selection-end-column="94" />
           <folding>
             <element signature="e#55#69#0" expanded="true" />
@@ -1210,31 +1213,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/moto_crawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1728">
-          <caret line="112" column="67" lean-forward="true" selection-start-line="112" selection-start-column="67" selection-end-line="112" selection-end-column="67" />
+        <state relative-caret-position="2781">
+          <caret line="112" column="67" selection-start-line="112" selection-start-column="67" selection-end-line="112" selection-end-column="67" />
           <folding>
             <element signature="e#10#24#0" expanded="true" />
             <marker date="1609763032150" expanded="true" signature="332:333" ph="..." />
-            <marker date="1609763032150" expanded="true" signature="2561:2634" ph="..." />
-            <marker date="1609763032150" expanded="true" signature="2704:7366" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="18" column="70" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="18" selection-end-column="70" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/moto_dirty.json">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="267">
+          <caret line="76" column="64" lean-forward="true" selection-start-line="76" selection-start-column="64" selection-end-line="76" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
