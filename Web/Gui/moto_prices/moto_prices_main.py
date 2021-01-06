@@ -178,7 +178,25 @@ def moto_spark():
 def crawl_motorcycles_dirty():
     from BD_projects.moto_prices.moto_crawler import MotoCrawler
     MotoCrawler.start_scrapy_spider(save_as="moto_dirty.json",
+                                    spider_py=r'BigData\BD_projects\moto_prices\dirty_spider.py',
+                                    delimeter=True, dirs_till_root=3)
+    return render_template('index.html')
+
+
+@app.route("/crawl_motorcycles_dirty_2", methods=['GET'])
+def crawl_motorcycles_dirty_2():
+    from BD_projects.moto_prices.moto_crawler import MotoCrawler
+    MotoCrawler.start_scrapy_spider(save_as="moto_dirty_2.json",
                                     spider_py=r'BigData\BD_projects\moto_prices\dirty_spider_2.py',
+                                    delimeter=True, dirs_till_root=3)
+    return render_template('index.html')
+
+
+@app.route("/scrapy_spider_2", methods=['GET'])
+def scrapy_spider_2():
+    from BD_projects.moto_prices.moto_crawler import MotoCrawler
+    MotoCrawler.start_scrapy_spider(save_as="vehicles.json",
+                                    spider_py=r'BigData\BD_projects\moto_prices\scrapy_spider_2.py',
                                     delimeter=True, dirs_till_root=3)
     return render_template('index.html')
 

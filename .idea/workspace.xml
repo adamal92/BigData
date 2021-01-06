@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08479cfc-b3b1-4f27-b904-0ba7322af693" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/Gui/moto_prices/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,11 +38,11 @@
           <entry key="ipynb" value="5" />
           <entry key="jl" value="11" />
           <entry key="js" value="14" />
-          <entry key="json" value="3" />
+          <entry key="json" value="6" />
           <entry key="jsx" value="2" />
           <entry key="md" value="2" />
           <entry key="ps1" value="3" />
-          <entry key="py" value="238" />
+          <entry key="py" value="240" />
           <entry key="untitled" value="1" />
         </counts>
       </usages-collector>
@@ -49,12 +51,12 @@
           <entry key="CSS" value="4" />
           <entry key="HTML" value="15" />
           <entry key="IPNB" value="5" />
-          <entry key="JSON" value="4" />
+          <entry key="JSON" value="7" />
           <entry key="JavaScript" value="14" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="15" />
           <entry key="PowerShell file" value="2" />
-          <entry key="Python" value="238" />
+          <entry key="Python" value="240" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -63,18 +65,20 @@
           <entry key="dummy" value="78" />
           <entry key="html" value="213" />
           <entry key="js" value="189" />
+          <entry key="json" value="1" />
           <entry key="md" value="1152" />
-          <entry key="py" value="29518" />
-          <entry key="txt" value="938" />
+          <entry key="py" value="29932" />
+          <entry key="txt" value="945" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="213" />
+          <entry key="JSON" value="1" />
           <entry key="JavaScript" value="189" />
           <entry key="Markdown" value="1146" />
-          <entry key="PLAIN_TEXT" value="1016" />
-          <entry key="Python" value="29549" />
+          <entry key="PLAIN_TEXT" value="1023" />
+          <entry key="Python" value="29963" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -90,20 +94,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="676">
-              <caret line="77" column="105" selection-start-line="75" selection-start-column="13" selection-end-line="77" selection-end-column="105" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider_2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+            <state relative-caret-position="1269">
+              <caret line="65" column="45" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="45" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -112,10 +104,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider_2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="139">
+              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4617">
-              <caret line="180" column="94" selection-start-line="180" selection-start-column="94" selection-end-line="180" selection-end-column="94" />
+            <state relative-caret-position="312">
+              <caret line="199" column="69" lean-forward="true" selection-start-line="199" selection-start-column="69" selection-end-line="199" selection-end-column="69" />
               <folding>
                 <element signature="e#55#69#0" expanded="true" />
               </folding>
@@ -126,7 +130,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/moto_crawler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="676">
+            <state relative-caret-position="1953">
               <caret line="112" column="67" selection-start-line="112" selection-start-column="67" selection-end-line="112" selection-end-column="67" />
               <folding>
                 <element signature="e#10#24#0" expanded="true" />
@@ -137,12 +141,26 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/motorcycles.json">
+        <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="8" column="80" selection-start-line="8" selection-start-column="80" selection-end-line="8" selection-end-column="80" />
+            <state relative-caret-position="247">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider_2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="43">
+              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/vehicles.json">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -175,8 +193,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tests_&amp;_others/data_types_&amp;_structures.py" />
-        <option value="$PROJECT_DIR$/NoSQL/ElasticSearch/start_search.py" />
         <option value="$PROJECT_DIR$/NoSQL/ElasticSearch/start_kibana.py" />
         <option value="$PROJECT_DIR$/SQL/MySQL.py" />
         <option value="$PROJECT_DIR$/Web/scrapy_web_crawler.py" />
@@ -223,9 +239,11 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/testsAndOthers/data_types_and_structures.py" />
         <option value="$PROJECT_DIR$/BD_projects/moto_prices/moto_crawler.py" />
-        <option value="$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider.py" />
-        <option value="$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py" />
         <option value="$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider_2.py" />
+        <option value="$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider.py" />
+        <option value="$PROJECT_DIR$/Web/Gui/moto_prices/motorcycles_2.json" />
+        <option value="$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py" />
+        <option value="$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider_2.py" />
       </list>
     </option>
   </component>
@@ -356,19 +374,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\moto_prices" />
-      <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\moto_prices" />
-      <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\first_web_gui" />
-      <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\first_web_gui\templates" />
-      <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\first_web_gui\static" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\moto_prices" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\jupyter_notebooks" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\first_web_gui" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\crawler" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\moto_prices" />
+      <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\moto_prices" />
+      <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\first_web_gui" />
+      <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\first_web_gui\templates" />
+      <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\first_web_gui\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -847,7 +865,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609932918614</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="tries to get leaves failed">
+      <created>1609933977989</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1609933977989</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TodoView">
@@ -863,12 +888,12 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49874687" visible="true" weight="0.17597471" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49874687" visible="true" weight="0.17597471" />
       <window_info id="Structure" order="1" sideWeight="0.50062734" side_tool="true" weight="0.1548999" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.16594361" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.07809111" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.20824295" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -891,7 +916,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="react app works" />
     <MESSAGE value="get json sucks" />
     <MESSAGE value="js charts react visualization works" />
     <MESSAGE value="visualize_json.css" />
@@ -916,7 +940,8 @@
     <MESSAGE value="filter ver 3" />
     <MESSAGE value="filter ver 4" />
     <MESSAGE value="tries to get leaves" />
-    <option name="LAST_COMMIT_MESSAGE" value="tries to get leaves" />
+    <MESSAGE value="tries to get leaves failed" />
+    <option name="LAST_COMMIT_MESSAGE" value="tries to get leaves failed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -940,23 +965,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../spotify/python_383/Lib/site-packages/pandas/core/frame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="1806" selection-start-line="1806" selection-end-line="1806" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BD_projects/crawler/crawler_mini_proj_clean.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="202" column="30" selection-start-line="202" selection-start-column="30" selection-end-line="202" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/Gui/first_web_gui/static/metro-all.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/Gui/first_web_gui/static/metro.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-405" />
@@ -1215,33 +1223,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-54">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="77" column="105" selection-start-line="75" selection-start-column="13" selection-end-line="77" selection-end-column="105" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4617">
-          <caret line="180" column="94" selection-start-line="180" selection-start-column="94" selection-end-line="180" selection-end-column="94" />
-          <folding>
-            <element signature="e#55#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/moto_dirty.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1252,9 +1233,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1269">
+          <caret line="65" column="45" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/motorcycles_2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-81">
+          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/moto_crawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
+        <state relative-caret-position="1953">
           <caret line="112" column="67" selection-start-line="112" selection-start-column="67" selection-end-line="112" selection-end-column="67" />
           <folding>
             <element signature="e#10#24#0" expanded="true" />
@@ -1263,12 +1278,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider_2.py">
+    <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+        <state relative-caret-position="43">
+          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/vehicles.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="199" column="69" lean-forward="true" selection-start-line="199" selection-start-column="69" selection-end-line="199" selection-end-column="69" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#55#69#0" expanded="true" />
           </folding>
         </state>
       </provider>
