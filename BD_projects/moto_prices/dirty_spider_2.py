@@ -42,7 +42,7 @@ class DirtyMotoSpider(scrapy.Spider):
                 lambda got_tag: (
                     DirtyMotoSpider.filter_unstripped_strings(got_tag)
                     and DirtyMotoSpider.filter_strings_by_value(got_tag)
-                    and not DirtyMotoSpider.has_children(soup.span)
+                    and not DirtyMotoSpider.has_children(got_tag)
                 )
         ):
             print("\n---------child-----------------------------------------\n")
@@ -100,14 +100,18 @@ class DirtyMotoSpider(scrapy.Spider):
         if u"\u20AA" in tag.stripped_strings:
             is_ok = True
 
-        # return is_ok
-        return True
+        if tag.name in ['div', 'span']:
+            is_ok = True
+
+        return is_ok
+        # return True
 
     @staticmethod
     def has_children(tag: bs4.element.Tag) -> bool:
         try:
+            print(tag.prettify())
             children_list = tag.children
             return True
         except Exception as e:
-            logging.debug(e)
+            logging.error(e)
             return False
