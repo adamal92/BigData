@@ -4,7 +4,6 @@
     <list default="true" id="08479cfc-b3b1-4f27-b904-0ba7322af693" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Gui/moto_prices/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/debug.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,13 +19,13 @@
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.3" value="4" />
-          <entry key="project.open.time.4" value="10" />
+          <entry key="project.open.time.4" value="11" />
           <entry key="project.open.time.5" value="7" />
           <entry key="project.open.time.59" value="1" />
           <entry key="project.open.time.6" value="8" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="35" />
+          <entry key="project.opened" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -65,8 +64,8 @@
           <entry key="html" value="213" />
           <entry key="js" value="189" />
           <entry key="md" value="1152" />
-          <entry key="py" value="29022" />
-          <entry key="txt" value="903" />
+          <entry key="py" value="29464" />
+          <entry key="txt" value="919" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -74,8 +73,8 @@
           <entry key="HTML" value="213" />
           <entry key="JavaScript" value="189" />
           <entry key="Markdown" value="1146" />
-          <entry key="PLAIN_TEXT" value="981" />
-          <entry key="Python" value="29053" />
+          <entry key="PLAIN_TEXT" value="997" />
+          <entry key="Python" value="29495" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -103,8 +102,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider_2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="76" column="64" lean-forward="true" selection-start-line="76" selection-start-column="64" selection-end-line="76" selection-end-column="64" />
+            <state relative-caret-position="-1912">
+              <caret line="17" column="68" lean-forward="true" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -809,7 +808,35 @@
       <option name="project" value="LOCAL" />
       <updated>1609783296567</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="filter ver 1">
+      <created>1609857328725</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1609857328725</updated>
+    </task>
+    <task id="LOCAL-00041" summary="filter ver 2">
+      <created>1609857341905</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1609857341905</updated>
+    </task>
+    <task id="LOCAL-00042" summary="filter ver 3">
+      <created>1609857370373</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1609857370373</updated>
+    </task>
+    <task id="LOCAL-00043" summary="filter ver 4">
+      <created>1609857410854</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1609857410854</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TodoView">
@@ -823,14 +850,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49874687" visible="true" weight="0.17597471" />
       <window_info id="Structure" order="1" sideWeight="0.50062734" side_tool="true" weight="0.1548999" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.29284164" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.4219089" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.20824295" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -853,10 +879,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="crawler with gui works" />
-    <MESSAGE value="cleaned unnecessary logger &amp; waiting for elastic server to answer" />
-    <MESSAGE value="cleaned crawler_mini_proj_using_libs and added functionality to handlers" />
-    <MESSAGE value="minor bug fixes &amp; cleanup" />
     <MESSAGE value="show the json on the web app" />
     <MESSAGE value="react app works" />
     <MESSAGE value="get json sucks" />
@@ -878,7 +900,11 @@
     <MESSAGE value="moto dirty init" />
     <MESSAGE value="recurse works!" />
     <MESSAGE value="got string from recurse" />
-    <option name="LAST_COMMIT_MESSAGE" value="got string from recurse" />
+    <MESSAGE value="filter ver 1" />
+    <MESSAGE value="filter ver 2" />
+    <MESSAGE value="filter ver 3" />
+    <MESSAGE value="filter ver 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="filter ver 4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1227,8 +1253,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="76" column="64" lean-forward="true" selection-start-line="76" selection-start-column="64" selection-end-line="76" selection-end-column="64" />
+        <state relative-caret-position="-1912">
+          <caret line="17" column="68" lean-forward="true" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

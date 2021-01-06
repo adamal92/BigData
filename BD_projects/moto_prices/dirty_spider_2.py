@@ -16,6 +16,9 @@ class DirtyMotoSpider(scrapy.Spider):
         ,
         'https://www.kawasaki.co.il/motorbikes/supernaked/z900_35kw/?_'
         'ga=2.193938925.1786289935.1609773572-1769228414.1609773572'
+        ,
+        'https://www.yamaha-motor.co.il/motorbikes/all-motorbikes/?_'
+        'ga=2.197200427.524402175.1609932589-1769228414.1609773572'
     ]
 
     def parse(self, response, **kwargs):
@@ -35,7 +38,13 @@ class DirtyMotoSpider(scrapy.Spider):
         # DirtyMotoSpider.recurse_over_html_tree(soup_Tag=soup.body)
 
         # for tag in soup.find_all(lambda tag: tag.stripped_strings):
-        for tag in soup.find_all(DirtyMotoSpider.filter_unstripped_strings):
+        for tag in soup.find_all(
+                lambda got_tag: (
+                    DirtyMotoSpider.filter_unstripped_strings(got_tag)
+                    and DirtyMotoSpider.filter_strings_by_value(got_tag)
+                    and not DirtyMotoSpider.has_children(soup.span)
+                )
+        ):
             print("\n---------child-----------------------------------------\n")
             for string in tag.stripped_strings:
                 print(string)
@@ -78,8 +87,27 @@ class DirtyMotoSpider(scrapy.Spider):
         has_special_chars: bool = False
 
         for string in tag.stripped_strings:
-            if string: pass
-            else: has_special_chars = True
-            if not string.strip(): has_special_chars = True
+            if string is None and not string.strip():
+                has_special_chars = True
 
-        return not has_special_chars
+        # return not has_special_chars
+        return True
+
+    @staticmethod
+    def filter_strings_by_value(tag: bs4.element.Tag) -> bool:
+        is_ok: bool = False
+
+        if u"\u20AA" in tag.stripped_strings:
+            is_ok = True
+
+        # return is_ok
+        return True
+
+    @staticmethod
+    def has_children(tag: bs4.element.Tag) -> bool:
+        try:
+            children_list = tag.children
+            return True
+        except Exception as e:
+            logging.debug(e)
+            return False
