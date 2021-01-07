@@ -57,7 +57,7 @@ class MotoCrawler:
         os.system(f'scrapy runspider "{scrapy_crawler_path}" -O {save_as} -L ERROR')
 
         with open(save_as) as file:
-            MotoCrawler.motorcycle_file = file
+            MotoCrawler.motorcycle_file = save_as
             return file
 
     @staticmethod
@@ -68,6 +68,7 @@ class MotoCrawler:
         :return:
         """
         os.system("hdfs dfsadmin -safemode leave")  # safe mode off
+        time.sleep(2)
         os.system(f"hdfs dfs -rm -R -skipTrash /user/hduser/{filename}")  # delete file
         os.system(HDFS_handler.LIST_FILES)
         os.system(f"hdfs dfs -put \"{file_path}\" /user/hduser")  # create file

@@ -204,3 +204,8 @@ class SQLite_handler(object):
             logging.log(logging.ERROR, "failed to connect to SQLite DB")
             raise
         return 0  # if succeeded
+
+    # TODO
+    @staticmethod
+    def insert_json(json):
+        pass
