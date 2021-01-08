@@ -234,8 +234,9 @@ def save_vehicles_to_sqlite():
     schema = "model VARCHAR(100), price VARCHAR(100), year VARCHAR(100), all_info VARCHAR(100)," \
              " engine VARCHAR(100), mileage VARCHAR(100), gears VARCHAR(100), color VARCHAR(100)"
     SQLite_handler(db_path=r"C:\cyber\PortableApps\SQLiteDatabaseBrowserPortable\first_sqlite_db.db")
+    SQLite_handler.exec_all(SQLite_handler.db_path, "DROP TABLE vehicles;")
     SQLite_handler.create_table(db_path=SQLite_handler.db_path, table_schema=schema, tablename="vehicles")
-    SQLite_handler.insert_json(json=data)  # TODO
+    SQLite_handler.insert_json(json=data, tablename="vehicles", db_path=SQLite_handler.db_path)  # TODO
 
     # HDFS_handler.create_file() TODO
     HDFS_handler.stop()

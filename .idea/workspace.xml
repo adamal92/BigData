@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="08479cfc-b3b1-4f27-b904-0ba7322af693" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BD_projects/moto_prices/moto_crawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/moto_prices/moto_crawler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hadoop/hdfs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hadoop/hdfs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SQL/SQLite_database_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/SQLite_database_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/Gui/moto_prices/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Gui/moto_prices/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Gui/moto_prices/templates/moto_crawler.html" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/templates/moto_crawler.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +17,7 @@
     <session id="1321443422">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.3" value="4" />
@@ -28,9 +25,9 @@
           <entry key="project.open.time.5" value="7" />
           <entry key="project.open.time.59" value="1" />
           <entry key="project.open.time.6" value="8" />
-          <entry key="project.open.time.7" value="2" />
+          <entry key="project.open.time.7" value="3" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="36" />
+          <entry key="project.opened" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -45,7 +42,7 @@
           <entry key="jsx" value="2" />
           <entry key="md" value="3" />
           <entry key="ps1" value="3" />
-          <entry key="py" value="252" />
+          <entry key="py" value="254" />
           <entry key="untitled" value="1" />
         </counts>
       </usages-collector>
@@ -59,7 +56,7 @@
           <entry key="Markdown" value="3" />
           <entry key="PLAIN_TEXT" value="15" />
           <entry key="PowerShell file" value="2" />
-          <entry key="Python" value="252" />
+          <entry key="Python" value="254" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -70,8 +67,8 @@
           <entry key="js" value="189" />
           <entry key="json" value="1" />
           <entry key="md" value="1152" />
-          <entry key="py" value="30865" />
-          <entry key="txt" value="963" />
+          <entry key="py" value="31826" />
+          <entry key="txt" value="985" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -80,8 +77,8 @@
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="189" />
           <entry key="Markdown" value="1146" />
-          <entry key="PLAIN_TEXT" value="1041" />
-          <entry key="Python" value="30896" />
+          <entry key="PLAIN_TEXT" value="1063" />
+          <entry key="Python" value="31857" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -97,8 +94,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="235" column="57" selection-start-line="235" selection-start-column="57" selection-end-line="235" selection-end-column="57" />
+            <state relative-caret-position="467">
+              <caret line="237" column="52" selection-start-line="237" selection-start-column="52" selection-end-line="237" selection-end-column="52" />
               <folding>
                 <element signature="e#55#69#0" expanded="true" />
               </folding>
@@ -109,17 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/vehicles.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-13744">
-              <caret line="22" column="135" lean-forward="true" selection-start-line="22" selection-start-column="135" selection-end-line="22" selection-end-column="135" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testsAndOthers/tests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="31" column="36" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="36" />
+            <state relative-caret-position="757">
+              <caret line="919" selection-start-line="919" selection-end-line="919" />
             </state>
           </provider>
         </entry>
@@ -127,8 +115,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Hadoop/hdfs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
+            <state relative-caret-position="999">
               <caret line="37" column="106" selection-start-line="37" selection-start-column="106" selection-end-line="37" selection-end-column="106" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SQL/SQLite_database_handler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="8">
+              <caret line="227" column="20" lean-forward="true" selection-start-line="227" selection-start-column="20" selection-end-line="227" selection-end-column="20" />
+              <folding>
+                <element signature="e#10#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NoSQL/ElasticSearch/elasticsearch_handler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -137,7 +146,7 @@
         <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider_2.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -145,7 +154,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider_2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
+            <state relative-caret-position="702">
               <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -157,8 +166,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/moto_crawler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="767">
-              <caret line="67" column="16" lean-forward="true" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
+            <state relative-caret-position="1566">
+              <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
               <folding>
                 <element signature="e#10#24#0" expanded="true" />
                 <marker date="1609940374677" expanded="true" signature="332:333" ph="..." />
@@ -267,6 +276,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -348,7 +358,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -862,7 +871,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609938844221</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="created table vehicles">
+      <created>1610025682467</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1610025682467</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TodoView">
@@ -883,7 +899,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.17136659" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.06832972" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.20824295" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -906,7 +922,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="js charts react visualization works" />
     <MESSAGE value="visualize_json.css" />
     <MESSAGE value="visualize_json is clean" />
     <MESSAGE value="added names" />
@@ -931,7 +946,8 @@
     <MESSAGE value="tries to get leaves" />
     <MESSAGE value="tries to get leaves failed" />
     <MESSAGE value="3000 entries in db" />
-    <option name="LAST_COMMIT_MESSAGE" value="3000 entries in db" />
+    <MESSAGE value="created table vehicles" />
+    <option name="LAST_COMMIT_MESSAGE" value="created table vehicles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1124,13 +1140,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NoSQL/ElasticSearch/elasticsearch_handler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3348">
-          <caret line="188" column="46" selection-start-line="188" selection-start-column="46" selection-end-line="188" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../spotify/python_383/Lib/site-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="41">
@@ -1176,9 +1185,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1269">
           <caret line="65" column="45" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1198,11 +1204,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testsAndOthers/SparkSQL.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-208">
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-208" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -1225,23 +1227,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NoSQL/ElasticSearch/Elasticsearch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1161">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Hadoop/hdfs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
+        <state relative-caret-position="999">
           <caret line="37" column="106" selection-start-line="37" selection-start-column="106" selection-end-line="37" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NoSQL/ElasticSearch/elasticsearch_handler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider_2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
+        <state relative-caret-position="702">
           <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -1251,8 +1267,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/moto_crawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="767">
-          <caret line="67" column="16" lean-forward="true" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
+        <state relative-caret-position="1566">
+          <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
           <folding>
             <element signature="e#10#24#0" expanded="true" />
             <marker date="1609940374677" expanded="true" signature="332:333" ph="..." />
@@ -1260,38 +1276,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NoSQL/ElasticSearch/Elasticsearch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1161">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQL/SQLite_database_handler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5562">
-          <caret line="207" column="10" selection-start-line="207" selection-start-column="10" selection-end-line="207" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testsAndOthers/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="31" column="36" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="36" />
+        <state relative-caret-position="184">
+          <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/vehicles.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13744">
-          <caret line="22" column="135" lean-forward="true" selection-start-line="22" selection-start-column="135" selection-end-line="22" selection-end-column="135" />
+        <state relative-caret-position="757">
+          <caret line="919" selection-start-line="919" selection-end-line="919" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQL/SQLite_database_handler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8">
+          <caret line="227" column="20" lean-forward="true" selection-start-line="227" selection-start-column="20" selection-end-line="227" selection-end-column="20" />
+          <folding>
+            <element signature="e#10#24#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="235" column="57" selection-start-line="235" selection-start-column="57" selection-end-line="235" selection-end-column="57" />
+        <state relative-caret-position="467">
+          <caret line="237" column="52" selection-start-line="237" selection-start-column="52" selection-end-line="237" selection-end-column="52" />
           <folding>
             <element signature="e#55#69#0" expanded="true" />
           </folding>
