@@ -3,6 +3,7 @@ import sqlite3
 import logging
 
 # global
+from typing import List, Any, Tuple, Dict
 
 
 class SQLite_handler(object):
@@ -16,6 +17,8 @@ class SQLite_handler(object):
     GET_TABLES: str = "get tables"  # get all tables in db
     GET_MASTER: str = "get master"  # get all information stored in the db master table
     RAM_DB: str = ":memory:"  # create & store the database in RAM, pass as db path
+
+    delete_table = lambda tablename: SQLite_handler.exec_all(SQLite_handler.db_path, f"DROP TABLE {tablename};")
 
     def __init__(self, db_path):
         SQLite_handler.db_path = db_path
@@ -204,3 +207,84 @@ class SQLite_handler(object):
             logging.log(logging.ERROR, "failed to connect to SQLite DB")
             raise
         return 0  # if succeeded
+
+    @staticmethod
+    def insert_json(json, tablename: str, db_path: str=db_path):
+        """
+        Insert a json object into the given table
+        :param json:
+        :return:
+        """
+        if type(json) is dict:
+            SQLite_handler.insert_dictionary(tablename=tablename, json=json, db_path=db_path)
+        elif type(json) is list:
+            for item in json:
+                SQLite_handler.insert_json(db_path=db_path, json=item, tablename=tablename)
+
+    @staticmethod
+    def insert_dictionary(json, tablename: str, db_path: str=db_path):
+        """
+        Insert a given dictionary to sqlite according to the columns' names
+        :param json:
+        :param tablename:
+        :param db_path:
+        :return:
+        """
+        # SQLite_handler.exec_all(db_path, "PRAGMA table_info(vehicles);")
+        schema: List[Tuple[int, str, str, int, None, int]] = \
+            SQLite_handler.get_schema(tablename=tablename, db_path=db_path)
+        # print(ret)
+        column_list: List[str] = list()
+        for column in schema:
+            column_list.append(column[1])
+        # print(column_list)
+        # print(json)
+        values: str = ''
+        for column in column_list:
+            column = column.replace("_", " ")
+            column = column.replace("\"", "")
+            column = column.replace("\'", "")
+            try:
+                string = json[column].replace("\"", "")
+                string = string.replace("\'", "")
+                # INSERT INTO vehicles VALUES("2008 BMW ב.מ.וו F800GS", "₪45,000", ...);
+                # INSERT INTO vehicles (model, price) VALUES("2008 BMW ב.מ.וו F800GS", "₪45,000");
+                values += rf'"{string}", '
+            except Exception as e:
+                # logging.error(e)
+                logging.error(f"no such column {column}")
+                values += rf'NULL, '
+        values = values[:-2]  # pop last ,
+        # print(values)
+        try:
+            SQLite_handler.exec_all(db_path, f"INSERT INTO {tablename} VALUES({values});")
+        except sqlite3.OperationalError as e:
+            logging.error("syntax error")
+            print(f"INSERT INTO {tablename} VALUES({values});")
+            raise e
+        except Exception as e:
+            print(f"INSERT INTO {tablename} VALUES({values});")
+            raise e
+
+    @staticmethod
+    def get_schema(tablename: str, db_path: str=db_path, *args: Tuple[Any], **kwargs: Dict[Any, Any]):
+        """
+        Get the schema of the table
+        :param tablename:
+        :param db_path:
+        :param args:
+        :param kwargs:
+        :return:
+        """
+        connection: sqlite3.Connection = sqlite3.connect(db_path)
+        cursor: sqlite3.Cursor = connection.execute(f"PRAGMA table_info({tablename});")
+        results: list = cursor.fetchall()
+        # if results:
+        #     # print(results)
+        #     for row in results:
+        #         logging.debug(row)
+        # else:
+        #     raise Exception(f"cant get table {tablename} schema")
+        connection.commit()
+        connection.close()
+        return results

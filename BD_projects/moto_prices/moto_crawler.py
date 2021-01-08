@@ -4,7 +4,7 @@ import os
 
 from io import TextIOWrapper
 import subprocess, sys, time
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Tuple
 
 from pyspark.sql import DataFrame
 
@@ -57,7 +57,7 @@ class MotoCrawler:
         os.system(f'scrapy runspider "{scrapy_crawler_path}" -O {save_as} -L ERROR')
 
         with open(save_as) as file:
-            MotoCrawler.motorcycle_file = file
+            MotoCrawler.motorcycle_file = save_as
             return file
 
     @staticmethod
@@ -68,6 +68,7 @@ class MotoCrawler:
         :return:
         """
         os.system("hdfs dfsadmin -safemode leave")  # safe mode off
+        time.sleep(2)
         os.system(f"hdfs dfs -rm -R -skipTrash /user/hduser/{filename}")  # delete file
         os.system(HDFS_handler.LIST_FILES)
         os.system(f"hdfs dfs -put \"{file_path}\" /user/hduser")  # create file
@@ -76,13 +77,17 @@ class MotoCrawler:
         os.system("hdfs dfsadmin -safemode enter")  # safe mode on
 
     @staticmethod
-    def process_data(data_frame: DataFrame) -> Dict:
+    def process_data(data_frame: DataFrame) -> dict:
         # TODO: add new miners/processing-tasks
 
-        return MotoCrawler.count_moto_years(data_frame=data_frame)
+        return (
+                # MotoCrawler.count_moto_column(data_frame=data_frame, years=True),
+                # MotoCrawler.count_moto_column(data_frame=data_frame, years=False)
+                MotoCrawler.count_moto(data_frame=data_frame)
+        )
 
     @staticmethod
-    def count_moto_years(data_frame: DataFrame) -> Dict:
+    def count_moto_column(data_frame: DataFrame, years: bool=True) -> Dict:
         from pyspark import SparkContext
         import pyspark
         from Spark.Spark_handler_class import Spark_handler
@@ -111,8 +116,10 @@ class MotoCrawler:
             # print(dict_list[0], dict_list[1][1:])
             temp_dict[dict_list[0].split("\"")[1]] = dict_list[1][1:].split("\"")[1]  # .replace(" ", "_")
             # temp_dict[dict_list[1][1:]] = temp_dict[dict_list[0]]
-            temp_list.append(dict_list[1][1:].split("\"")[1].split(" ")[0])  # first names
-            # temp_list.append(dict_list[1][1:].split("\"")[1])  # author names
+            if years:
+                temp_list.append(dict_list[1][1:].split("\"")[1].split(" ")[0])  # first names
+            else:
+                temp_list.append(dict_list[1][1:].split("\"")[1])  # author names
 
         # create key-value pairs
         sc.emptyRDD()
@@ -140,7 +147,7 @@ class MotoCrawler:
         return dictionary_vals
 
     @staticmethod
-    def count_moto_models(data_frame: DataFrame) -> Dict:
+    def count_moto(data_frame: DataFrame) -> Dict:
         from pyspark import SparkContext
         import pyspark
         from Spark.Spark_handler_class import Spark_handler
@@ -158,14 +165,17 @@ class MotoCrawler:
 
         # create values list (clean data)
         for row in moto_bikes_list:
+            if row.value == "[" or row.value == "]": continue
+
+            # print(row)
             dict_str: str = pyspark.sql.types.Row.asDict(row, True)["value"].split(",")[0][1:]  # .split("{")[1]
             # print(dict_str)
             dict_list = dict_str.split(":")
             # print(dict_list[0], dict_list[1][1:])
             temp_dict[dict_list[0].split("\"")[1]] = dict_list[1][1:].split("\"")[1]  # .replace(" ", "_")
             # temp_dict[dict_list[1][1:]] = temp_dict[dict_list[0]]
-            temp_list.append(dict_list[1][1:].split("\"")[1].split(" ")[0])  # first names
-            # temp_list.append(dict_list[1][1:].split("\"")[1])  # author names
+            # temp_list.append(dict_list[1][1:].split("\"")[1].split(" ")[0])  # first names
+            temp_list.append(dict_list[1][1:].split("\"")[1])  # author names
 
         # create key-value pairs
         sc.emptyRDD()

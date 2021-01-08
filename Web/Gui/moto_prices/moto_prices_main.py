@@ -3,6 +3,7 @@ This is the moto_prices projects' entry point
 """
 
 import logging
+import os
 import time
 
 import requests
@@ -135,8 +136,13 @@ def moto_hdfs():
     from BD_projects.moto_prices.moto_crawler import MotoCrawler
     from Hadoop.hdfs import HDFS_handler
     HDFS_handler.start()
-    MotoCrawler.save_file_to_hdfs(file_path=MotoCrawler.motorcycle_file.name,
-                                  filename=MotoCrawler.motorcycle_file.name)
+    # TODO:
+    # MotoCrawler.save_file_to_hdfs(file_path=MotoCrawler.motorcycle_file.name,
+    #                               filename=MotoCrawler.motorcycle_file.name)
+    MotoCrawler.save_file_to_hdfs(
+        file_path=r'C:\Users\adam l\Desktop\python files\BigData\Web\Gui\moto_prices\vehicles.json',
+        filename="vehicles.json"
+    )
     time.sleep(2)
     # json_count_names: dict = Spark_handler.pass_to_spark(
     #     file_path=f"{HDFS_handler.DEFAULT_CLUSTER_PATH}user/hduser/quotes.jl", process_fn=process_data
@@ -157,8 +163,14 @@ def moto_spark():
     os.system("hdfs dfsadmin -safemode leave")  # safe mode off
     time.sleep(2)
 
+    # TODO:
+    # json_count_names: dict = Spark_handler.pass_to_spark(
+    #     file_path=f"{HDFS_handler.DEFAULT_CLUSTER_PATH}user/hduser/{MotoCrawler.motorcycle_file.name}",
+    #     process_fn=MotoCrawler.process_data
+    # )
+
     json_count_names: dict = Spark_handler.pass_to_spark(
-        file_path=f"{HDFS_handler.DEFAULT_CLUSTER_PATH}user/hduser/{MotoCrawler.motorcycle_file.name}",
+        file_path=f"{HDFS_handler.DEFAULT_CLUSTER_PATH}user/hduser/vehicles.json",
         process_fn=MotoCrawler.process_data
     )
 
@@ -178,8 +190,59 @@ def moto_spark():
 def crawl_motorcycles_dirty():
     from BD_projects.moto_prices.moto_crawler import MotoCrawler
     MotoCrawler.start_scrapy_spider(save_as="moto_dirty.json",
+                                    spider_py=r'BigData\BD_projects\moto_prices\dirty_spider.py',
+                                    delimeter=True, dirs_till_root=3)
+    return render_template('index.html')
+
+
+@app.route("/crawl_motorcycles_dirty_2", methods=['GET'])
+def crawl_motorcycles_dirty_2():
+    from BD_projects.moto_prices.moto_crawler import MotoCrawler
+    MotoCrawler.start_scrapy_spider(save_as="moto_dirty_2.json",
                                     spider_py=r'BigData\BD_projects\moto_prices\dirty_spider_2.py',
                                     delimeter=True, dirs_till_root=3)
+    return render_template('index.html')
+
+
+@app.route("/scrapy_spider_2", methods=['GET'])
+def scrapy_spider_2():
+    from BD_projects.moto_prices.moto_crawler import MotoCrawler
+    MotoCrawler.start_scrapy_spider(save_as="vehicles.json",
+                                    spider_py=r'BigData\BD_projects\moto_prices\scrapy_spider_2.py',
+                                    delimeter=True, dirs_till_root=3)
+    return render_template('index.html')
+
+
+@app.route("/save_vehicles_to_sqlite", methods=['GET'])
+def save_vehicles_to_sqlite():
+    st = time.time()
+
+    from Hadoop.hdfs import HDFS_handler
+    HDFS_handler.start()
+    # HDFS_handler.safemode_off()
+    time.sleep(2)
+    vehicles_local_path = rf'{os.getcwd()}\vehicles.json'
+    HDFS_handler.get_file(rf'{HDFS_handler.HADOOP_USER}/vehicles.json', vehicles_local_path)
+    # HDFS_handler.safemode_on()
+
+    import json
+    with open(vehicles_local_path) as f:
+        data = json.load(f)
+    # print(type(data))
+
+    from SQL.SQLite_database_handler import SQLite_handler
+    schema = "model VARCHAR(100), price VARCHAR(100), year VARCHAR(100), all_info VARCHAR(100)," \
+             " engine VARCHAR(100), mileage VARCHAR(100), gears VARCHAR(100), color VARCHAR(100)"
+    SQLite_handler(db_path=r"C:\cyber\PortableApps\SQLiteDatabaseBrowserPortable\first_sqlite_db.db")
+    SQLite_handler.exec_all(SQLite_handler.db_path, "DROP TABLE vehicles;")
+    SQLite_handler.create_table(db_path=SQLite_handler.db_path, table_schema=schema, tablename="vehicles")
+    SQLite_handler.insert_json(json=data, tablename="vehicles", db_path=SQLite_handler.db_path)
+
+    HDFS_handler.create_file(file_path=r"C:\cyber\PortableApps\SQLiteDatabaseBrowserPortable\first_sqlite_db.db")
+    HDFS_handler.stop()
+
+    logging.debug(f"sqlite hadoop total time: {time.time() - st} seconds")
+
     return render_template('index.html')
 
 
