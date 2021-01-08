@@ -31,9 +31,8 @@ class HDFS_handler:
     safemode_on = lambda: os.system("hdfs dfsadmin -safemode enter")  # safe mode on
     delete_file = lambda filename: \
         os.system(f"hdfs dfs -rm -R -skipTrash {HDFS_handler.HADOOP_USER}/{filename}")  # delete file
-    create_file = lambda file_path: os.system(  # create file in hadoop (copy file from local to hadoop)
-        f"hdfs dfs -put \"{file_path}\" {HDFS_handler.HADOOP_USER}"
-    )
+    # create file in hadoop (copy file from local to hadoop). -f for overriding the existing file
+    create_file = lambda file_path: os.system(f"hdfs dfs -put -f \"{file_path}\" {HDFS_handler.HADOOP_USER}")
     get_file = lambda hdfs_file_path, local_path: \
         os.system(f"hdfs dfs -copyToLocal \"{hdfs_file_path}\" \"{local_path}\"")  # copy file from hadoop to local
     list_files = lambda: os.system(HDFS_handler.LIST_FILES)

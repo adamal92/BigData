@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="08479cfc-b3b1-4f27-b904-0ba7322af693" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD_projects/moto_prices/moto_crawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/moto_prices/moto_crawler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hadoop/hdfs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hadoop/hdfs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SQL/SQLite_database_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/SQLite_database_handler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/Gui/moto_prices/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py" afterDir="false" />
@@ -67,8 +69,8 @@
           <entry key="js" value="189" />
           <entry key="json" value="1" />
           <entry key="md" value="1152" />
-          <entry key="py" value="31826" />
-          <entry key="txt" value="985" />
+          <entry key="py" value="32153" />
+          <entry key="txt" value="1012" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -77,8 +79,8 @@
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="189" />
           <entry key="Markdown" value="1146" />
-          <entry key="PLAIN_TEXT" value="1063" />
-          <entry key="Python" value="31857" />
+          <entry key="PLAIN_TEXT" value="1090" />
+          <entry key="Python" value="32184" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -91,11 +93,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="237" column="52" selection-start-line="237" selection-start-column="52" selection-end-line="237" selection-end-column="52" />
+            <state relative-caret-position="375">
+              <caret line="175" lean-forward="true" selection-start-line="175" selection-end-line="175" />
               <folding>
                 <element signature="e#55#69#0" expanded="true" />
               </folding>
@@ -115,8 +117,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Hadoop/hdfs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="999">
-              <caret line="37" column="106" selection-start-line="37" selection-start-column="106" selection-end-line="37" selection-end-column="106" />
+            <state relative-caret-position="343">
+              <caret line="32" column="80" selection-start-line="32" selection-start-column="80" selection-end-line="32" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -124,7 +126,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SQL/SQLite_database_handler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8">
+            <state relative-caret-position="302">
               <caret line="227" column="20" lean-forward="true" selection-start-line="227" selection-start-column="20" selection-end-line="227" selection-end-column="20" />
               <folding>
                 <element signature="e#10#24#0" expanded="true" />
@@ -163,14 +165,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/moto_crawler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1566">
-              <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
+            <state relative-caret-position="-1900">
+              <caret line="78" column="17" lean-forward="true" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
               <folding>
                 <element signature="e#10#24#0" expanded="true" />
-                <marker date="1609940374677" expanded="true" signature="332:333" ph="..." />
+                <marker date="1610134517463" expanded="true" signature="339:340" ph="..." />
               </folding>
             </state>
           </provider>
@@ -257,10 +259,10 @@
         <option value="$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider.py" />
         <option value="$PROJECT_DIR$/Web/Gui/moto_prices/motorcycles_2.json" />
         <option value="$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider_2.py" />
-        <option value="$PROJECT_DIR$/BD_projects/moto_prices/moto_crawler.py" />
-        <option value="$PROJECT_DIR$/Hadoop/hdfs.py" />
         <option value="$PROJECT_DIR$/SQL/SQLite_database_handler.py" />
         <option value="$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py" />
+        <option value="$PROJECT_DIR$/Hadoop/hdfs.py" />
+        <option value="$PROJECT_DIR$/BD_projects/moto_prices/moto_crawler.py" />
       </list>
     </option>
   </component>
@@ -878,7 +880,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610025682467</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="data inserted into table vehicles">
+      <created>1610131087266</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1610131087266</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TodoView">
@@ -899,7 +908,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.06832972" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.19522777" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.20824295" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -922,7 +931,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="visualize_json.css" />
     <MESSAGE value="visualize_json is clean" />
     <MESSAGE value="added names" />
     <MESSAGE value="minor changes to readme" />
@@ -947,7 +955,8 @@
     <MESSAGE value="tries to get leaves failed" />
     <MESSAGE value="3000 entries in db" />
     <MESSAGE value="created table vehicles" />
-    <option name="LAST_COMMIT_MESSAGE" value="created table vehicles" />
+    <MESSAGE value="data inserted into table vehicles" />
+    <option name="LAST_COMMIT_MESSAGE" value="data inserted into table vehicles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1234,13 +1243,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Hadoop/hdfs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="999">
-          <caret line="37" column="106" selection-start-line="37" selection-start-column="106" selection-end-line="37" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NoSQL/ElasticSearch/elasticsearch_handler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -1265,17 +1267,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/moto_crawler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1566">
-          <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
-          <folding>
-            <element signature="e#10#24#0" expanded="true" />
-            <marker date="1609940374677" expanded="true" signature="332:333" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testsAndOthers/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -1290,9 +1281,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Hadoop/hdfs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="32" column="80" selection-start-line="32" selection-start-column="80" selection-end-line="32" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="175" lean-forward="true" selection-start-line="175" selection-end-line="175" />
+          <folding>
+            <element signature="e#55#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SQL/SQLite_database_handler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8">
+        <state relative-caret-position="302">
           <caret line="227" column="20" lean-forward="true" selection-start-line="227" selection-start-column="20" selection-end-line="227" selection-end-column="20" />
           <folding>
             <element signature="e#10#24#0" expanded="true" />
@@ -1300,12 +1308,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py">
+    <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/moto_crawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="237" column="52" selection-start-line="237" selection-start-column="52" selection-end-line="237" selection-end-column="52" />
+        <state relative-caret-position="-1900">
+          <caret line="78" column="17" lean-forward="true" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
           <folding>
-            <element signature="e#55#69#0" expanded="true" />
+            <element signature="e#10#24#0" expanded="true" />
+            <marker date="1610134517463" expanded="true" signature="339:340" ph="..." />
           </folding>
         </state>
       </provider>

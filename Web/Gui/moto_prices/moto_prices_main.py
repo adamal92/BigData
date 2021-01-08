@@ -236,9 +236,9 @@ def save_vehicles_to_sqlite():
     SQLite_handler(db_path=r"C:\cyber\PortableApps\SQLiteDatabaseBrowserPortable\first_sqlite_db.db")
     SQLite_handler.exec_all(SQLite_handler.db_path, "DROP TABLE vehicles;")
     SQLite_handler.create_table(db_path=SQLite_handler.db_path, table_schema=schema, tablename="vehicles")
-    SQLite_handler.insert_json(json=data, tablename="vehicles", db_path=SQLite_handler.db_path)  # TODO
+    SQLite_handler.insert_json(json=data, tablename="vehicles", db_path=SQLite_handler.db_path)
 
-    # HDFS_handler.create_file() TODO
+    HDFS_handler.create_file(file_path=r"C:\cyber\PortableApps\SQLiteDatabaseBrowserPortable\first_sqlite_db.db")
     HDFS_handler.stop()
 
     logging.debug(f"sqlite hadoop total time: {time.time() - st} seconds")

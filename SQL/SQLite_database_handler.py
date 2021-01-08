@@ -18,6 +18,8 @@ class SQLite_handler(object):
     GET_MASTER: str = "get master"  # get all information stored in the db master table
     RAM_DB: str = ":memory:"  # create & store the database in RAM, pass as db path
 
+    delete_table = lambda tablename: SQLite_handler.exec_all(SQLite_handler.db_path, f"DROP TABLE {tablename};")
+
     def __init__(self, db_path):
         SQLite_handler.db_path = db_path
 
@@ -206,7 +208,6 @@ class SQLite_handler(object):
             raise
         return 0  # if succeeded
 
-    # TODO
     @staticmethod
     def insert_json(json, tablename: str, db_path: str=db_path):
         """
@@ -222,6 +223,13 @@ class SQLite_handler(object):
 
     @staticmethod
     def insert_dictionary(json, tablename: str, db_path: str=db_path):
+        """
+        Insert a given dictionary to sqlite according to the columns' names
+        :param json:
+        :param tablename:
+        :param db_path:
+        :return:
+        """
         # SQLite_handler.exec_all(db_path, "PRAGMA table_info(vehicles);")
         schema: List[Tuple[int, str, str, int, None, int]] = \
             SQLite_handler.get_schema(tablename=tablename, db_path=db_path)
@@ -260,6 +268,14 @@ class SQLite_handler(object):
 
     @staticmethod
     def get_schema(tablename: str, db_path: str=db_path, *args: Tuple[Any], **kwargs: Dict[Any, Any]):
+        """
+        Get the schema of the table
+        :param tablename:
+        :param db_path:
+        :param args:
+        :param kwargs:
+        :return:
+        """
         connection: sqlite3.Connection = sqlite3.connect(db_path)
         cursor: sqlite3.Cursor = connection.execute(f"PRAGMA table_info({tablename});")
         results: list = cursor.fetchall()
