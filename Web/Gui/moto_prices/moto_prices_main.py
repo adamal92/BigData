@@ -177,12 +177,15 @@ def moto_spark():
     os.system("hdfs dfsadmin -safemode enter")  # safe mode on
     HDFS_handler.stop()
 
-    from testsAndOthers.data_types_and_structures import DataTypesHandler
-    DataTypesHandler.print_data_recursively(data=json_count_names)
+    from testsAndOthers.data_types_and_structures import DataTypesHandler, PrintForm
+    DataTypesHandler.print_data_recursively(data=json_count_names, print_dict=PrintForm.PRINT_DICT.value)
+
+    # elastic
+    from BD_projects.moto_prices.moto_crawler import MotoCrawler
+    MotoCrawler.upload_json_to_elastic(json=json_count_names)
+
     logging.debug(f"spark total time: {time.time() - st} seconds")
 
-    # # elastic
-    # TODO: upload_json_to_elastic(json=json_count_names)
     return render_template('moto_crawler.html')
 
 
