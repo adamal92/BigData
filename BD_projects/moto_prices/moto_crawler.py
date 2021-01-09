@@ -234,8 +234,29 @@ class MotoCrawler:
                     send_json(json_inner=item)
 
             elif type(json_inner) is dict:
+                Elasticsearch_Handler.delete("vehicles_2")
+
+                # Elasticsearch_Handler.send_request(
+                #     fn=lambda url: requests.put(url=url + f"vehicles_2",
+                #                                 json={
+                #                                     "mappings": {
+                #                                        "properties": {
+                #                                         "model": {"type": "integer"},
+                #                                         # "price": {"type": "keyword"},
+                #                                         # "all info": {"type": "keyword"},
+                #                                         # "engine": {"type": "keyword"},
+                #                                         # "mileage": {"type": "keyword"},
+                #                                         # "gears": {"type": "keyword"},
+                #                                         # "color": {"type": "keyword"}
+                #                                        }
+                #                                      }
+                #                                 }),
+                #     print_recursively=True, max_tries=5,
+                #     print_form=PrintForm.PRINT_DICT
+                # )
+
                 Elasticsearch_Handler.send_request(
-                    fn=lambda url: requests.put(url=url + f"vehicles/_doc/years", json={"vehicles": json_inner}),
+                    fn=lambda url: requests.put(url=url + f"vehicles_2/_doc/years", json=json_inner),
                     print_recursively=True, max_tries=5,
                     print_form=PrintForm.PRINT_DICT
                 )

@@ -185,6 +185,10 @@ def moto_spark():
     MotoCrawler.upload_json_to_elastic(json=json_count_names)
 
     logging.debug(f"spark total time: {time.time() - st} seconds")
+    import winsound
+    # winsound.PlaySound(sound=REC_FILE_PATH, flags=winsound.SND_FILENAME)
+    winsound.MessageBeep(winsound.MB_OK)
+    # winsound.MessageBeep(-1)
 
     return render_template('moto_crawler.html')
 
