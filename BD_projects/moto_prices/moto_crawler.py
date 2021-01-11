@@ -4,8 +4,9 @@ import os
 
 from io import TextIOWrapper
 import subprocess, sys, time
-from typing import Dict, List, Any, Tuple
+from typing import Dict, List, Any, Tuple, Union
 
+import requests
 from pyspark.sql import DataFrame
 
 from Hadoop.hdfs import HDFS_handler
@@ -77,13 +78,13 @@ class MotoCrawler:
         os.system("hdfs dfsadmin -safemode enter")  # safe mode on
 
     @staticmethod
-    def process_data(data_frame: DataFrame) -> dict:
+    def process_data(data_frame: DataFrame) -> Tuple[dict, dict]:
         # TODO: add new miners/processing-tasks
 
         return (
-                # MotoCrawler.count_moto_column(data_frame=data_frame, years=True),
-                # MotoCrawler.count_moto_column(data_frame=data_frame, years=False)
-                MotoCrawler.count_moto(data_frame=data_frame)
+                MotoCrawler.count_moto_column(data_frame=data_frame, years=True),
+                MotoCrawler.count_moto_column(data_frame=data_frame, years=False)
+                # MotoCrawler.count_moto(data_frame=data_frame)
         )
 
     @staticmethod
@@ -148,6 +149,7 @@ class MotoCrawler:
 
     @staticmethod
     def count_moto(data_frame: DataFrame) -> Dict:
+        # TODO: make abstract
         from pyspark import SparkContext
         import pyspark
         from Spark.Spark_handler_class import Spark_handler
@@ -174,8 +176,11 @@ class MotoCrawler:
             # print(dict_list[0], dict_list[1][1:])
             temp_dict[dict_list[0].split("\"")[1]] = dict_list[1][1:].split("\"")[1]  # .replace(" ", "_")
             # temp_dict[dict_list[1][1:]] = temp_dict[dict_list[0]]
+            # TODO: make abstract
+            for column in dict_list:
+                temp_list.append(dict_list[column])
             # temp_list.append(dict_list[1][1:].split("\"")[1].split(" ")[0])  # first names
-            temp_list.append(dict_list[1][1:].split("\"")[1])  # author names
+            # temp_list.append(dict_list[1][1:].split("\"")[1])  # author names
 
         # create key-value pairs
         sc.emptyRDD()
@@ -203,23 +208,84 @@ class MotoCrawler:
         return dictionary_vals
 
     @staticmethod
-    def upload_json_to_elastic(json: dict):
-        pass
+    def upload_json_to_elastic(json: Union[dict, list, tuple]):
         """
 
-        :param json:
+        :param json :type dict, list, tuple
         :return:
         """
         elastic_path: str = ""
         for directory in os.path.dirname(__file__).split(DELIMETER)[:-DIRS_TILL_ROOT]:
             elastic_path += f"{directory}\\"
-        elastic_path += "NoSQL\\ElasticSearch"
+        elastic_path += "BigData\\NoSQL\\ElasticSearch"
         # TODO: close elastic
         p = subprocess.Popen(["python", f'{elastic_path}\\start_search.py'], stdout=sys.stdout)  # search
         # p2 = subprocess.Popen(["python", f'{elastic_path}\\start_kibana.py'], stdout=sys.stdout)  # kibana
-        # p.communicate()  # wait for process to end
+        p.communicate()  # wait for process to end
 
         time.sleep(13)  # minimum time that elasticsearch takes to start: 13
+
+        from NoSQL.ElasticSearch.elasticsearch_handler import Elasticsearch_Handler
+        from testsAndOthers.data_types_and_structures import DataTypesHandler, PrintForm
+
+        def send_json(json_inner):
+            if type(json_inner) is list or type(json_inner) is tuple:
+                for item in json_inner:
+                    send_json(json_inner=item)
+
+            elif type(json_inner) is dict:
+                Elasticsearch_Handler.delete("vehicles_2")
+
+                # Elasticsearch_Handler.send_request(
+                #     fn=lambda url: requests.put(url=url + f"vehicles_2",
+                #                                 json={
+                #                                     "mappings": {
+                #                                        "properties": {
+                #                                         "model": {"type": "integer"},
+                #                                         # "price": {"type": "keyword"},
+                #                                         # "all info": {"type": "keyword"},
+                #                                         # "engine": {"type": "keyword"},
+                #                                         # "mileage": {"type": "keyword"},
+                #                                         # "gears": {"type": "keyword"},
+                #                                         # "color": {"type": "keyword"}
+                #                                        }
+                #                                      }
+                #                                 }),
+                #     print_recursively=True, max_tries=5,
+                #     print_form=PrintForm.PRINT_DICT
+                # )
+
+                Elasticsearch_Handler.send_request(
+                    fn=lambda url: requests.put(url=url + f"vehicles_2/_doc/years", json=json_inner),
+                    print_recursively=True, max_tries=5,
+                    print_form=PrintForm.PRINT_DICT
+                )
+
+            else:
+                raise Exception(f"unsupported type: {type(json_inner)}")
+
+        send_json(json_inner=json)
+
+# def main():
+#     start = time.time()
+#
+#     # loggers
+#     py4j_logger = logging.getLogger('py4j.java_gateway')  # py4j logs
+#     py4j_logger.setLevel(logging.ERROR)
+#
+#     matplotlib_logger = logging.getLogger('matplotlib')  # matplotlib logs
+#     matplotlib_logger.setLevel(logging.ERROR)
+#
+#     # logging.basicConfig(level=logging.WARNING)
+#
+#     # scrapy
+#     file: TextIOWrapper = get_file()
+#     file_path: str = f"{os.getcwd()}\\{file.name}"
+#     # file_path: str = f"{os.getcwd()}\\quotes.jl"
+#     logging.debug(file_path)
+#
+#     print("OK Total Time: %s seconds" % (time.time() - start))
+
 
         # max_tries = 5
         # counter = 0
@@ -242,28 +308,3 @@ class MotoCrawler:
         # Elasticsearch_Handler.exec(fn=lambda url: requests.put(url=url + f"school/_doc/quotes", json=json),
         #                            print_recursively=True,
         #                            print_form=DataTypesHandler.PRINT_DICT)
-
-        Elasticsearch_Handler.send_request(fn=lambda url: requests.put(url=url + f"school/_doc/quotes", json=json),
-                                           print_recursively=True, max_tries=5,
-                                           print_form=DataTypesHandler.PRINT_DICT)
-
-# def main():
-#     start = time.time()
-#
-#     # loggers
-#     py4j_logger = logging.getLogger('py4j.java_gateway')  # py4j logs
-#     py4j_logger.setLevel(logging.ERROR)
-#
-#     matplotlib_logger = logging.getLogger('matplotlib')  # matplotlib logs
-#     matplotlib_logger.setLevel(logging.ERROR)
-#
-#     # logging.basicConfig(level=logging.WARNING)
-#
-#     # scrapy
-#     file: TextIOWrapper = get_file()
-#     file_path: str = f"{os.getcwd()}\\{file.name}"
-#     # file_path: str = f"{os.getcwd()}\\quotes.jl"
-#     logging.debug(file_path)
-#
-#     print("OK Total Time: %s seconds" % (time.time() - start))
-

@@ -1,3 +1,23 @@
+from enum import Enum, unique
+
+
+@unique
+class PrintForm(Enum):
+    PRINT_BRACKETS = 0  # {
+    PRINT_DICT = 1  # dict {
+    PRINT_ARROWS = 2  # <class 'dict'>
+    NO_PRINT = 3  # don't print
+
+    def __str__(self):
+        return "PRINT_BRACKETS: {\nPRINT_DICT: dict {\nPRINT_ARROWS: <class 'dict'>\nNO_PRINT: nothing"
+
+    def get_value(self):
+        return self.name, self.value
+
+    @classmethod
+    def print_options(cls):
+        print(cls.__str__(PrintForm.PRINT_DICT))
+
 
 class DataTypesHandler:
     """
@@ -6,7 +26,7 @@ class DataTypesHandler:
     # static
     PRINT_BRACKETS = 0  # {
     PRINT_DICT = 1  # dict {
-    PRINT_ARROWS = 2  # <class 'dict'> {
+    PRINT_ARROWS = 2  # <class 'dict'> {{
 
     @staticmethod
     def print_dict(dictionary: dict):
@@ -107,6 +127,7 @@ class DataTypesHandler:
             if print_dict == DataTypesHandler.PRINT_BRACKETS: print(tab+"{")
             elif print_dict == DataTypesHandler.PRINT_DICT: print(tab+"%s {" % str(type(data)).split("'")[1])
             elif print_dict == DataTypesHandler.PRINT_ARROWS: print(tab+"%s {" % type(data))
+            elif print_dict == PrintForm.NO_PRINT: return
             else: print(tab+"%s {" % type(data))
 
             for key in data.keys():

@@ -20,6 +20,8 @@ class Elasticsearch_Handler:
     # static
     DEFAULT_URL: str = 'http://localhost:9200/'  # address of the default elastic search server
 
+    delete = lambda path: Elasticsearch_Handler.exec(fn=lambda url: requests.delete(url + path))
+
     def __init__(self):
         self._elastic_process = self.start_search()
         self._kibana_process = Elasticsearch_Handler.start_kibana(self)

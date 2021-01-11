@@ -33,10 +33,8 @@ react.fetch(json).visualize()
 
 - [ ] לרוץ על כל span
 - [ ] לפלטר לפי הערך (גם אם מלוכלך)
-- [ ] להכניס ל sql לפי הפילטר
-- [ ] לשמור את ה sql ב HDFS
-
-- [x] damn
+- [x] להכניס ל sql לפי הפילטר
+- [x] לשמור את ה sql ב HDFS
 
 * site with moto prices
 * scrape model & prices
