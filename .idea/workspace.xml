@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08479cfc-b3b1-4f27-b904-0ba7322af693" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_json.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/spark.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/firebase_connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/firebase_connection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/json/city_json.json" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/json/city_json.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_json.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_json_2.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +42,7 @@
           <entry key="jsx" value="2" />
           <entry key="md" value="4" />
           <entry key="ps1" value="3" />
-          <entry key="py" value="287" />
+          <entry key="py" value="288" />
           <entry key="untitled" value="1" />
         </counts>
       </usages-collector>
@@ -59,7 +56,7 @@
           <entry key="Markdown" value="4" />
           <entry key="PLAIN_TEXT" value="15" />
           <entry key="PowerShell file" value="2" />
-          <entry key="Python" value="287" />
+          <entry key="Python" value="288" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -70,8 +67,8 @@
           <entry key="js" value="189" />
           <entry key="json" value="3" />
           <entry key="md" value="1154" />
-          <entry key="py" value="36527" />
-          <entry key="txt" value="1158" />
+          <entry key="py" value="36784" />
+          <entry key="txt" value="1168" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -80,8 +77,8 @@
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="189" />
           <entry key="Markdown" value="1148" />
-          <entry key="PLAIN_TEXT" value="1236" />
-          <entry key="Python" value="36570" />
+          <entry key="PLAIN_TEXT" value="1246" />
+          <entry key="Python" value="36827" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -136,7 +133,7 @@
         <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/spider.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="219">
-              <caret line="192" column="52" lean-forward="true" selection-start-line="192" selection-start-column="8" selection-end-line="192" selection-end-column="52" />
+              <caret line="192" column="52" selection-start-line="192" selection-start-column="8" selection-end-line="192" selection-end-column="52" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <marker date="1610476637449" expanded="true" signature="1472:1473" ph="..." />
@@ -162,11 +159,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_json.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-606">
-              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+            <state relative-caret-position="217">
+              <caret line="112" column="59" selection-start-line="112" selection-start-column="59" selection-end-line="112" selection-end-column="59" />
               <folding>
-                <element signature="e#0#14#0" expanded="true" />
-                <marker date="1610485452891" expanded="true" signature="194:1144" ph="..." />
+                <element signature="e#0#15#0" expanded="true" />
+                <marker date="1610488666459" expanded="true" signature="591:1459" ph="..." />
+                <marker date="1610488666459" expanded="true" signature="3728:3768" ph="..." />
               </folding>
             </state>
           </provider>
@@ -175,8 +173,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/firebase_connection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="78" column="4" lean-forward="true" selection-start-line="70" selection-start-column="2" selection-end-line="78" selection-end-column="4" />
+            <state relative-caret-position="86">
+              <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
               <folding>
                 <marker date="1610479774364" expanded="true" signature="2191:2193" ph="..." />
               </folding>
@@ -188,7 +186,7 @@
         <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/json/city_json.json">
           <provider selected="true" editor-type-id="LargeFileEditor">
             <state>
-              <caret lean-forward="true" selection-end-column="1379" />
+              <caret selection-end-column="1379" />
             </state>
           </provider>
         </entry>
@@ -239,7 +237,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/BD_projects/crawler_mini_proj_clean.py" />
         <option value="$PROJECT_DIR$/BD_projects/crawler_mini_proj_using_libs.py" />
         <option value="$PROJECT_DIR$/testsAndOthers/administrator_handler.py" />
         <option value="$PROJECT_DIR$/BD_projects/crawler_admin.py" />
@@ -289,6 +286,7 @@
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/spider.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/spark.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/firebase_connection.py" />
+        <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_json_2.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_json.py" />
       </list>
     </option>
@@ -544,13 +542,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604516892326</updated>
-    </task>
-    <task id="LOCAL-00004" summary="web scraper main added">
-      <created>1607076165825</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1607076165825</updated>
     </task>
     <task id="LOCAL-00005" summary="web scraper works">
       <created>1607076635069</created>
@@ -888,7 +879,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610464436334</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="load json">
+      <created>1610485609939</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1610485609939</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TodoView">
@@ -902,14 +900,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49774775" visible="true" weight="0.17597471" />
-      <window_info id="Structure" order="1" sideWeight="0.5022523" side_tool="true" visible="true" weight="0.17597471" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.63990825" visible="true" weight="0.17597471" />
+      <window_info id="Structure" order="1" sideWeight="0.36009175" side_tool="true" visible="true" weight="0.17597471" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.51843816" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.527115" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.20824295" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -932,7 +929,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="spider got price &amp; name" />
     <MESSAGE value="spider works" />
     <MESSAGE value="spider goes to second page" />
     <MESSAGE value="added info to spider" />
@@ -957,7 +953,8 @@
     <MESSAGE value="added sound at the end of the program" />
     <MESSAGE value="ruby corona charts init" />
     <MESSAGE value="spider parse to hadoop and spark" />
-    <option name="LAST_COMMIT_MESSAGE" value="spider parse to hadoop and spark" />
+    <MESSAGE value="load json" />
+    <option name="LAST_COMMIT_MESSAGE" value="load json" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -981,13 +978,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BD_projects/jupyter_notebooks/book.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/node_modules/moment/min/locales.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1309,7 +1299,7 @@
     <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/spider.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
-          <caret line="192" column="52" lean-forward="true" selection-start-line="192" selection-start-column="8" selection-end-line="192" selection-end-column="52" />
+          <caret line="192" column="52" selection-start-line="192" selection-start-column="8" selection-end-line="192" selection-end-column="52" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <marker date="1610476637449" expanded="true" signature="1472:1473" ph="..." />
@@ -1333,14 +1323,17 @@
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state>
-          <caret lean-forward="true" selection-end-column="1379" />
+          <caret selection-end-column="1379" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_json_2.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/firebase_connection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="78" column="4" lean-forward="true" selection-start-line="70" selection-start-column="2" selection-end-line="78" selection-end-column="4" />
+        <state relative-caret-position="86">
+          <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
           <folding>
             <marker date="1610479774364" expanded="true" signature="2191:2193" ph="..." />
           </folding>
@@ -1349,11 +1342,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_json.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-606">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+        <state relative-caret-position="217">
+          <caret line="112" column="59" selection-start-line="112" selection-start-column="59" selection-end-line="112" selection-end-column="59" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1610485452891" expanded="true" signature="194:1144" ph="..." />
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1610488666459" expanded="true" signature="591:1459" ph="..." />
+            <marker date="1610488666459" expanded="true" signature="3728:3768" ph="..." />
           </folding>
         </state>
       </provider>
