@@ -88,3 +88,6 @@ for stat in db.get().val().values():
 
 print(db.get().val())
 print(stats_list)
+
+# for stat in db.get().val().values():
+#     print(stat["Stats"]['cityIdRandom']['name'])

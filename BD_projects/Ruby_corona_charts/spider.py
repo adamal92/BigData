@@ -1,3 +1,4 @@
+import json
 import logging
 import os
 import time
@@ -6,6 +7,7 @@ import winsound
 from http.client import HTTPResponse
 from typing import Dict, List, Any, Union
 
+import requests
 from pyspark import RDD
 from pyspark.sql import DataFrame
 
@@ -77,19 +79,38 @@ def process_data(data_frame: DataFrame) -> Dict:
     # from testsAndOthers.data_types_and_structures import DataTypesHandler
     # DataTypesHandler.print_data_recursively(objects_list)
 
+    data = json.load(objects_list)
+    print(data)
+
     # create values list (clean data)
     for row in objects_list:
         if row.value == "[" or row.value == "]": continue
-
-        dict_str: str = pyspark.sql.types.Row.asDict(row, True)["value"].split(",")[0][1:]  # .split("{")[1]
+        # print(row.asDict())
+        # dict_str: str = pyspark.sql.types.Row.asDict(row, True)["value"].split(",")[0][1:]  # .split("{")[1]
         # print(dict_str)
-        dict_list = dict_str.split(":")
+        # dict_list = dict_str.split(":")
         # print(dict_list[0], dict_list[1][1:])
-        temp_dict[dict_list[0].split("\"")[1]] = dict_list[1][1:].split("\"")[1]  # .replace(" ", "_")
-        # temp_dict[dict_list[1][1:]] = temp_dict[dict_list[0]]
+        # temp_dict[dict_list[0].split("\"")[1]] = dict_list[1][1:].split("\"")[1]  # .replace(" ", "_")
+        # # temp_dict[dict_list[1][1:]] = temp_dict[dict_list[0]]
+        #
+        # # temp_list.append(dict_list[1][1:].split("\"")[1].split(" ")[0])  # first names
+        # temp_list.append(dict_list[1][1:].split("\"")[1])  # author names
+        # print(temp_list)
+        # print(temp_dict)
+        string = row.asDict()["value"]
+        # print(string)
+        data = json.load(string)
+        print(data)
+        time.sleep(3)
+        return
 
-        # temp_list.append(dict_list[1][1:].split("\"")[1].split(" ")[0])  # first names
-        temp_list.append(dict_list[1][1:].split("\"")[1])  # author names
+        # for row2 in row.asDict().values():
+        #     print(type(row2))
+        #     import json
+        #     data = json.loads(row2.encode())
+        #     print(type(data))
+        #     time.sleep(3)
+        #     return
 
     # create key-value pairs
     sc.emptyRDD()
@@ -168,20 +189,24 @@ def main():
     logging.getLogger('my_log').setLevel(logging.DEBUG)
 
     def crawl_into_hdfs():
-        fileobj: HTTPResponse = urllib.request.urlopen(URL_GOV)
+        # fileobj: HTTPResponse = urllib.request.urlopen(URL_GOV)
+        fileobj: dict = requests.get(URL_GOV).json()
 
         try:
             os.mkdir(f"json/{CITY_JSON}")
         except FileExistsError:
             logging.debug("file exists")
         time.sleep(1)
-        with open(f"json/{CITY_JSON}", "w") as file:  # create the file
-            file.write(str(fileobj.read()))
-            # print(os.path.dirname(os.path.abspath(file.name)))
-            # print(os.path.abspath(file.name))
-            save_json_to_hdfs(filename=file.name, file_path=os.path.abspath(file.name))
+        # with open(f"json/{CITY_JSON}", "w") as file:  # create the file
+        #     file.write(str(fileobj.read()))
+        #     # print(os.path.dirname(os.path.abspath(file.name)))
+        #     # print(os.path.abspath(file.name))
+        #     save_json_to_hdfs(filename=file.name, file_path=os.path.abspath(file.name))
+        with open(f"json/{CITY_JSON}", 'w') as outfile:
+            json.dump(fileobj, outfile)
+            save_json_to_hdfs(filename=outfile.name, file_path=os.path.abspath(outfile.name))
 
-    crawl_into_hdfs()
+    # crawl_into_hdfs()
     to_spark()
 
     SQLite_handler(db_path=r"C:\cyber\PortableApps\SQLiteDatabaseBrowserPortable\first_sqlite_db.db")
