@@ -1,12 +1,11 @@
 from firebase import Firebase
-import jwt
 
 config = {
     # "apiKey": "apiKey",
     # "authDomain": "projectId.firebaseapp.com",
     # "databaseURL": "https://databaseName.firebaseio.com",
     # "storageBucket": "projectId.appspot.com",
-    # "serviceAccount": "path/to/serviceAccountCredentials.json"
+    # "serviceAccount": "path/to/serviceAccountCredentials.json"  # (optional)
 
     "apiKey": "AIzaSyCOt619fNqEuIgFpzf20h2cmC6tFeQYuTE",
     "authDomain": "corona-charts-33e8a.firebaseapp.com",
@@ -63,12 +62,27 @@ db = firebase.database()
 # stats_2 = db.get()
 # print(stats_2.val())
 
-# recurse?
-print(db.child("Stats").get().val())
+# print(db.child("Stats").get().val())
+# for stat in db.child("Stats").get().val().values():
+#    stats_list.append(stat)
+#    print(stat)
 
+# # create database
+# db.push({
+#     "Stats": {
+#         "cityIdRandom": {
+#             "name": "city",
+#             "code": 1,
+#             "numOfSick": 20
+#         }
+#     }
+# })
+
+# print database
+# recurse?
 stats_list = []
 
-for stat in db.child("Stats").get().val().values():
+for stat in db.get().val().values():
     stats_list.append(stat)
     print(stat)
 

@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08479cfc-b3b1-4f27-b904-0ba7322af693" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/firebase_connection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/spider.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spark/streaming.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spark/streaming.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/json/city_json.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/firebase_connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/firebase_connection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hadoop/hdfs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hadoop/hdfs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/SQLite_database_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/SQLite_database_handler.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,11 +41,11 @@
           <entry key="ipynb" value="6" />
           <entry key="jl" value="11" />
           <entry key="js" value="14" />
-          <entry key="json" value="6" />
+          <entry key="json" value="10" />
           <entry key="jsx" value="2" />
           <entry key="md" value="4" />
           <entry key="ps1" value="3" />
-          <entry key="py" value="276" />
+          <entry key="py" value="284" />
           <entry key="untitled" value="1" />
         </counts>
       </usages-collector>
@@ -53,12 +54,12 @@
           <entry key="CSS" value="4" />
           <entry key="HTML" value="15" />
           <entry key="IPNB" value="6" />
-          <entry key="JSON" value="7" />
+          <entry key="JSON" value="11" />
           <entry key="JavaScript" value="14" />
           <entry key="Markdown" value="4" />
           <entry key="PLAIN_TEXT" value="15" />
           <entry key="PowerShell file" value="2" />
-          <entry key="Python" value="276" />
+          <entry key="Python" value="284" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -69,8 +70,8 @@
           <entry key="js" value="189" />
           <entry key="json" value="1" />
           <entry key="md" value="1154" />
-          <entry key="py" value="34193" />
-          <entry key="txt" value="1096" />
+          <entry key="py" value="35490" />
+          <entry key="txt" value="1119" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -79,14 +80,14 @@
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="189" />
           <entry key="Markdown" value="1148" />
-          <entry key="PLAIN_TEXT" value="1174" />
-          <entry key="Python" value="34236" />
+          <entry key="PLAIN_TEXT" value="1197" />
+          <entry key="Python" value="35533" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
         <counts>
           <entry key="git.branch.checkout.local" value="2" />
-          <entry key="git.branch.create.new" value="16" />
+          <entry key="git.branch.create.new" value="17" />
         </counts>
       </usages-collector>
     </session>
@@ -94,31 +95,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/vehicles.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23787">
-              <caret line="881" column="309" selection-start-line="881" selection-start-column="304" selection-end-line="881" selection-end-column="309" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SQL/SQLite_database_handler.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6021">
-              <caret line="227" column="20" selection-start-line="227" selection-start-column="20" selection-end-line="227" selection-end-column="20" />
-              <folding>
-                <element signature="e#10#24#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/moto_crawler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2025">
-              <caret line="85" column="75" selection-start-line="85" selection-start-column="75" selection-end-line="85" selection-end-column="75" />
+            <state relative-caret-position="3048">
+              <caret line="126" column="40" selection-start-line="126" selection-start-column="40" selection-end-line="126" selection-end-column="40" />
               <folding>
                 <element signature="e#10#24#0" expanded="true" />
                 <marker date="1610211234273" expanded="true" signature="362:363" ph="..." />
@@ -129,24 +109,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider_2.py">
+        <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+            <state relative-caret-position="367">
+              <caret line="253" selection-start-line="253" selection-end-line="253" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#55#69#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/firebase_connection.py">
+        <entry file="file://$PROJECT_DIR$/SQL/SQLite_database_handler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+            <state relative-caret-position="49">
+              <caret line="309" column="11" selection-start-line="309" selection-start-column="11" selection-end-line="309" selection-end-column="11" />
               <folding>
-                <element signature="e#0#29#0" expanded="true" />
+                <element signature="e#10#24#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -155,8 +135,38 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/spider.py">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+                <marker date="1610464132237" expanded="true" signature="1444:1445" ph="..." />
+                <marker date="1610464132237" expanded="true" signature="5588:6081" ph="..." />
+                <marker date="1610464132237" expanded="true" signature="6494:6503" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/firebase_connection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="80" column="16" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
+              <folding>
+                <marker date="1610459190376" expanded="true" signature="2191:2193" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider_2.py">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -188,7 +198,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="moto_prices_5" />
+        <entry key="$PROJECT_DIR$" value="recall_2" />
       </map>
     </option>
   </component>
@@ -234,8 +244,6 @@
         <option value="$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider.py" />
         <option value="$PROJECT_DIR$/Web/Gui/moto_prices/motorcycles_2.json" />
         <option value="$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider_2.py" />
-        <option value="$PROJECT_DIR$/SQL/SQLite_database_handler.py" />
-        <option value="$PROJECT_DIR$/Hadoop/hdfs.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/testsAndOthers/data_types_and_structures.py" />
         <option value="$PROJECT_DIR$/NoSQL/ElasticSearch/start_kibana.py" />
@@ -244,7 +252,9 @@
         <option value="$PROJECT_DIR$/BD_projects/moto_prices/moto_crawler.py" />
         <option value="$PROJECT_DIR$/Spark/streaming.py" />
         <option value="$PROJECT_DIR$/Spark/streaming.ipynb" />
+        <option value="$PROJECT_DIR$/Hadoop/hdfs.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/firebase_connection.py" />
+        <option value="$PROJECT_DIR$/SQL/SQLite_database_handler.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/spider.py" />
       </list>
     </option>
@@ -296,61 +306,14 @@
             <path>
               <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
               <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="Hadoop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="NoSQL" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="NoSQL" type="462c0819:PsiDirectoryNode" />
-              <item name="ElasticSearch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="Spark" type="462c0819:PsiDirectoryNode" />
+              <item name="BD_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="Ruby_corona_charts" type="462c0819:PsiDirectoryNode" />
+              <item name="json" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
               <item name="BigData" type="462c0819:PsiDirectoryNode" />
               <item name="SQL" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="testsAndOthers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="visualization" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="Gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="Gui" type="462c0819:PsiDirectoryNode" />
-              <item name="moto_prices" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -365,19 +328,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\moto_prices" />
-      <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\jupyter_notebooks" />
-      <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\first_web_gui" />
-      <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui" />
-      <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\crawler" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\moto_prices" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\moto_prices" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\first_web_gui" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\first_web_gui\templates" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\first_web_gui\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\Ruby_corona_charts\json" />
+      <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\moto_prices" />
+      <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\jupyter_notebooks" />
+      <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\first_web_gui" />
+      <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -392,7 +355,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.spider">
+  <component name="RunManager" selected="Python.firebase_connection">
     <configuration name="firebase_connection" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="BigData" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -547,13 +510,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604516892326</updated>
-    </task>
-    <task id="LOCAL-00002" summary="_all keyword added">
-      <created>1607013707967</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1607013707967</updated>
     </task>
     <task id="LOCAL-00003" summary="web scraper added">
       <created>1607075098362</created>
@@ -891,7 +847,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610211546586</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="ruby corona charts init">
+      <created>1610389239495</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1610389239495</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TodoView">
@@ -911,7 +874,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.45119306" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.3470716" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.20824295" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -934,7 +897,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="minor changes to readme" />
     <MESSAGE value="spider init" />
     <MESSAGE value="spider got price &amp; name" />
     <MESSAGE value="spider works" />
@@ -959,7 +921,8 @@
     <MESSAGE value="data inserted into table vehicles" />
     <MESSAGE value="vehicles count years &amp; models" />
     <MESSAGE value="added sound at the end of the program" />
-    <option name="LAST_COMMIT_MESSAGE" value="added sound at the end of the program" />
+    <MESSAGE value="ruby corona charts init" />
+    <option name="LAST_COMMIT_MESSAGE" value="ruby corona charts init" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -983,19 +946,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/visualization/gui.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/Gui/first_web_gui/static/react_app.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/Gui/first_web_gui/static/react_app.jsx">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/Gui/first_web_gui/templates/chart.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1208,34 +1158,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4320">
-          <caret line="170" selection-start-line="170" selection-end-line="170" />
-          <folding>
-            <element signature="e#55#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Spark/streaming.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/vehicles.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23787">
-          <caret line="881" column="309" selection-start-line="881" selection-start-column="304" selection-end-line="881" selection-end-column="309" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Hadoop/hdfs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="32" column="80" selection-start-line="32" selection-start-column="80" selection-end-line="32" selection-end-column="80" />
         </state>
       </provider>
     </entry>
@@ -1245,16 +1171,6 @@
           <caret line="22" column="94" selection-start-line="22" selection-start-column="94" selection-end-line="22" selection-end-column="94" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQL/SQLite_database_handler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6021">
-          <caret line="227" column="20" selection-start-line="227" selection-start-column="20" selection-end-line="227" selection-end-column="20" />
-          <folding>
-            <element signature="e#10#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1276,44 +1192,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/moto_crawler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2025">
-          <caret line="85" column="75" selection-start-line="85" selection-start-column="75" selection-end-line="85" selection-end-column="75" />
-          <folding>
-            <element signature="e#10#24#0" expanded="true" />
-            <marker date="1610211234273" expanded="true" signature="362:363" ph="..." />
-            <marker date="1610211234273" expanded="true" signature="10414:10423" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../spotify/python_383/Lib/site-packages/firebase/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
           <caret line="308" column="8" selection-start-line="308" selection-start-column="8" selection-end-line="308" selection-end-column="8" />
           <folding>
             <element signature="e#104#115#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/firebase_connection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1325,10 +1209,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/spider.py">
+    <entry file="file://$PROJECT_DIR$/SQL/random_table.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="83" column="56" lean-forward="true" selection-start-line="83" selection-end-line="84" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider_2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/vehicles.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="881" column="309" selection-start-line="881" selection-start-column="304" selection-end-line="881" selection-end-column="309" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/moto_prices_main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="253" selection-start-line="253" selection-end-line="253" />
+          <folding>
+            <element signature="e#55#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hadoop/hdfs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1441">
+          <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
+          <folding>
+            <marker date="1610450705375" expanded="true" signature="2601:2719" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/moto_crawler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3048">
+          <caret line="126" column="40" selection-start-line="126" selection-start-column="40" selection-end-line="126" selection-end-column="40" />
+          <folding>
+            <element signature="e#10#24#0" expanded="true" />
+            <marker date="1610211234273" expanded="true" signature="362:363" ph="..." />
+            <marker date="1610211234273" expanded="true" signature="10414:10423" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/firebase_connection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="80" column="16" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
+          <folding>
+            <marker date="1610459190376" expanded="true" signature="2191:2193" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/json/city_json.json">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="189">
+          <caret column="844" selection-start-column="844" selection-end-column="844" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQL/SQLite.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQL/SQLite_database_handler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="309" column="11" selection-start-line="309" selection-start-column="11" selection-end-line="309" selection-end-column="11" />
+          <folding>
+            <element signature="e#10#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1610464132237" expanded="true" signature="1444:1445" ph="..." />
+            <marker date="1610464132237" expanded="true" signature="5588:6081" ph="..." />
+            <marker date="1610464132237" expanded="true" signature="6494:6503" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
