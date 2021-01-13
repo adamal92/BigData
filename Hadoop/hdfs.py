@@ -27,12 +27,12 @@ class HDFS_handler:
 
     stop = lambda: os.system(HDFS_handler.STOP_HDFS)  # close the hdfs server
     list_all = lambda: os.system(HDFS_handler.LIST_ALL)  # list all users & files
-    safemode_off = lambda: os.system("hdfs dfsadmin -safemode leave")  # safe mode off
+    # safemode_off = lambda: os.system("hdfs dfsadmin -safemode leave")  # safe mode off
     safemode_on = lambda: os.system("hdfs dfsadmin -safemode enter")  # safe mode on
-    delete_file = lambda filename: \
-        os.system(f"hdfs dfs -rm -R -skipTrash {HDFS_handler.HADOOP_USER}/{filename}")  # delete file
+    # delete_file = lambda filename: \
+    #     os.system(f"hdfs dfs -rm -R -skipTrash {HDFS_handler.HADOOP_USER}/{filename}")  # delete file
     # create file in hadoop (copy file from local to hadoop). -f for overriding the existing file
-    create_file = lambda file_path: os.system(f"hdfs dfs -put -f \"{file_path}\" {HDFS_handler.HADOOP_USER}")
+    # create_file = lambda file_path: os.system(f"hdfs dfs -put -f \"{file_path}\" {HDFS_handler.HADOOP_USER}")
     get_file = lambda hdfs_file_path, local_path: \
         os.system(f"hdfs dfs -copyToLocal \"{hdfs_file_path}\" \"{local_path}\"")  # copy file from hadoop to local
     list_files = lambda: os.system(HDFS_handler.LIST_FILES)
@@ -48,3 +48,20 @@ class HDFS_handler:
         result = os.system(HDFS_handler.START_HDFS)
         time.sleep(HDFS_handler.MIN_START_TIME)
         return result
+
+    @staticmethod
+    def safemode_off():
+        os.system("hdfs dfsadmin -safemode leave")  # safe mode off
+        time.sleep(2)
+
+    @staticmethod
+    def delete_file(filename: str):
+        HDFS_handler.safemode_off()
+        os.system(f"hdfs dfs -rm -R -skipTrash {HDFS_handler.HADOOP_USER}/{filename}")  # delete file
+        HDFS_handler.safemode_on()
+
+    @staticmethod
+    def create_file(file_path: str):
+        HDFS_handler.safemode_off()
+        os.system(f"hdfs dfs -put -f \"{file_path}\" {HDFS_handler.HADOOP_USER}")
+        HDFS_handler.safemode_on()

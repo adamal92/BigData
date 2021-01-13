@@ -3,7 +3,7 @@ import sqlite3
 import logging
 
 # global
-from typing import List, Any, Tuple, Dict
+from typing import List, Any, Tuple, Dict, Union
 
 
 class SQLite_handler(object):
@@ -209,14 +209,16 @@ class SQLite_handler(object):
         return 0  # if succeeded
 
     @staticmethod
-    def insert_json(json, tablename: str, db_path: str=db_path):
+    def insert_json(json: Union[dict, list], tablename: str, db_path: str=db_path, special_chars: bool=True):
         """
         Insert a json object into the given table
         :param json:
         :return:
         """
         if type(json) is dict:
-            SQLite_handler.insert_dictionary(tablename=tablename, json=json, db_path=db_path)
+            # SQLite_handler.insert_dictionary(tablename=tablename, json=json, db_path=db_path)
+            SQLite_handler.insert_dictionary_abstract(tablename=tablename, json=json, db_path=db_path,
+                                                      special_chars=special_chars)
         elif type(json) is list:
             for item in json:
                 SQLite_handler.insert_json(db_path=db_path, json=item, tablename=tablename)
@@ -288,3 +290,48 @@ class SQLite_handler(object):
         connection.commit()
         connection.close()
         return results
+
+    @staticmethod
+    def insert_dictionary_abstract(json, tablename: str, db_path: str = db_path, special_chars: bool=True):
+        """
+        Insert a given dictionary to sqlite according to the columns' names
+        :param json:
+        :param tablename:
+        :param db_path:
+        :return:
+        """
+        # SQLite_handler.exec_all(db_path, f"PRAGMA table_info({tablename});")
+        schema: List[Tuple[Any]] = SQLite_handler.get_schema(tablename=tablename, db_path=db_path)
+        # print(ret)
+        column_list: List[str] = list()
+        for column in schema:
+            column_list.append(column[1])
+        # print(column_list)
+        # print(json)
+        values: str = ''
+        for column in column_list:
+            if special_chars:
+                column = column.replace("_", " ")
+                column = column.replace("\"", "")
+                column = column.replace("\'", "")
+            try:
+                string = json[column].replace("\"", "")
+                string = string.replace("\'", "")
+                # INSERT INTO vehicles VALUES("2008 BMW ב.מ.וו F800GS", "₪45,000", ...);
+                # INSERT INTO vehicles (model, price) VALUES("2008 BMW ב.מ.וו F800GS", "₪45,000");
+                values += rf'"{string}", '
+            except Exception as e:
+                # logging.error(e)
+                logging.error(f"no such column {column}")
+                values += rf'NULL, '
+        values = values[:-2]  # pop last ,
+        print(values)
+        try:
+            SQLite_handler.exec_all(db_path, f"INSERT INTO {tablename} VALUES({values});")
+        except sqlite3.OperationalError as e:
+            logging.error("syntax error")
+            print(f"INSERT INTO {tablename} VALUES({values});")
+            raise e
+        except Exception as e:
+            print(f"INSERT INTO {tablename} VALUES({values});")
+            raise e
