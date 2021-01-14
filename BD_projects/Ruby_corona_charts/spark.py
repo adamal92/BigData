@@ -66,3 +66,24 @@ for line in response["result"]["records"]:
 #         ]
 #     }
 # }
+
+
+# {
+#     "result":{
+#         "_links":{
+#             "next":"/api/3/action/datastore_search?offset=1000000000&limit=1000000000&resource_id=8a21d39d-91e3-40db-aca1-f73f7ab1df69",
+#             "start":"/api/3/action/datastore_search?limit=1000000000&resource_id=8a21d39d-91e3-40db-aca1-f73f7ab1df69"
+#         },
+#         "fields":[
+#             {"id":"_id","type":"int"},
+#             {"id":"City_Name","type":"text"},
+#             {"id":"City_Code","type":"text"},
+#             {"id":"Date","type":"text"},
+#             {"id":"Cumulative_verified_cases","type":"text"},
+#             {"id":"Cumulated_recovered","type":"text"}
+#         ],
+#         "include_total":false,
+#         "limit":1000000000,
+#         "records":[
+#             {"City_Code":"967","City_Name":"אבו ג'ווייעד (שבט)","Cumulated_deaths":"0","Cumulated_number_of_diagnostic_tests":"0","Cumulated_number_of_tests":"0","Cumulated_recovered":"0","Cumulated_vaccinated":"0","Cumulative_verified_cases":"0","Date":"2020-03-11","_id":1},
+#             ....
