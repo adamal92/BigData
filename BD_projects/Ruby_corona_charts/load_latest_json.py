@@ -10,11 +10,13 @@ from firebase import Firebase
 
 from apscheduler.schedulers.blocking import BlockingScheduler
 # https://stackoverflow.com/questions/22715086/scheduling-python-script-to-run-every-hour-accurately
-# https://data.gov.il/dataset/covid-19/resource/0995c344-6a7a-4557-99ff-28ee6f3149b3
-# https://data.gov.il/dataset/covid-19/resource/89f61e3a-4866-4bbf-bcc1-9734e5fee58e
+# https://data.gov.il/dataset/covid-19  # מאגר קורונה
+# https://data.gov.il/dataset/covid-19/resource/8a21d39d-91e3-40db-aca1-f73f7ab1df69  # טבלת יישובים
+# https://data.gov.il/dataset/covid-19/resource/0995c344-6a7a-4557-99ff-28ee6f3149b3  # טבלת יישובים README
+# https://data.gov.il/dataset/covid-19/resource/89f61e3a-4866-4bbf-bcc1-9734e5fee58e  # קבוצות מין וגיל
 # https://console.firebase.google.com/u/2/project/corona-charts-33e8a/database/corona-charts-33e8a-default-rtdb/data/~2F
 # https://stackoverflow.com/questions/30483977/python-get-yesterdays-date-as-a-string-in-yyyy-mm-dd-format/30484112
-from pyspark import RDD, Row
+from pyspark import RDD, Row, Accumulator
 from pyspark.python.pyspark.shell import spark
 from pyspark.sql import SparkSession, DataFrame, Column
 from pyspark.sql.functions import explode, create_map
@@ -25,7 +27,7 @@ class Constants:
     URL_GOV = 'https://data.gov.il/api/3/action/datastore_search?' \
               'resource_id=8a21d39d-91e3-40db-aca1-f73f7ab1df69&limit=100000000'
     SCHEDULER: BlockingScheduler = BlockingScheduler()
-    json_rows = []
+    # json_rows = []
 
 
 def firebase_config():
@@ -106,7 +108,7 @@ def to_spark_direct_upside_down(cities: dict):
     # rdd: pyspark.rdd.RDD = sc.parallelize(list)
     def append_json(row: Row):
         # for item in row.asDict(recursive=True).items():
-        my_dict2 = {y: x for x, y in row.asDict(recursive=True).items()}
+        # my_dict2 = {y: x for x, y in row.asDict(recursive=True).items()}
         # print(my_dict2)
         # print(row.asDict(recursive=True))
         return {row["City_Name"]: row.asDict()} # {"counter": row.asDict()}
@@ -116,9 +118,9 @@ def to_spark_direct_upside_down(cities: dict):
         #     "Cumulated_deaths": row[2]
         # })
     filteresDF.foreach(append_json)
-    df55: DataFrame = spark.createDataFrame(data=filteresDF.rdd.map(append_json).collect())
-    df55.show()
-    print(df55.toPandas().to_dict())
+    cities_final_df: DataFrame = spark.createDataFrame(data=filteresDF.rdd.map(append_json).collect())
+    # cities_final_df.show()
+    print(cities_final_df.toPandas().to_dict())
     # print(Constants.json_rows)
     # filteresDF.show()
     # filteresDF.foreachPartition(lambda x: print(x))
@@ -141,24 +143,77 @@ def to_spark_direct_upside_down(cities: dict):
    #  filteresDF.select(explode(metric)).show()
    #  filteresDF.select(create_map(filteresDF.columns).alias("map")).show()
 
-    # Constants.db.update(
-    #     {
-    #         "cities_3": {
-    #             "schema": schema,
-    #             "data": final_result,
-    #             "filteresDF": filteresDF.toJSON().collect(),
-    #             # "ok_3": json.loads(str(dict({"data": filteresDF.toJSON().collect()}))),
-    #             # "ok_5": json.load(filteresDF.toJSON().collect()),
-    #             # "ok": filteresDF.toJSON().keys(),
-    #             # "ok_2": filteresDF.toJSON().collectAsMap(),
-    #             "ok": filteresDF.toPandas().to_dict(),
-    #             "shit": df55.toPandas().to_dict()
-    #         }
-    #     }
-    # )  # load to firebase
+    Constants.db.update(
+        {
+            "cities_3": {
+                "schema": schema,
+                "data": final_result,
+                "filteresDF": filteresDF.toJSON().collect(),
+                # "ok_3": json.loads(str(dict({"data": filteresDF.toJSON().collect()}))),
+                # "ok_5": json.load(filteresDF.toJSON().collect()),
+                # "ok": filteresDF.toJSON().keys(),
+                # "ok_2": filteresDF.toJSON().collectAsMap(),
+                "ok": filteresDF.toPandas().to_dict(),
+                "shit": cities_final_df.toPandas().to_dict()
+            }
+        }
+    )  # load to firebase
 
     Constants.db.update(
-        {"cities_final": df55.toPandas().to_dict()}
+        {"cities_final": cities_final_df.toPandas().to_dict()}
+    )  # load to firebase
+    # ---------------------------------------------------------------------------------
+    cities_final_df.summary()
+
+    Constants.db.update(
+        {
+            "israel": {
+                # "sum": cities_final_df.rdd.sum().__str__(),
+                "summarize": filteresDF.describe(filteresDF.columns).toPandas().to_dict(),
+                # "summarize_2": {
+                #     "City_Code": filteresDF.describe(filteresDF.City_Code).toPandas().to_dict(),
+                #     "City_Name": filteresDF.describe(filteresDF.City_Name).toPandas().to_dict(),
+                #     "Cumulated_deaths": filteresDF.describe(filteresDF.Cumulated_deaths).toPandas().to_dict(),
+                #     "Cumulated_number_of_diagnostic_tests": filteresDF
+                #         .describe(filteresDF.Cumulated_number_of_diagnostic_tests).toPandas().to_dict(),
+                #     "Cumulated_number_of_tests": filteresDF
+                #         .describe(filteresDF.Cumulated_number_of_tests).toPandas().to_dict(),
+                #     "Cumulated_recovered": filteresDF
+                #         .describe(filteresDF.Cumulated_recovered).toPandas().to_dict(),
+                #     "Cumulated_vaccinated": filteresDF
+                #         .describe(filteresDF.Cumulated_vaccinated).toPandas().to_dict(),
+                #     "Cumulative_verified_cases": filteresDF
+                #         .describe(filteresDF.Cumulative_verified_cases).toPandas().to_dict(),
+                #     "Date": filteresDF.describe(filteresDF.Date).toPandas().to_dict(),
+                #     "_id": filteresDF.describe(filteresDF["_id"]).toPandas().to_dict(),
+                # }
+            }
+        }
+    )  # load to firebase
+
+    acc_vaccinated = spark.sparkContext.accumulator(0)
+    acc_vaccinated_less_than_15 = spark.sparkContext.accumulator(0)
+
+    def count_israel_total(row: Row, acc_vaccinated_internal: Accumulator,
+                           acc_vaccinated_less_than_15_internal: Accumulator):
+        # print(row.Cumulated_vaccinated)
+        if row.Cumulated_vaccinated.isdigit():
+            acc_vaccinated_internal += int(row.Cumulated_vaccinated)
+        else:
+            print(row.Cumulated_vaccinated, type(row.Cumulated_vaccinated))
+            acc_vaccinated_less_than_15_internal += 1
+
+    filteresDF.foreach(lambda row: count_israel_total(row, acc_vaccinated, acc_vaccinated_less_than_15))
+    print(acc_vaccinated.value)
+    print(acc_vaccinated_less_than_15.value)
+
+    Constants.db.update(
+        {
+            "israel": {
+                "Cumulated_vaccinated": acc_vaccinated.value,
+                "Cumulated_vaccinated_<15": acc_vaccinated_less_than_15.value
+            }
+        }
     )  # load to firebase
 
     # from testsAndOthers.data_types_and_structures import DataTypesHandler, PrintForm
