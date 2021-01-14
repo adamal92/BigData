@@ -13,6 +13,7 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 # https://data.gov.il/dataset/covid-19/resource/0995c344-6a7a-4557-99ff-28ee6f3149b3
 # https://data.gov.il/dataset/covid-19/resource/89f61e3a-4866-4bbf-bcc1-9734e5fee58e
 # https://console.firebase.google.com/u/2/project/corona-charts-33e8a/database/corona-charts-33e8a-default-rtdb/data/~2F
+# https://stackoverflow.com/questions/30483977/python-get-yesterdays-date-as-a-string-in-yyyy-mm-dd-format/30484112
 from pyspark import RDD
 from pyspark.python.pyspark.shell import spark
 from pyspark.sql import SparkSession, DataFrame
@@ -71,14 +72,21 @@ def to_spark_direct(cities: dict):
     # print(type(citiesDF.filter(citiesDF.Date >= date.today())))
     # filteresDF: DataFrame = citiesDF.filter(citiesDF.Date >= "2021-01-09")
     from datetime import datetime, timedelta
-    day: datetime = datetime.now() - timedelta(2)  # timedelta() indicates how many days ago
-    # print(type(day))
-    print(datetime.strftime(day, '%Y-%m-%d'), type(datetime.strftime(day, '%Y-%m-%d')))
-    day_str = str(datetime.strftime(day, '%Y-%m-%d'))
-    filteresDF: DataFrame = citiesDF.filter(citiesDF.Date >= day_str)
-    filteresDF.show()
-    # print(type(filteresDF.collect()))
-    final_result: List[Dict] = filteresDF.collect()
+    result_length: int = 0
+    day: datetime = datetime.now()  # today
+    while result_length == 0:
+        # print(type(day))
+        day_str: str = datetime.strftime(day, '%Y-%m-%d')
+        filteresDF: DataFrame = citiesDF.filter(citiesDF.Date >= day_str)
+        filteresDF.show()
+        # print(type(filteresDF.collect()))
+        final_result: List[Dict] = filteresDF.collect()
+        # print(filteresDF.select("*"))
+        # print(datetime.strftime(day, '%Y-%m-%d'), type(datetime.strftime(day, '%Y-%m-%d')))
+        print(day_str, type(day_str))
+        print("Empty RDD: %s" % (final_result.__len__() == 0))
+        day = day - timedelta(1)  # timedelta() indicates how many days ago
+        result_length = final_result.__len__()
 
     Constants.db.update({"cities_3": final_result})  # load to firebase
 

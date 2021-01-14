@@ -66,8 +66,8 @@
           <entry key="js" value="189" />
           <entry key="json" value="3" />
           <entry key="md" value="1154" />
-          <entry key="py" value="38973" />
-          <entry key="txt" value="1218" />
+          <entry key="py" value="39188" />
+          <entry key="txt" value="1263" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -76,8 +76,8 @@
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="189" />
           <entry key="Markdown" value="1148" />
-          <entry key="PLAIN_TEXT" value="1296" />
-          <entry key="Python" value="39016" />
+          <entry key="PLAIN_TEXT" value="1341" />
+          <entry key="Python" value="39231" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -154,11 +154,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="73" column="61" lean-forward="true" selection-start-line="73" selection-start-column="61" selection-end-line="73" selection-end-column="61" />
+            <state relative-caret-position="177">
+              <caret line="88" column="32" lean-forward="true" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <marker date="1610621007839" expanded="true" signature="1966:3404" ph="..." />
+                <marker date="1610623095446" expanded="true" signature="2082:3810" ph="..." />
               </folding>
             </state>
           </provider>
@@ -530,13 +530,6 @@
       <option name="presentableId" value="Default" />
       <updated>1604516892326</updated>
     </task>
-    <task id="LOCAL-00008" summary="filtering works">
-      <created>1607168537714</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1607168537714</updated>
-    </task>
     <task id="LOCAL-00009" summary="cleaning data and creating dictionary works">
       <created>1607175378835</created>
       <option name="number" value="00009" />
@@ -873,7 +866,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610617827327</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="load latest json - got cities by date directly from response">
+      <created>1610621250270</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1610621250270</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TodoView">
@@ -887,13 +887,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.63752663" visible="true" weight="0.17597471" />
-      <window_info id="Structure" order="1" sideWeight="0.36247334" side_tool="true" visible="true" weight="0.17597471" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6379822" visible="true" weight="0.17597471" />
+      <window_info id="Structure" order="1" sideWeight="0.3620178" side_tool="true" visible="true" weight="0.17597471" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.4913232" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.63449025" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.20824295" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -916,7 +917,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added spider web page" />
     <MESSAGE value="Spark works" />
     <MESSAGE value="Spark for moto bikes work" />
     <MESSAGE value="TODOs cleaning" />
@@ -941,7 +941,8 @@
     <MESSAGE value="scheduled work" />
     <MESSAGE value="spark sql" />
     <MESSAGE value="spark sql works - got cities by date" />
-    <option name="LAST_COMMIT_MESSAGE" value="spark sql works - got cities by date" />
+    <MESSAGE value="load latest json - got cities by date directly from response" />
+    <option name="LAST_COMMIT_MESSAGE" value="load latest json - got cities by date directly from response" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1330,11 +1331,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="73" column="61" lean-forward="true" selection-start-line="73" selection-start-column="61" selection-end-line="73" selection-end-column="61" />
+        <state relative-caret-position="177">
+          <caret line="88" column="32" lean-forward="true" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <marker date="1610621007839" expanded="true" signature="1966:3404" ph="..." />
+            <marker date="1610623095446" expanded="true" signature="2082:3810" ph="..." />
           </folding>
         </state>
       </provider>
