@@ -50,6 +50,7 @@ def firebase_config():
 
 
 def crawl_corona():
+    # TODO: catch if there is no internet connection
     response: dict = requests.get(Constants.URL_GOV).json()
     # print(response["result"]["records"].pop().items())
     # return
@@ -72,76 +73,33 @@ def to_spark_direct_upside_down(cities: dict):
 
     # cities: List[Dict[str, str, str, str, str, str, str, str, str, int]] = dict_root["result"]["records"]
     citiesDF: DataFrame = spark.createDataFrame(data=cities)
-    citiesDF.printSchema()
-    citiesDF.show(truncate=False)
-    # from datetime import date
-    # today = date.today()
-    # print("Today's date:", today)
-    # print(type(citiesDF.filter(citiesDF.Date >= date.today())))
-    # filteresDF: DataFrame = citiesDF.filter(citiesDF.Date >= "2021-01-09")
+    # citiesDF.printSchema()
+    # citiesDF.show(truncate=False)
+
     from datetime import datetime, timedelta
     result_length: int = 0
     day: datetime = datetime.now()  # today
     while result_length == 0:
-        # print(type(day))
         day_str: str = datetime.strftime(day, '%Y-%m-%d')
         filteresDF: DataFrame = citiesDF.filter(citiesDF.Date >= day_str)
-        filteresDF.show()
-        filteresDF.describe().show()
+        # filteresDF.show()
+        # filteresDF.describe().show()
         schema = filteresDF.columns
-        logging.debug(schema)
-        # print(type(filteresDF.collect()))
+        # logging.debug(schema)
+
         final_result: List[Dict] = filteresDF.collect()
-        # print(filteresDF.select("*"))
-        # print(datetime.strftime(day, '%Y-%m-%d'), type(datetime.strftime(day, '%Y-%m-%d')))
+
         logging.debug(f'{day_str} {type(day_str)}')
         logging.debug("Empty RDD: %s" % (final_result.__len__() == 0))
         day = day - timedelta(1)  # timedelta() indicates how many days ago
         result_length = final_result.__len__()
-    # print(type(filteresDF.rdd.mapValues(lambda city: (city["City_Name"], city["City_Code"]))))
-    # print(filteresDF.rdd.mapValues(lambda city: (city["City_Name"], city["City_Code"])).collectAsMap())
-    # print(filteresDF.select(explode(filteresDF.rdd.collectAsMap())))
-    # print(explode(filteresDF))
-    # print(filteresDF.toPandas().to_dict())
-    # my_dict2 = {y: x for x, y in filteresDF.toPandas().to_dict().items()}
-    # print(my_dict2)
-    # rdd: pyspark.rdd.RDD = sc.parallelize(list)
+
     def append_json(row: Row):
-        # for item in row.asDict(recursive=True).items():
-        # my_dict2 = {y: x for x, y in row.asDict(recursive=True).items()}
-        # print(my_dict2)
-        # print(row.asDict(recursive=True))
-        return {row["City_Name"]: row.asDict()} # {"counter": row.asDict()}
-        # Constants.json_rows.append({
-        #     "City_Code": row["City_Code"],
-        #     "City_Name": row.City_Code,
-        #     "Cumulated_deaths": row[2]
-        # })
+        return {row["City_Name"]: row.asDict()}  # {"counter": row.asDict()}
+
     filteresDF.foreach(append_json)
     cities_final_df: DataFrame = spark.createDataFrame(data=filteresDF.rdd.map(append_json).collect())
-    # cities_final_df.show()
-    #               print(cities_final_df.toPandas().to_dict())
-    # print(Constants.json_rows)
-    # filteresDF.show()
-    # filteresDF.foreachPartition(lambda x: print(x))
-   #  metric: Column = create_map(filteresDF.columns)
-   #  metric: Column = create_map([
-   #      filteresDF.City_Name,
-   #      [
-   #          filteresDF.City_Code,
-   #          filteresDF.Cumulated_deaths,
-   #          filteresDF.Cumulated_number_of_diagnostic_tests,
-   #          filteresDF.Cumulated_number_of_tests,
-   #          filteresDF.Cumulated_recovered,
-   #          filteresDF.Cumulated_vaccinated,
-   #          filteresDF["Cumulative_verified_cases"],
-   #          filteresDF.Date,
-   #          filteresDF["_id"]
-   #      ]
-   #  ])
-   #  print(filteresDF.select(explode(metric)))
-   #  filteresDF.select(explode(metric)).show()
-   #  filteresDF.select(create_map(filteresDF.columns).alias("map")).show()
+    # print(cities_final_df.toPandas().to_dict())
 
     Constants.db.update(
         {
@@ -149,10 +107,6 @@ def to_spark_direct_upside_down(cities: dict):
                 "schema": schema,
                 "data": final_result,
                 "filteresDF": filteresDF.toJSON().collect(),
-                # "ok_3": json.loads(str(dict({"data": filteresDF.toJSON().collect()}))),
-                # "ok_5": json.load(filteresDF.toJSON().collect()),
-                # "ok": filteresDF.toJSON().keys(),
-                # "ok_2": filteresDF.toJSON().collectAsMap(),
                 "ok": filteresDF.toPandas().to_dict(),
                 "shit": cities_final_df.toPandas().to_dict()
             }
@@ -164,57 +118,6 @@ def to_spark_direct_upside_down(cities: dict):
     )  # load to firebase
     # ---------------------------------------------------------------------------------
     cities_final_df.summary()
-
-    # Constants.db.update(
-    #     {
-    #         "israel": {
-    #             # "sum": cities_final_df.rdd.sum().__str__(),
-    #             "summarize": filteresDF.describe(filteresDF.columns).toPandas().to_dict(),
-    #             # "summarize_2": {
-    #             #     "City_Code": filteresDF.describe(filteresDF.City_Code).toPandas().to_dict(),
-    #             #     "City_Name": filteresDF.describe(filteresDF.City_Name).toPandas().to_dict(),
-    #             #     "Cumulated_deaths": filteresDF.describe(filteresDF.Cumulated_deaths).toPandas().to_dict(),
-    #             #     "Cumulated_number_of_diagnostic_tests": filteresDF
-    #             #         .describe(filteresDF.Cumulated_number_of_diagnostic_tests).toPandas().to_dict(),
-    #             #     "Cumulated_number_of_tests": filteresDF
-    #             #         .describe(filteresDF.Cumulated_number_of_tests).toPandas().to_dict(),
-    #             #     "Cumulated_recovered": filteresDF
-    #             #         .describe(filteresDF.Cumulated_recovered).toPandas().to_dict(),
-    #             #     "Cumulated_vaccinated": filteresDF
-    #             #         .describe(filteresDF.Cumulated_vaccinated).toPandas().to_dict(),
-    #             #     "Cumulative_verified_cases": filteresDF
-    #             #         .describe(filteresDF.Cumulative_verified_cases).toPandas().to_dict(),
-    #             #     "Date": filteresDF.describe(filteresDF.Date).toPandas().to_dict(),
-    #             #     "_id": filteresDF.describe(filteresDF["_id"]).toPandas().to_dict(),
-    #             # }
-    #         }
-    #     }
-    # )  # load to firebase
-
-    # acc_vaccinated = spark.sparkContext.accumulator(0)
-    # acc_vaccinated_less_than_15 = spark.sparkContext.accumulator(0)
-    #
-    # def count_israel_total(row: Row, acc_vaccinated_internal: Accumulator,
-    #                        acc_vaccinated_less_than_15_internal: Accumulator):
-    #     # print(row.Cumulated_vaccinated)
-    #     if row.Cumulated_vaccinated.isdigit():
-    #         acc_vaccinated_internal += int(row.Cumulated_vaccinated)
-    #     else:
-    #         print(row.Cumulated_vaccinated, type(row.Cumulated_vaccinated))
-    #         acc_vaccinated_less_than_15_internal += 1
-    #
-    # filteresDF.foreach(lambda row: count_israel_total(row, acc_vaccinated, acc_vaccinated_less_than_15))
-    # print(acc_vaccinated.value)
-    # print(acc_vaccinated_less_than_15.value)
-    #
-    # Constants.db.update(
-    #     {
-    #         "israel": {
-    #             "Cumulated_vaccinated": acc_vaccinated.value,
-    #             "Cumulated_vaccinated_<15": acc_vaccinated_less_than_15.value
-    #         }
-    #     }
-    # )  # load to firebase
 
     accum_dict: Dict[Dict[str, Accumulator]] = {
         "vaccinated": {
@@ -243,55 +146,45 @@ def to_spark_direct_upside_down(cities: dict):
         }
     }
 
-    value_accu = spark.sparkContext.accumulator(0)
-
     def count_israel_total(row: Row, acc_vaccinated_internal: Accumulator,
                            acc_vaccinated_less_than_15_internal: Accumulator):
-        # print(row.Cumulated_vaccinated)
-        if row.Cumulated_vaccinated.isdigit():
-            acc_vaccinated_internal += int(row.Cumulated_vaccinated)
-        else:
-            print(row.Cumulated_vaccinated, type(row.Cumulated_vaccinated))
-            acc_vaccinated_less_than_15_internal += 1
+        # print(row)
+        for city in row.asDict().values():
+            if city:
+                # TODO: city[city_key] = accumulator  x6
+                for city_key in city.keys():
+                    print(city[city_key])
+                    if city[city_key].isdigit():
+                        acc_vaccinated_internal += int(city[city_key])
+                        # print(f"------------------{int(row.Cumulated_vaccinated)}-----------------------")
+                    elif city[city_key] == "<15":
+                        # print(city[city_key], type(city["Cumulated_deaths"]))
+                        print("------------------<15-----------------------")
+                        acc_vaccinated_less_than_15_internal += 1
 
     def switch_accu(key_dict: dict, row: Row, keyname):
-        print("----------------------start---------------------------------------")
-        print(key_dict, keyname)
+        # print(key_dict, keyname)
         try:
             less_15 = key_dict.popitem()
             cumulated = key_dict.popitem()
             count_israel_total(row, cumulated[1], less_15[1])
 
-            # accum_dict[keyname][cumulated[0]] = cumulated[1].value
-            # accum_dict[keyname][less_15[0]] = less_15[1].value
-            # print(cumulated[1].value)
-            # print(less_15[1].value)
-            try:
-                print(accum_dict[keyname][cumulated[0]])
-            finally:
-                print("---------------------end----------------------------------------")
-            # for key2 in accum_dict[keyname].keys():
-            #     print(accum_dict[keyname], accum_dict[keyname][key2])
-            #     accum_dict[keyname][key2] = accum_dict[keyname][key2].value
         except Exception as e:
-            logging.error(e)
-        # accum_dict[keyname][cumulated[0]] = cumulated[1].value
-        # accum_dict[keyname][less_15[0]] = less_15[1].value
+            # logging.error(e)
+            pass
+        finally:
+            # print()
+            pass
 
-    print(accum_dict)
-    filteresDF.foreach(lambda row: switch_accu(key_dict=accum_dict[key], row=row, keyname=key))
+    # print(accum_dict)
 
     for key in accum_dict.keys():
-        print(key, accum_dict[key])
+        # print(key, accum_dict[key])
+        cities_final_df.foreach(lambda row: switch_accu(key_dict=accum_dict[key], row=row, keyname=key))
+
         for key2 in accum_dict[key].keys():
-            print(accum_dict[key], accum_dict[key][key2].value)
+            # print(accum_dict[key], accum_dict[key][key2].value)
             accum_dict[key][key2] = accum_dict[key][key2].value
-    #
-    # Constants.db.update(
-    #     {
-    #         "israel": accum_dict
-    #     }
-    # )  # load to firebase
 
     Constants.db.update(
         {

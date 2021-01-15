@@ -279,10 +279,10 @@ def to_spark_direct_upside_down(cities: dict):
         # accum_dict[keyname][less_15[0]] = less_15[1].value
 
     print(accum_dict)
-    filteresDF.foreach(lambda row: switch_accu(key_dict=accum_dict[key], row=row, keyname=key))
 
     for key in accum_dict.keys():
         print(key, accum_dict[key])
+        filteresDF.foreach(lambda row: switch_accu(key_dict=accum_dict[key], row=row, keyname=key))
         for key2 in accum_dict[key].keys():
             print(accum_dict[key], accum_dict[key][key2].value)
             accum_dict[key][key2] = accum_dict[key][key2].value

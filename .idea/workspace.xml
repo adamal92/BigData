@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08479cfc-b3b1-4f27-b904-0ba7322af693" name="Default Changelist" comment="">
+    <list default="true" id="08479cfc-b3b1-4f27-b904-0ba7322af693" name="Default Changelist" comment="cities and israel working final">
+      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +43,7 @@
           <entry key="jsx" value="2" />
           <entry key="md" value="4" />
           <entry key="ps1" value="3" />
-          <entry key="py" value="298" />
+          <entry key="py" value="300" />
           <entry key="untitled" value="1" />
         </counts>
       </usages-collector>
@@ -55,7 +57,7 @@
           <entry key="Markdown" value="4" />
           <entry key="PLAIN_TEXT" value="15" />
           <entry key="PowerShell file" value="2" />
-          <entry key="Python" value="298" />
+          <entry key="Python" value="300" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -66,8 +68,8 @@
           <entry key="js" value="189" />
           <entry key="json" value="3" />
           <entry key="md" value="1154" />
-          <entry key="py" value="41878" />
-          <entry key="txt" value="1312" />
+          <entry key="py" value="42802" />
+          <entry key="txt" value="1361" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -76,8 +78,8 @@
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="189" />
           <entry key="Markdown" value="1148" />
-          <entry key="PLAIN_TEXT" value="1390" />
-          <entry key="Python" value="41921" />
+          <entry key="PLAIN_TEXT" value="1439" />
+          <entry key="Python" value="42845" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -151,16 +153,34 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="283" column="8" selection-start-line="283" selection-start-column="8" selection-end-line="283" selection-end-column="8" />
+            <state relative-caret-position="-3068">
+              <caret line="324" column="96" selection-start-line="324" selection-start-column="96" selection-end-line="324" selection-end-column="96" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <marker date="1610709514856" expanded="true" signature="4886:5071" ph="..." />
-                <marker date="1610709514856" expanded="true" signature="8656:8657" ph="..." />
-                <marker date="1610709514856" expanded="true" signature="12452:12703" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-362">
+              <caret line="153" column="56" lean-forward="true" selection-start-line="153" selection-start-column="56" selection-end-line="153" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4311">
+              <caret line="290" column="66" selection-start-line="290" selection-start-column="66" selection-end-line="290" selection-end-column="66" />
+              <folding>
+                <marker date="1610725272652" expanded="true" signature="5710:5715" ph="..." />
               </folding>
             </state>
           </provider>
@@ -222,8 +242,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/BD_projects/crawler_admin.py" />
-        <option value="$PROJECT_DIR$/testsAndOthers/copy_admin.py" />
         <option value="$PROJECT_DIR$/BD_projects/crawler/crawler_admin.py" />
         <option value="$PROJECT_DIR$/testsAndOthers/admin.py" />
         <option value="$PROJECT_DIR$/testsAndOthers/tests.py" />
@@ -273,6 +291,8 @@
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/spark.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/sparkSQL.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json.py" />
+        <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_2.py" />
+        <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_3.py" />
       </list>
     </option>
   </component>
@@ -350,19 +370,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\moto_prices" />
-      <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\moto_prices" />
-      <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\first_web_gui" />
-      <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\first_web_gui\templates" />
-      <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\first_web_gui\static" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\Ruby_corona_charts\json" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\moto_prices" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\jupyter_notebooks" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\first_web_gui" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\Ruby_corona_charts" />
+      <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\moto_prices" />
+      <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\moto_prices" />
+      <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\first_web_gui" />
+      <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Gui\first_web_gui\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -377,28 +397,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.load_latest_json">
-    <configuration name="firebase_connection" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="BigData" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/firebase_connection.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.load_latest_json_3">
     <configuration name="hdfs_try_powershell" type="PythonConfigurationType" factoryName="Python">
       <module name="BigData" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -462,7 +461,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="spark" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="load_latest_json_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="BigData" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -474,7 +473,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/spark.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="load_latest_json_3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="BigData" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -506,19 +526,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.hdfs_try_powershell" />
-      <item itemvalue="Python.firebase_connection" />
-      <item itemvalue="Python.spark" />
       <item itemvalue="Python.load_json" />
       <item itemvalue="Python.sparkSQL" />
       <item itemvalue="Python.load_latest_json" />
+      <item itemvalue="Python.load_latest_json_2" />
+      <item itemvalue="Python.load_latest_json_3" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.load_latest_json_3" />
+        <item itemvalue="Python.load_latest_json_2" />
         <item itemvalue="Python.load_latest_json" />
         <item itemvalue="Python.sparkSQL" />
         <item itemvalue="Python.load_json" />
-        <item itemvalue="Python.firebase_connection" />
-        <item itemvalue="Python.spark" />
       </list>
     </recent_temporary>
   </component>
@@ -532,13 +552,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604516892326</updated>
-    </task>
-    <task id="LOCAL-00012" summary="crawler project finished">
-      <created>1607266568323</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1607266568323</updated>
     </task>
     <task id="LOCAL-00013" summary="some tries to kill elastic processes">
       <created>1607357031230</created>
@@ -876,7 +889,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610658996922</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="oof">
+      <created>1610709646434</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1610709646435</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TodoView">
@@ -890,14 +910,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6383701" visible="true" weight="0.17597471" />
-      <window_info id="Structure" order="1" sideWeight="0.36162987" side_tool="true" visible="true" weight="0.17597471" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.63976085" visible="true" weight="0.17597471" />
+      <window_info id="Structure" order="1" sideWeight="0.36023915" side_tool="true" visible="true" weight="0.17597471" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.36117136" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.27440348" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.20824295" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -920,7 +939,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="README table" />
     <MESSAGE value="moto dirty init" />
     <MESSAGE value="recurse works!" />
     <MESSAGE value="got string from recurse" />
@@ -945,7 +963,8 @@
     <MESSAGE value="got cities by latest date directly from response" />
     <MESSAGE value="cities is done" />
     <MESSAGE value="got total vaccinated" />
-    <option name="LAST_COMMIT_MESSAGE" value="got total vaccinated" />
+    <MESSAGE value="oof" />
+    <option name="LAST_COMMIT_MESSAGE" value="oof" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -969,20 +988,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Web/start_scrapy_crawler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="109" selection-start-line="9" selection-start-column="109" selection-end-line="9" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/templates/moto_crawler.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/static/spider/spider.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -1334,13 +1339,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="283" column="8" selection-start-line="283" selection-start-column="8" selection-end-line="283" selection-end-column="8" />
+        <state relative-caret-position="-3068">
+          <caret line="324" column="96" selection-start-line="324" selection-start-column="96" selection-end-line="324" selection-end-column="96" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <marker date="1610709514856" expanded="true" signature="4886:5071" ph="..." />
-            <marker date="1610709514856" expanded="true" signature="8656:8657" ph="..." />
-            <marker date="1610709514856" expanded="true" signature="12452:12703" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-362">
+          <caret line="153" column="56" lean-forward="true" selection-start-line="153" selection-start-column="56" selection-end-line="153" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4311">
+          <caret line="290" column="66" selection-start-line="290" selection-start-column="66" selection-end-line="290" selection-end-column="66" />
+          <folding>
+            <marker date="1610725272652" expanded="true" signature="5710:5715" ph="..." />
           </folding>
         </state>
       </provider>
