@@ -1,5 +1,5 @@
 from firebase import Firebase
-
+# https://bitbucket.org/joetilsed/firebase/src/master/firebase/__init__.py
 config = {
     # "apiKey": "apiKey",
     # "authDomain": "projectId.firebaseapp.com",
