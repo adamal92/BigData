@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08479cfc-b3b1-4f27-b904-0ba7322af693" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/excel_sheets/Copy of קובץ_ישובים_2018.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/excel_sheets/corona_city_table_ver_0035 (1).xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/excel_sheets/corona_city_table_ver_0035.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/excel_sheets/Corona_BD_2.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/excel_sheets/Corona_BD_2_deadliness.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/excel_sheets/Corona_BD_3_population.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/excel_sheets/Corona__BD_1_tables.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/excel_sheets/ptpdistance-2.xls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_4_hdfs.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_4_hdfs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/excel_sheets/corona_city_table_ver_0035 (1).xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/excel_sheets/corona_city_table_ver_0035 (1).xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/excel_sheets/corona_city_table_ver_0035.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/excel_sheets/corona_city_table_ver_0035.xlsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +73,7 @@
           <entry key="json" value="3" />
           <entry key="md" value="1154" />
           <entry key="py" value="42807" />
-          <entry key="txt" value="1374" />
+          <entry key="txt" value="1395" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -79,7 +82,7 @@
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="189" />
           <entry key="Markdown" value="1148" />
-          <entry key="PLAIN_TEXT" value="1452" />
+          <entry key="PLAIN_TEXT" value="1473" />
           <entry key="Python" value="42850" />
         </counts>
       </usages-collector>
@@ -97,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_4_hdfs.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="185">
-              <caret line="195" column="50" lean-forward="true" selection-start-line="195" selection-start-column="50" selection-end-line="195" selection-end-column="50" />
+              <caret line="195" column="50" selection-start-line="195" selection-start-column="50" selection-end-line="195" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -457,13 +460,6 @@
       <option name="presentableId" value="Default" />
       <updated>1604516892326</updated>
     </task>
-    <task id="LOCAL-00015" summary="first_web_gui and metro4-theme where added">
-      <created>1607523339114</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1607523339114</updated>
-    </task>
     <task id="LOCAL-00016" summary="crawler with gui works">
       <created>1607556201940</created>
       <option name="number" value="00016" />
@@ -800,7 +796,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610750935593</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="added excel directory">
+      <created>1610821861561</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1610821861562</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TodoView">
@@ -814,14 +817,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7791411" visible="true" weight="0.17597471" />
-      <window_info id="Structure" order="1" sideWeight="0.2208589" side_tool="true" visible="true" weight="0.17597471" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.87286526" visible="true" weight="0.17597471" />
+      <window_info id="Structure" order="1" sideWeight="0.12713473" side_tool="true" visible="true" weight="0.17597471" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.64642084" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.4284165" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.20824295" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -844,7 +846,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="got string from recurse" />
     <MESSAGE value="filter ver 1" />
     <MESSAGE value="filter ver 2" />
     <MESSAGE value="filter ver 3" />
@@ -869,7 +870,8 @@
     <MESSAGE value="oof" />
     <MESSAGE value="cities and israel working final" />
     <MESSAGE value="ML init https://www.youtube.com/watch?v=5HWveDdrosk&amp;feature=youtu.be" />
-    <option name="LAST_COMMIT_MESSAGE" value="ML init https://www.youtube.com/watch?v=5HWveDdrosk&amp;feature=youtu.be" />
+    <MESSAGE value="added excel directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="added excel directory" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1244,7 +1246,7 @@
     <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_4_hdfs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
-          <caret line="195" column="50" lean-forward="true" selection-start-line="195" selection-start-column="50" selection-end-line="195" selection-end-column="50" />
+          <caret line="195" column="50" selection-start-line="195" selection-start-column="50" selection-end-line="195" selection-end-column="50" />
         </state>
       </provider>
     </entry>
