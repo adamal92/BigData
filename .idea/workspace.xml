@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08479cfc-b3b1-4f27-b904-0ba7322af693" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_4_hdfs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/sparkML.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spark/ML.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/excel_sheets/Copy of קובץ_ישובים_2018.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/excel_sheets/corona_city_table_ver_0035 (1).xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/excel_sheets/corona_city_table_ver_0035.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_4_hdfs.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_4_hdfs.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +70,7 @@
           <entry key="json" value="3" />
           <entry key="md" value="1154" />
           <entry key="py" value="42807" />
-          <entry key="txt" value="1361" />
+          <entry key="txt" value="1374" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -78,25 +79,25 @@
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="189" />
           <entry key="Markdown" value="1148" />
-          <entry key="PLAIN_TEXT" value="1439" />
+          <entry key="PLAIN_TEXT" value="1452" />
           <entry key="Python" value="42850" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
         <counts>
           <entry key="git.branch.checkout.local" value="2" />
-          <entry key="git.branch.create.new" value="21" />
+          <entry key="git.branch.create.new" value="22" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_4_hdfs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="93" column="99" selection-start-line="93" selection-start-column="99" selection-end-line="93" selection-end-column="99" />
+            <state relative-caret-position="185">
+              <caret line="195" column="50" lean-forward="true" selection-start-line="195" selection-start-column="50" selection-end-line="195" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -106,7 +107,7 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Spark/ML.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -139,7 +140,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ruby_corona_charts_4" />
+        <entry key="$PROJECT_DIR$" value="ruby_corona_charts_5" />
       </map>
     </option>
   </component>
@@ -194,9 +195,9 @@
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_2.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_3.py" />
-        <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_4_hdfs.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/sparkML.py" />
         <option value="$PROJECT_DIR$/Spark/ML.py" />
+        <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_4_hdfs.py" />
       </list>
     </option>
   </component>
@@ -247,6 +248,13 @@
             <path>
               <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
               <item name="BigData" type="462c0819:PsiDirectoryNode" />
+              <item name="BD_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="Ruby_corona_charts" type="462c0819:PsiDirectoryNode" />
+              <item name="excel_sheets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BigData" type="462c0819:PsiDirectoryNode" />
               <item name="Spark" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -293,7 +301,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.load_latest_json_3">
+  <component name="RunManager" selected="Python.load_latest_json_4_hdfs">
     <configuration name="hdfs_try_powershell" type="PythonConfigurationType" factoryName="Python">
       <module name="BigData" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -307,27 +315,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="C:\Users\adam l\Desktop\python files\BigData\Hadoop\hdfs_try_powershell.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="load_json" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="BigData" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_json.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -399,6 +386,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="load_latest_json_4_hdfs" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="BigData" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_4_hdfs.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="sparkSQL" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="BigData" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -422,19 +430,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.hdfs_try_powershell" />
-      <item itemvalue="Python.load_json" />
       <item itemvalue="Python.sparkSQL" />
       <item itemvalue="Python.load_latest_json" />
       <item itemvalue="Python.load_latest_json_2" />
       <item itemvalue="Python.load_latest_json_3" />
+      <item itemvalue="Python.load_latest_json_4_hdfs" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.load_latest_json_4_hdfs" />
         <item itemvalue="Python.load_latest_json_3" />
         <item itemvalue="Python.load_latest_json_2" />
         <item itemvalue="Python.load_latest_json" />
         <item itemvalue="Python.sparkSQL" />
-        <item itemvalue="Python.load_json" />
       </list>
     </recent_temporary>
   </component>
@@ -448,13 +456,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604516892326</updated>
-    </task>
-    <task id="LOCAL-00014" summary="copy_admin and web_gui where added">
-      <created>1607521307395</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1607521307395</updated>
     </task>
     <task id="LOCAL-00015" summary="first_web_gui and metro4-theme where added">
       <created>1607523339114</created>
@@ -792,7 +793,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610733638519</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="ML init https://www.youtube.com/watch?v=5HWveDdrosk&amp;feature=youtu.be">
+      <created>1610750935593</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1610750935593</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TodoView">
@@ -808,12 +816,12 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8741866" visible="true" weight="0.17597471" />
-      <window_info id="Structure" order="1" sideWeight="0.12581345" side_tool="true" visible="true" weight="0.17597471" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7791411" visible="true" weight="0.17597471" />
+      <window_info id="Structure" order="1" sideWeight="0.2208589" side_tool="true" visible="true" weight="0.17597471" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.27440348" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.64642084" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.20824295" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -836,7 +844,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="recurse works!" />
     <MESSAGE value="got string from recurse" />
     <MESSAGE value="filter ver 1" />
     <MESSAGE value="filter ver 2" />
@@ -861,7 +868,8 @@
     <MESSAGE value="got total vaccinated" />
     <MESSAGE value="oof" />
     <MESSAGE value="cities and israel working final" />
-    <option name="LAST_COMMIT_MESSAGE" value="cities and israel working final" />
+    <MESSAGE value="ML init https://www.youtube.com/watch?v=5HWveDdrosk&amp;feature=youtu.be" />
+    <option name="LAST_COMMIT_MESSAGE" value="ML init https://www.youtube.com/watch?v=5HWveDdrosk&amp;feature=youtu.be" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1227,18 +1235,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_4_hdfs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="93" column="99" selection-start-line="93" selection-start-column="99" selection-end-line="93" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/sparkML.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Spark/ML.py">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_latest_json_4_hdfs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="195" column="50" lean-forward="true" selection-start-line="195" selection-start-column="50" selection-end-line="195" selection-end-column="50" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
