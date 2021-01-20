@@ -1,8 +1,6 @@
 import datetime
-import glob
 import json
 import logging
-import os
 import time
 import winsound
 from typing import List, Dict, Any, Union
@@ -24,11 +22,10 @@ from pyspark.sql import SparkSession, DataFrame, Column
 from pyspark.sql.functions import explode, create_map
 
 
-# https://www.cbs.gov.il/he/Pages/%D7%A1%D7%93%D7%A8%D7%95%D7%AA-
-# %D7%A2%D7%99%D7%AA%D7%99%D7%95%D7%AA-%D7%91%D7%90%D7%9E%D7%A6%D7%A2%D7%95%D7%AA-API.aspx
 class Constants:
     db = {}
-    URL_GREEN_RED = 'https://data.gov.il/api/3/action/datastore_search?resource_id=f1d13bbd-4f84-4cde-82ed-e075c942de12'
+    URL_GOV = 'https://data.gov.il/api/3/action/datastore_search?' \
+              'resource_id=8a21d39d-91e3-40db-aca1-f73f7ab1df69&limit=100000000'
     SCHEDULER: BlockingScheduler = BlockingScheduler()
 
 
@@ -53,11 +50,11 @@ def firebase_config():
 
 def crawl_corona():
     # TODO: catch if there is no internet connection
-    response: dict = requests.get(Constants.URL_GREEN_RED).json()
-    to_spark_direct_upside_down(countries=response["result"]["records"])
+    response: dict = requests.get(Constants.URL_GOV).json()
+    to_spark_direct_upside_down(cities=response["result"]["records"])
 
 
-def to_spark_direct_upside_down(countries: dict):
+def to_spark_direct_upside_down(cities: dict):
     st = time.time()
 
     spark_session = SparkSession \
@@ -66,70 +63,43 @@ def to_spark_direct_upside_down(countries: dict):
         .getOrCreate()
 
     # cities: List[Dict[str, str, str, str, str, str, str, str, str, int]] = dict_root["result"]["records"]
-    countiesDF: DataFrame = spark.createDataFrame(data=countries)
-    countiesDF.cache()  # without: 152.403 s, with: 14.531 s
-    # countiesDF.printSchema()
-    # countiesDF.show(truncate=False)
+    citiesDF: DataFrame = spark.createDataFrame(data=cities)
+    citiesDF.cache()
+    # citiesDF.printSchema()
+    # citiesDF.show(truncate=False)
 
     from datetime import datetime, timedelta
     result_length: int = 0
     day: datetime = datetime.now()  # today
     while result_length == 0:
         day_str: str = datetime.strftime(day, '%Y-%m-%d')
-        filteredDF: DataFrame = countiesDF.filter(countiesDF.update_date >= day_str)
-        filteredDF.cache()
+        filteresDF: DataFrame = citiesDF.filter(citiesDF.Date >= day_str)
 
-        schema = filteredDF.columns
+        schema = filteresDF.columns
 
-        final_result: List[Dict] = filteredDF.collect()
+        final_result: List[Dict] = filteresDF.collect()
 
         logging.debug(f'{day_str} {type(day_str)}')
         logging.debug("Empty RDD: %s" % (final_result.__len__() == 0))
         day = day - timedelta(1)  # timedelta() indicates how many days ago
         result_length = final_result.__len__()
 
-    # filteredDF.show()
-    # filteredDF.describe().show()
-    logging.debug(schema)
-
-    # Constants.db.update(
-    #     {
-    #         "Countries_Red_Green": filteredDF.toPandas().to_dict()
-    #     }
-    # )
+    # filteresDF.show()
+    # filteresDF.describe().show()
+    # logging.debug(schema)
+    del citiesDF
+    filteresDF.cache()
 
     def append_json(row: Row):
-        return {row["destination"]: row.country_status}  # {"counter": row.asDict()}
+        return {row["City_Name"]: row.asDict()}  # {"counter": row.asDict()}
 
-    filteredDF.foreach(append_json)
-    cities_final_df: DataFrame = spark.createDataFrame(data=filteredDF.rdd.map(append_json).collect())
-    cities_final_df.cache()
-    # cities_final_df.show()
+    filteresDF.foreach(append_json)
+    cities_final_df: DataFrame = spark.createDataFrame(data=filteresDF.rdd.map(append_json).collect())
+    # cities_final_df.cache()
 
     Constants.db.update(
-        {
-            "Countries_Red_Green": {
-                "full_table": filteredDF.toPandas().to_dict(),
-                "color_by_country": cities_final_df.toPandas().to_dict()
-            }
-        }
-    )
-    return
-    # 
-    # Constants.db.update(
-    #     {
-    #         "cities_3": {
-    #             "schema": schema,
-    #             "data": final_result,
-    #             "filteredDF": filteredDF.toJSON().collect(),
-    #             "ok": filteredDF.toPandas().to_dict()
-    #         }
-    #     }
-    # )  # load to firebase
-
-    # Constants.db.update(
-    #     {"cities_final": cities_final_df.toPandas().to_dict()}
-    # )  # load to firebase
+        {"cities_final": cities_final_df.toPandas().to_dict()}
+    )  # load to firebase
 
     total: Accumulator = spark.sparkContext.accumulator(0)
     less: Accumulator = spark.sparkContext.accumulator(0)
@@ -143,14 +113,14 @@ def to_spark_direct_upside_down(countries: dict):
             elif val == "<15":
                 less += 1
 
-    for key in filteredDF.toPandas().keys():
+    for key in filteresDF.toPandas().keys():
         if key == 'Date':
-            print(filteredDF.rdd.first().Date)
-            updated_to = filteredDF.rdd.first().Date
+            print(filteresDF.rdd.first().Date)
+            updated_to = filteresDF.rdd.first().Date
             continue
         elif key in ["_id", "City_Name", "City_Code"]: continue
         print(key)
-        filteredDF.select(filteredDF[key]).foreach(lambda row: add(row, total, less))
+        filteresDF.select(filteresDF[key]).foreach(lambda row: add(row, total, less))
         print(total.value)
         print(less.value)
         keys_lst.append(
@@ -164,29 +134,14 @@ def to_spark_direct_upside_down(countries: dict):
         total.value = 0
         less.value = 0
 
-    # keys_lst.append(updated_to)
-    # Constants.db.update(
-    #     {
-    #         "israel_final_3": keys_lst
-    #     }
-    # )
-    # 
-    # Constants.db.update(
-    #     {
-    #         "israel_final_2": [
-    #             keys_lst, updated_to
-    #         ]
-    #     }
-    # )
-    # 
-    # Constants.db.update(
-    #     {
-    #         "israel_final": {
-    #             "data": keys_lst,
-    #             "Last_Update": updated_to
-    #         }
-    #     }
-    # )
+    Constants.db.update(
+        {
+            "israel_final": {
+                "data": keys_lst,
+                "Last_Update": updated_to
+            }
+        }
+    )
 
     logging.debug(f"spark total time: {time.time() - st} seconds")
 

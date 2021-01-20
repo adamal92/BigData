@@ -3,10 +3,12 @@ import glob
 import json
 import logging
 import os
+import pandas
 import time
 import winsound
 from typing import List, Dict, Any, Union
 
+import pyspark
 import requests as requests
 from firebase import Firebase
 
@@ -77,6 +79,7 @@ def to_spark_direct_upside_down(cities: dict):
 
     # cities: List[Dict[str, str, str, str, str, str, str, str, str, int]] = dict_root["result"]["records"]
     citiesDF: DataFrame = spark.createDataFrame(data=cities)
+    citiesDF.cache()
     # citiesDF.printSchema()
     # citiesDF.show(truncate=False)
 
@@ -85,34 +88,39 @@ def to_spark_direct_upside_down(cities: dict):
     day: datetime = datetime.now()  # today
     while result_length == 0:
         day_str: str = datetime.strftime(day, '%Y-%m-%d')
-        filteresDF: DataFrame = citiesDF.filter(citiesDF.Date >= day_str)
+        filteredDF: DataFrame = citiesDF.filter(citiesDF.Date >= day_str)
+        filteredDF.cache()
 
-        schema = filteresDF.columns
+        schema = filteredDF.columns
 
-        final_result: List[Dict] = filteresDF.collect()
+        final_result: List[Dict] = filteredDF.collect()
 
         logging.debug(f'{day_str} {type(day_str)}')
         logging.debug("Empty RDD: %s" % (final_result.__len__() == 0))
         day = day - timedelta(1)  # timedelta() indicates how many days ago
         result_length = final_result.__len__()
 
-    # filteresDF.show()
-    # filteresDF.describe().show()
-    # logging.debug(schema)
+    filteredDF.show()
+    filteredDF.describe().show()
+    logging.debug(schema)
+
+    join_population_statistics(filteredDF)
+    return
 
     def append_json(row: Row):
         return {row["City_Name"]: row.asDict()}  # {"counter": row.asDict()}
 
-    filteresDF.foreach(append_json)
-    cities_final_df: DataFrame = spark.createDataFrame(data=filteresDF.rdd.map(append_json).collect())
+    filteredDF.foreach(append_json)
+    cities_final_df: DataFrame = spark.createDataFrame(data=filteredDF.rdd.map(append_json).collect())
+    # cities_final_df.show()
 
     Constants.db.update(
         {
             "cities_3": {
                 "schema": schema,
                 "data": final_result,
-                "filteresDF": filteresDF.toJSON().collect(),
-                "ok": filteresDF.toPandas().to_dict()
+                "filteredDF": filteredDF.toJSON().collect(),
+                "ok": filteredDF.toPandas().to_dict()
             }
         }
     )  # load to firebase
@@ -133,14 +141,14 @@ def to_spark_direct_upside_down(cities: dict):
             elif val == "<15":
                 less += 1
 
-    for key in filteresDF.toPandas().keys():
+    for key in filteredDF.toPandas().keys():
         if key == 'Date':
-            print(filteresDF.rdd.first().Date)
-            updated_to = filteresDF.rdd.first().Date
+            print(filteredDF.rdd.first().Date)
+            updated_to = filteredDF.rdd.first().Date
             continue
         elif key in ["_id", "City_Name", "City_Code"]: continue
         print(key)
-        filteresDF.select(filteresDF[key]).foreach(lambda row: add(row, total, less))
+        filteredDF.select(filteredDF[key]).foreach(lambda row: add(row, total, less))
         print(total.value)
         print(less.value)
         keys_lst.append(
@@ -181,15 +189,93 @@ def to_spark_direct_upside_down(cities: dict):
     logging.debug(f"spark total time: {time.time() - st} seconds")
 
 
-def get_population_statistics():
+def join_population_statistics(cities: pyspark.sql.DataFrame):
+    cities.cache()
+    # population
     import pandas
     population_df: pandas.DataFrame = pandas.read_excel(Constants.POPULATION_EXCEL_PATH, engine='openpyxl')
     del population_df['סמל יישוב'], population_df['שם באנגלית']
-    print(population_df.shape)
-    print(population_df.columns)
-    print(population_df.keys())
+    # del cities["City_Code"], cities.Cumulated_number_of_diagnostic_tests, \
+    #     cities.Cumulated_number_of_tests, cities.Cumulated_recovered
+    # print(population_df.shape)
+    # print(population_df.columns)
+    # print(population_df.keys())
     print(population_df)
+    print(population_df.info())
+    from BD_projects.Ruby_corona_charts.python import Pandas_df_to_Spark
+    population_spark_df: pyspark.sql.DataFrame = Pandas_df_to_Spark.pandas_to_spark(population_df)
+    population_spark_df.cache()
+    population_spark_df.show()
+    population_spark_df.createOrReplaceTempView("population")
+    # cities
     # print(population_df.query(expr="SELECT `סמל יישוב`", inplace=True))
+    # cities = spark.createDataFrame([cities.City_Name, cities.Date, cities.Cumulated_vaccinated])
+    # spark.createDataFrame(
+    #     cities.groupby("City_Name", "Date", "Cumulated_deaths", "Cumulative_verified_cases", "Cumulated_vaccinated")
+    # ).show()
+    wanted_columns_cities = ["City_Name", "Date", "Cumulated_deaths", "Cumulative_verified_cases",
+                             "Cumulated_vaccinated"]
+    # for name in wanted_columns_cities:
+    #     cities.drop(cities[name])
+    cities = cities.drop("City_Code").drop("Cumulated_number_of_diagnostic_tests").drop("Cumulated_number_of_tests") \
+        .drop("Cumulated_recovered").drop("_id")
+    cities.show()
+    cities.createOrReplaceTempView("cities")
+    # join
+    joint_df: pyspark.sql.DataFrame = spark.sql(
+        "select * from cities, population where cities.City_Name = population.`שם יישוב`"
+    )
+    joint_df.cache()
+    joint_df.show()
+    joint_df = joint_df.drop("שם יישוב").drop("Date").drop("יהודים ואחרים") \
+        .drop("Cumulative_verified_cases").drop("Cumulated_deaths").drop("ערבים")
+    # joint_df = spark.sql("SELECT City_Name, Cumulated_vaccinated FROM cities "
+    #                      "UNION SELECT `מזה: יהודים`, `שם יישוב` FROM population")
+    joint_df.show()
+    joint_df.createOrReplaceTempView("cities_population_joint")
+    # joint_df = joint_df.select("SELECT * FROM cities_population_joint WHERE Cumulated_vaccinated")
+    joint_df: pyspark.sql.DataFrame = spark.sql(
+        "select City_Name, Cumulated_vaccinated, `סך אוכלוסייה ` as population, `מזה: יהודים` as jews "
+        "from cities_population_joint"
+    )
+
+    calc_percentage(df=joint_df)
+
+
+def calc_percentage(df: pyspark.sql.DataFrame):
+    df.cache()
+    df.show()
+
+    # def vaccined_is_digit(row):
+    #     if row.Cumulated_vaccinated.isdigit():
+    #         return row
+    #     else:
+    #         return
+    #
+    # percent_df: DataFrame = spark.createDataFrame(data=df.rdd.map(vaccined_is_digit).collect())
+    # df.rdd.filter(type(df.Cumulated_vaccinated) is str)
+    # df.show()
+    # percent_df: DataFrame = spark.createDataFrame(data=df)
+    # percent_df.show()
+    # pd_df: pandas.DataFrame = df.toPandas()
+    vaccinated_percentile = []
+    jewish_percentage = []
+    # less: Accumulator = spark.sparkContext.accumulator(0)
+
+    def get_percentage(row: Row, vaccinated: list, jewish: list):
+        print(row)
+        # vaccinated.append(row.Cumulated_vaccinated/row["סך אוכלוסייה "])
+        # jewish.append(row["מזה: יהודים"]/row["סך אוכלוסייה "])
+        try:
+            vaccinated.append(int(row.Cumulated_vaccinated)/int(row.population))
+            jewish.append(int(row.jews)/int(row.population))
+            print(int(row.Cumulated_vaccinated)/int(row.population))
+            print(int(row.jews)/int(row.population))
+        except: pass
+
+    df.rdd.foreach(lambda row: get_percentage(row, vaccinated_percentile, jewish_percentage))
+    print(vaccinated_percentile, jewish_percentage)
+    # print(jewish_percentage)
 
 
 @Constants.SCHEDULER.scheduled_job('cron', day_of_week='mon-sun', hour=7, minute=0, second=0)
@@ -214,9 +300,8 @@ def main():
 
     try:
         # Constants.SCHEDULER.start()
-        # firebase_config()
-        # crawl_corona()
-        get_population_statistics()
+        firebase_config()
+        crawl_corona()
     finally:
         winsound.MessageBeep(winsound.MB_ICONHAND)
         logging.debug(f"Program Total Time: {time.time() - st} seconds")

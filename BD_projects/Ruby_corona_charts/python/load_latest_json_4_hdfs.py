@@ -64,6 +64,7 @@ def to_spark_direct_upside_down(cities: dict):
 
     # cities: List[Dict[str, str, str, str, str, str, str, str, str, int]] = dict_root["result"]["records"]
     citiesDF: DataFrame = spark.createDataFrame(data=cities)
+    # citiesDF.cache()
     # citiesDF.printSchema()
     # citiesDF.show(truncate=False)
 
@@ -73,6 +74,7 @@ def to_spark_direct_upside_down(cities: dict):
     while result_length == 0:
         day_str: str = datetime.strftime(day, '%Y-%m-%d')
         filteresDF: DataFrame = citiesDF.filter(citiesDF.Date >= day_str)
+        # filteresDF.cache()
 
         schema = filteresDF.columns
 
@@ -92,6 +94,7 @@ def to_spark_direct_upside_down(cities: dict):
 
     filteresDF.foreach(append_json)
     cities_final_df: DataFrame = spark.createDataFrame(data=filteresDF.rdd.map(append_json).collect())
+    # cities_final_df.cache()
 
     Constants.db.update(
         {
@@ -189,9 +192,9 @@ def main():
     logging.getLogger('my_log').setLevel(logging.DEBUG)
 
     try:
-        Constants.SCHEDULER.start()
-        # firebase_config()
-        # crawl_corona()
+        # Constants.SCHEDULER.start()
+        firebase_config()
+        crawl_corona()
     finally:
         winsound.MessageBeep(winsound.MB_ICONHAND)
         logging.debug(f"Program Total Time: {time.time() - st} seconds")
