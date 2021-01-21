@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08479cfc-b3b1-4f27-b904-0ba7322af693" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_graph.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_graph_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_graph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hadoop/hdfs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hadoop/hdfs.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +43,7 @@
           <entry key="jsx" value="2" />
           <entry key="md" value="4" />
           <entry key="ps1" value="3" />
-          <entry key="py" value="350" />
+          <entry key="py" value="357" />
           <entry key="untitled" value="1" />
         </counts>
       </usages-collector>
@@ -55,7 +57,7 @@
           <entry key="Markdown" value="4" />
           <entry key="PLAIN_TEXT" value="15" />
           <entry key="PowerShell file" value="2" />
-          <entry key="Python" value="350" />
+          <entry key="Python" value="357" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -66,8 +68,8 @@
           <entry key="js" value="189" />
           <entry key="json" value="3" />
           <entry key="md" value="1154" />
-          <entry key="py" value="45447" />
-          <entry key="txt" value="1532" />
+          <entry key="py" value="46273" />
+          <entry key="txt" value="1552" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -76,8 +78,8 @@
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="189" />
           <entry key="Markdown" value="1148" />
-          <entry key="PLAIN_TEXT" value="1618" />
-          <entry key="Python" value="45490" />
+          <entry key="PLAIN_TEXT" value="1638" />
+          <entry key="Python" value="46316" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -93,8 +95,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/sparkML.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="236" selection-start-line="236" selection-end-line="236" />
+            <state relative-caret-position="2349">
+              <caret line="87" column="43" lean-forward="true" selection-start-line="87" selection-start-column="43" selection-end-line="87" selection-end-column="43" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -111,16 +113,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_graph.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2411">
-              <caret line="201" column="10" selection-start-line="201" selection-start-column="10" selection-end-line="201" selection-end-column="10" />
+            <state relative-caret-position="-138">
+              <caret line="70" selection-start-line="70" selection-end-line="70" />
               <folding>
-                <element signature="e#0#40#0" expanded="true" />
-                <marker date="1611162725685" expanded="true" signature="2495:2991" ph="..." />
-                <marker date="1611162725685" expanded="true" signature="7984:7987" ph="..." />
+                <element signature="e#0#10#0" expanded="true" />
+                <marker date="1611163763924" expanded="true" signature="2505:2904" ph="..." />
+                <marker date="1611163763924" expanded="true" signature="7881:7884" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_graph_2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="81" column="44" lean-forward="true" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+                <marker date="1611190398200" expanded="true" signature="4326:5591" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NoSQL/ElasticSearch/Elasticsearch.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-6967">
+              <caret line="51" column="43" lean-forward="true" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -128,8 +152,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Hadoop/hdfs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="61" selection-start-line="61" selection-end-line="61" />
+            <state relative-caret-position="391">
+              <caret line="27" column="58" lean-forward="true" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -190,7 +214,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Web/Gui/first_web_gui/static/scripts.js" />
         <option value="$PROJECT_DIR$/Web/Gui/first_web_gui/static/crawler.js" />
         <option value="$PROJECT_DIR$/NoSQL/ElasticSearch/Elasticsearch.py" />
         <option value="$PROJECT_DIR$/Web/Gui/first_web_gui/templates/crawler.html" />
@@ -221,7 +244,6 @@
         <option value="$PROJECT_DIR$/BD_projects/moto_prices/moto_crawler.py" />
         <option value="$PROJECT_DIR$/Spark/streaming.py" />
         <option value="$PROJECT_DIR$/Spark/streaming.ipynb" />
-        <option value="$PROJECT_DIR$/Hadoop/hdfs.py" />
         <option value="$PROJECT_DIR$/SQL/SQLite_database_handler.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/spider.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_json_2.py" />
@@ -241,6 +263,8 @@
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/sparkML.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_latest_json_5_cities_israel_redGreen.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_graph.py" />
+        <option value="$PROJECT_DIR$/Hadoop/hdfs.py" />
+        <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_graph_2.py" />
       </list>
     </option>
   </component>
@@ -318,6 +342,17 @@
             <path>
               <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
               <item name="BigData" type="462c0819:PsiDirectoryNode" />
+              <item name="NoSQL" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BigData" type="462c0819:PsiDirectoryNode" />
+              <item name="NoSQL" type="462c0819:PsiDirectoryNode" />
+              <item name="ElasticSearch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BigData" type="462c0819:PsiDirectoryNode" />
               <item name="Spark" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -364,7 +399,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.load_graph">
+  <component name="RunManager" selected="Python.load_graph_2">
     <configuration name="hdfs_try_powershell" type="PythonConfigurationType" factoryName="Python">
       <module name="BigData" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -399,6 +434,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_graph.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="load_graph_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="BigData" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_graph_2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -449,27 +505,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="red_green_countries" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="BigData" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/red_green_countries.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="sparkML" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="BigData" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -494,18 +529,18 @@
     <list>
       <item itemvalue="Python.hdfs_try_powershell" />
       <item itemvalue="Python.sparkML" />
-      <item itemvalue="Python.red_green_countries" />
       <item itemvalue="Python.load_latest_json_4_hdfs (1)" />
       <item itemvalue="Python.load_latest_json_5_cities_israel_redGreen" />
       <item itemvalue="Python.load_graph" />
+      <item itemvalue="Python.load_graph_2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.load_graph_2" />
         <item itemvalue="Python.load_graph" />
         <item itemvalue="Python.load_latest_json_5_cities_israel_redGreen" />
         <item itemvalue="Python.sparkML" />
         <item itemvalue="Python.load_latest_json_4_hdfs (1)" />
-        <item itemvalue="Python.red_green_countries" />
       </list>
     </recent_temporary>
   </component>
@@ -519,13 +554,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604516892326</updated>
-    </task>
-    <task id="LOCAL-00019" summary="minor bug fixes &amp; cleanup">
-      <created>1607600717525</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1607600717525</updated>
     </task>
     <task id="LOCAL-00020" summary="show the json on the web app">
       <created>1608375214786</created>
@@ -863,7 +891,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611139757592</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="first graph is done">
+      <created>1611162859946</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1611162859947</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TodoView">
@@ -878,12 +913,12 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8722689" visible="true" weight="0.17597471" />
-      <window_info id="Structure" order="1" sideWeight="0.1277311" side_tool="true" visible="true" weight="0.17597471" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8732639" visible="true" weight="0.17597471" />
+      <window_info id="Structure" order="1" sideWeight="0.1267361" side_tool="true" visible="true" weight="0.17597471" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.3546638" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.37527114" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.20824295" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -906,7 +941,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="filter ver 4" />
     <MESSAGE value="tries to get leaves" />
     <MESSAGE value="tries to get leaves failed" />
     <MESSAGE value="3000 entries in db" />
@@ -931,7 +965,8 @@
     <MESSAGE value="Jews Arabs Deadliness statistics" />
     <MESSAGE value="red and green countries scraper" />
     <MESSAGE value="Cumulative_vaccinated aws deleted from the scrapers' site database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cumulative_vaccinated aws deleted from the scrapers' site database" />
+    <MESSAGE value="first graph is done" />
+    <option name="LAST_COMMIT_MESSAGE" value="first graph is done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -955,23 +990,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/motorcycles.jl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/moto_dirty.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/motorcycles.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="80" selection-start-line="8" selection-start-column="80" selection-end-line="8" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/dirty_spider.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1269">
@@ -1061,13 +1079,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="22" column="94" selection-start-line="22" selection-start-column="94" selection-end-line="22" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NoSQL/ElasticSearch/Elasticsearch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="53" column="60" selection-start-line="53" selection-end-line="54" />
         </state>
       </provider>
     </entry>
@@ -1257,6 +1268,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../spotify/python_383/Lib/site-packages/hdfs/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="208" selection-start-line="208" selection-end-line="208" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../spotify/python_383/Lib/site-packages/requests/sessions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6921">
+          <caret line="183" column="76" selection-start-line="183" selection-start-column="68" selection-end-line="183" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_latest_json_5_cities_israel_redGreen.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1264,10 +1289,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/red_green_countries.py">
+    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="710">
-          <caret line="103" column="35" selection-start-line="103" selection-start-column="35" selection-end-line="103" selection-end-column="35" />
+        <state relative-caret-position="-1347">
+          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NoSQL/ElasticSearch/Elasticsearch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6967">
+          <caret line="51" column="43" lean-forward="true" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -1281,38 +1313,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Hadoop/hdfs.py">
+    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/red_green_countries.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="710">
+          <caret line="103" column="35" selection-start-line="103" selection-start-column="35" selection-end-line="103" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/spider.py">
+    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_graph.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1347">
-          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+        <state relative-caret-position="-138">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1611163763924" expanded="true" signature="2505:2904" ph="..." />
+            <marker date="1611163763924" expanded="true" signature="7881:7884" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/sparkML.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="236" selection-start-line="236" selection-end-line="236" />
+        <state relative-caret-position="2349">
+          <caret line="87" column="43" lean-forward="true" selection-start-line="87" selection-start-column="43" selection-end-line="87" selection-end-column="43" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_graph.py">
+    <entry file="file://$PROJECT_DIR$/Hadoop/hdfs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2411">
-          <caret line="201" column="10" selection-start-line="201" selection-start-column="10" selection-end-line="201" selection-end-column="10" />
+        <state relative-caret-position="391">
+          <caret line="27" column="58" lean-forward="true" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_graph_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="81" column="44" lean-forward="true" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
-            <marker date="1611162725685" expanded="true" signature="2495:2991" ph="..." />
-            <marker date="1611162725685" expanded="true" signature="7984:7987" ph="..." />
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1611190398200" expanded="true" signature="4326:5591" ph="..." />
           </folding>
         </state>
       </provider>

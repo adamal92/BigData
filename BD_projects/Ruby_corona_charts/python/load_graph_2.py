@@ -1,3 +1,4 @@
+import pandas
 import sys
 from datetime import datetime, timedelta
 import json
@@ -7,6 +8,8 @@ import time
 import winsound
 from typing import List, Dict, Any, Union
 
+import hdfs
+import pyspark
 import requests as requests
 from firebase import Firebase
 
@@ -53,37 +56,39 @@ def firebase_config():
     Constants.db = firebase.database()
 
 
-def save_json_to_hdfs(filename: str, file_path: str):
-    from Hadoop.hdfs import HDFS_handler
-    HDFS_handler.start()
-
-    HDFS_handler.delete_file(filename=filename)
-    HDFS_handler.create_file(file_path=file_path)
-    time.sleep(2)
-    HDFS_handler.list_files()
-
-    HDFS_handler.stop()
-
-
-def crawl_corona_batch():
-    response: dict = requests.get(Constants.URL_GOV).json()
-    try:
-        os.mkdir(f"json/{Constants.JSON_PATH}", 0o777)
-    except FileExistsError:
-        logging.debug("file exists")
-    time.sleep(1)
-    with open(f"json/{Constants.JSON_PATH}", 'w') as outfile:
-        json.dump(response, outfile)
-        save_json_to_hdfs(filename=outfile.name, file_path=os.path.abspath(outfile.name))
-
-
 def crawl_corona():  # streaming?
     # TODO: catch if there is no internet connection
     response: dict = requests.get(Constants.URL_GOV).json()
-    to_spark_direct_upside_down(cities=response["result"]["records"])
-    
+
+    if Constants.SAVE_TO_HDFS:
+        save_df_to_hdfs(spark.createDataFrame(data=response["result"]["records"]).toPandas())
+        to_spark()
+    else:
+        to_spark_direct_upside_down(cities=response["result"]["records"])
     # citiesDF: DataFrame = spark.createDataFrame(data=cities)
     # process_data(data_frame=citiesDF)
+
+
+def save_df_to_hdfs(df: pandas.DataFrame):
+    from Hadoop.hdfs import HDFS_handler
+    from testsAndOthers.data_types_and_structures import DataTypesHandler
+    HDFS_handler.start()
+    HDFS_handler.safemode_off()
+    time.sleep(5)
+
+    # hdfs_client: hdfs.client.Client = hdfs.client.Client(HDFS_handler.DEFAULT_CLUSTER_PATH)
+    hdfs_path: str = f"{HDFS_handler.DEFAULT_CLUSTER_WEB_URL}/{Constants.JSON_PATH}"
+    print(requests.post(url=hdfs_path+'?op=CREATE', data=df.to_dict()).text)
+    # print(requests.get(url=hdfs_path).text)
+    print(requests.get(url=f'http://localhost:9870/?op=LISTSTATUS').text)
+    # DataTypesHandler.print_data_recursively(data=requests.get(url=hdfs_path).json())
+    # from hdfs.ext.dataframe import write_dataframe
+    # hdfs.config.catch(Exception)
+    # write_dataframe(client=hdfs_client, hdfs_path=hdfs_path, df=df)
+    # from hdfs.ext.dataframe import read_dataframe
+    # print(read_dataframe(hdfs_client, hdfs_path))
+
+    HDFS_handler.stop()
 
 
 def to_spark_direct_upside_down(cities: dict):
@@ -100,45 +105,82 @@ def to_spark_direct_upside_down(cities: dict):
     # citiesDF.printSchema()
     # citiesDF.show(truncate=False)
 
-    # citiesDF.filter(
-    #     citiesDF.City_Name == "תל אביב - יפו" and not citiesDF.Cumulative_verified_cases == "<15"
-    # ).show()
+    def get_cities(fullDF: pyspark.sql.DataFrame) -> pyspark.sql.DataFrame:
+        """
+        Get the received DataFrame filtered by latest date
+        :param fullDF:
+        :return:
+        """
+        from datetime import datetime, timedelta
+        result_length: int = 0
+        day: datetime = datetime.now()  # today
+        while result_length == 0:
+            day_str: str = datetime.strftime(day, '%Y-%m-%d')
+            filteredDF: DataFrame = fullDF.filter(fullDF.Date >= day_str)
+            filteredDF.cache()
 
-    # citiesDF.filter(
-    #     citiesDF.City_Name == "תל אביב - יפו" & str(citiesDF.Cumulative_verified_cases).isdigit()
-    # ).show()
+            schema = filteredDF.columns
+
+            final_result: List[Dict] = filteredDF.collect()
+
+            logging.debug(f'{day_str} {type(day_str)}')
+            logging.debug("Empty RDD: %s" % (final_result.__len__() == 0))
+            day = day - timedelta(1)  # timedelta() indicates how many days ago
+            result_length = final_result.__len__()
+
+        filteredDF.show()
+        filteredDF.describe().show()
+        logging.debug(schema)
+        return filteredDF
+
+    filteredDF_ext: DataFrame = get_cities(fullDF=citiesDF)
+    filteredDF_ext.cache()
+    cities_list: List[Row[str]] = filteredDF_ext.select(filteredDF_ext.City_Name).collect()
     citiesDF = citiesDF.select(citiesDF.Date, citiesDF.Cumulative_verified_cases, citiesDF.City_Name)
-    citiesDF = citiesDF.filter(citiesDF.City_Name == "תל אביב - יפו") \
-        .filter(citiesDF.Cumulative_verified_cases != "<15")
 
-    # citiesDF.show()
-    # print(citiesDF.toPandas().to_dict())
-    from datetime import datetime, timedelta
+    all_graphs = {}
+    for city_name in cities_list:
+        # print(city_name, type(city_name))
+        logging.debug(city_name.City_Name)
+        # citiesDF.show()
+        cities_newDF: DataFrame = citiesDF.filter(citiesDF.City_Name == city_name.City_Name) \
+            .filter(citiesDF.Cumulative_verified_cases != "<15")
+        cities_newDF.cache()
 
-    # Last_Update: str = datetime.strftime(datetime.now(), '%Y-%m-%d')
-    Last_Update: str = citiesDF.toPandas().to_dict()["Date"].pop(citiesDF.count()-1)
-    City: str = citiesDF.toPandas().to_dict()["City_Name"].pop(0)
+        # citiesDF.show()
+        # print(citiesDF.toPandas().to_dict())
+        from datetime import datetime, timedelta
 
-    citiesDF = citiesDF.drop("City_Name")
+        # Last_Update: str = datetime.strftime(datetime.now(), '%Y-%m-%d')
+        Last_Update: str = cities_newDF.toPandas().to_dict()["Date"].pop(cities_newDF.count()-1)
+        # Last_Update: str = cities_newDF.toPandas().to_dict()["Date"].pop(0)
+        City: str = city_name.City_Name
 
-    citiesDF.show()
+        cities_newDF = cities_newDF.drop("City_Name")
+        # all_graphs[city_name.City_Name] = {
+        #     f"חולים לפי תאריך ב{city_name.City_Name}": {
+        #         "data": cities_newDF.toPandas().to_dict(),
+        #         "Last_Update": Last_Update,
+        #         "City": City
+        #     }
+        # }
+        all_graphs[city_name.City_Name] = {
+            "data": cities_newDF.toPandas().to_dict(),
+            "Last_Update": Last_Update,
+            "City": City
+        }
+        # cities_newDF.show()
+        del cities_newDF
 
     Constants.db.update(
         {
             "graphs": {
-                "חולים לפי תאריך בתל אביב": {
-                    "data": citiesDF.toPandas().to_dict(),
-                    "Last_Update": Last_Update,
-                    "City": City
-
-                    # "Last_Update": datetime.strftime(datetime.now(), '%Y-%m-%d'),
-                    # "City": citiesDF.toPandas().to_dict()["City_Name"].pop(0)
-                }
+                "חולים לפי תאריך": all_graphs
             }
         }
     )
-    logging.debug(f"spark total time: {time.time() - st} seconds")
 
+    logging.debug(f"spark total time: {time.time() - st} seconds")
     return
 
 
@@ -227,11 +269,7 @@ def to_spark():
 def scheduled_job():
     print('This job is run every weekday at 7am.')
     firebase_config()
-    if Constants.SAVE_TO_HDFS:
-        crawl_corona_batch()
-        to_spark()
-    else:
-        crawl_corona()
+    crawl_corona()
     print(datetime.datetime.now())
     winsound.MessageBeep(winsound.MB_OK)
 
@@ -253,11 +291,7 @@ def main():
         if Constants.RUN_SCHEDULER:
             Constants.SCHEDULER.start()
         else:
-            if Constants.SAVE_TO_HDFS:
-                crawl_corona_batch()
-                to_spark()
-            else:
-                crawl_corona()
+            crawl_corona()
     finally:
         winsound.MessageBeep(winsound.MB_ICONHAND)
         logging.debug(f"Program Total Time: {time.time() - st} seconds")
