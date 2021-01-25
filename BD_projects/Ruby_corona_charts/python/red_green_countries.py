@@ -7,6 +7,7 @@ import time
 import winsound
 from typing import List, Dict, Any, Union
 
+import pyspark
 import requests as requests
 from firebase import Firebase
 
@@ -28,7 +29,8 @@ from pyspark.sql.functions import explode, create_map
 # %D7%A2%D7%99%D7%AA%D7%99%D7%95%D7%AA-%D7%91%D7%90%D7%9E%D7%A6%D7%A2%D7%95%D7%AA-API.aspx
 class Constants:
     db = {}
-    URL_GREEN_RED = 'https://data.gov.il/api/3/action/datastore_search?resource_id=f1d13bbd-4f84-4cde-82ed-e075c942de12'
+    URL_GREEN_RED = 'https://data.gov.il/api/3/action/datastore_search?' \
+                    'resource_id=f1d13bbd-4f84-4cde-82ed-e075c942de12&limit=100000'  # 167
     SCHEDULER: BlockingScheduler = BlockingScheduler()
 
 
@@ -63,6 +65,7 @@ def to_spark_direct_upside_down(countries: dict):
     spark_session = SparkSession \
         .builder \
         .enableHiveSupport() \
+        .config('spark.sql.debug.maxToStringFields', 2000) \
         .getOrCreate()
 
     # cities: List[Dict[str, str, str, str, str, str, str, str, str, int]] = dict_root["result"]["records"]
@@ -101,16 +104,39 @@ def to_spark_direct_upside_down(countries: dict):
     def append_json(row: Row):
         return {row["destination"]: row.country_status}  # {"counter": row.asDict()}
 
-    filteredDF.foreach(append_json)
+    # filteredDF.foreach(append_json)
+    filteredDF = filteredDF.select("destination", "country_status")
+    filteredDF.show()
     cities_final_df: DataFrame = spark.createDataFrame(data=filteredDF.rdd.map(append_json).collect())
-    cities_final_df.cache()
-    # cities_final_df.show()
 
+    cities_final_df.cache()
+    # # cities_final_df.show()
+    #
+    # from testsAndOthers.data_types_and_structures import DataTypesHandler
+    # DataTypesHandler.print_data_recursively(
+    #     data=cities_final_df.toPandas().to_dict(), print_dict=DataTypesHandler.PRINT_DICT
+    # )
+
+    dicty = {}
+    for row in filteredDF.collect():
+        dicty[row.destination] = row.country_status
+
+    from testsAndOthers.data_types_and_structures import DataTypesHandler
+    DataTypesHandler.print_data_recursively(
+        data=dicty, print_dict=DataTypesHandler.PRINT_DICT
+    )
+
+    # TODO: red green bug (firebase 167 keys limit)
+    # TODO: get whole country status from api
+    # TODO: generate graphs for dead, vaccinated, deadliness
+    # print(pyspark.sql.functions.split(cities_final_df, "פקיסטן"))
     Constants.db.update(
         {
-            "Countries_Red_Green": {
+            "Countries_Red_Green_2": {
                 "full_table": filteredDF.toPandas().to_dict(),
-                "color_by_country": cities_final_df.toPandas().to_dict()
+                "collected": filteredDF.collect(),
+                # "dicty": dicty
+                # "color_by_country": cities_final_df.toPandas().to_dict()
             }
         }
     )

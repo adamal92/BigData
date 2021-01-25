@@ -29,10 +29,9 @@ from pyspark.sql.functions import explode, create_map
 
 class Constants:
     db = {}
-    URL_GOV = 'https://data.gov.il/api/3/action/datastore_search?' \
-              'resource_id=8a21d39d-91e3-40db-aca1-f73f7ab1df69&limit=100000000'
+    API_URL = "https://covid-19-data.p.rapidapi.com/report/country/name"
     SCHEDULER: BlockingScheduler = BlockingScheduler()
-    SAVE_TO_HDFS : bool = True
+    SAVE_TO_HDFS : bool = False
     RUN_SCHEDULER: bool = False
     JSON_PATH = "graph_json.json"
 
@@ -58,8 +57,34 @@ def firebase_config():
 
 def crawl_corona():  # streaming?
     # TODO: catch if there is no internet connection
-    response: dict = requests.get(Constants.URL_GOV).json()
+    # url = "https://covid-19-data.p.rapidapi.com/report/country/name"
+    #
+    # querystring = {"date": "2020-04-01", "name": "Italy"}
+    #
+    # headers = {
+    #     'x-rapidapi-key': "4cf6cde65amshebec6aca153a547p1f5086jsn4d2c130baaad",
+    #     'x-rapidapi-host': "covid-19-data.p.rapidapi.com"
+    # }
+    #
+    # response = requests.request("GET", url, headers=headers, params=querystring)
+    #
+    # print(response.text)
 
+    response: dict = requests.get(
+        url=Constants.API_URL,
+        headers={
+            "x-rapidapi-key": "4cf6cde65amshebec6aca153a547p1f5086jsn4d2c130baaad",
+            "x-rapidapi-host": "covid-19-data.p.rapidapi.com",
+            "useQueryString": 'true'
+        },
+        params={
+            "date": "2020-04-01",
+            "name": "Italy"
+        }
+    ).json()
+
+    print(response)
+    return
     if Constants.SAVE_TO_HDFS:
         save_df_to_hdfs(spark.createDataFrame(data=response["result"]["records"]).toPandas())
         to_spark()
