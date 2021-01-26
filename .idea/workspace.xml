@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08479cfc-b3b1-4f27-b904-0ba7322af693" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_graph_3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_country.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_country.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_graph_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_graph_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/red_green_countries.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/red_green_countries.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,8 +67,8 @@
           <entry key="js" value="189" />
           <entry key="json" value="3" />
           <entry key="md" value="1154" />
-          <entry key="py" value="47864" />
-          <entry key="txt" value="1611" />
+          <entry key="py" value="48155" />
+          <entry key="txt" value="1657" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -80,8 +77,8 @@
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="189" />
           <entry key="Markdown" value="1148" />
-          <entry key="PLAIN_TEXT" value="1716" />
-          <entry key="Python" value="47907" />
+          <entry key="PLAIN_TEXT" value="1762" />
+          <entry key="Python" value="48198" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -118,8 +115,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_country.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3466">
-              <caret line="256" column="39" lean-forward="true" selection-start-line="256" selection-start-column="39" selection-end-line="256" selection-end-column="39" />
+            <state relative-caret-position="405">
+              <caret line="98" column="9" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -187,6 +184,7 @@
       <find>json_rows</find>
       <find>Israel</find>
       <find>Isra</find>
+      <find>attr</find>
     </findStrings>
     <replaceStrings>
       <replace>100</replace>
@@ -251,9 +249,9 @@
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/linear_regrresion.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/scrapes/Covid_19/Final_CoronaVirus.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/red_green_countries.py" />
-        <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_country.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_graph_3.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_graph_2.py" />
+        <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_country.py" />
       </list>
     </option>
   </component>
@@ -388,7 +386,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.load_graph_2">
+  <component name="RunManager" selected="Python.load_country">
     <configuration name="hdfs_try_powershell" type="PythonConfigurationType" factoryName="Python">
       <module name="BigData" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -525,9 +523,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.load_country" />
         <item itemvalue="Python.load_graph_2" />
         <item itemvalue="Python.load_graph_3" />
-        <item itemvalue="Python.load_country" />
         <item itemvalue="Python.load_latest_json_5_cities_israel_redGreen" />
         <item itemvalue="Python.red_green_countries" />
       </list>
@@ -543,13 +541,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604516892326</updated>
-    </task>
-    <task id="LOCAL-00022" summary="get json sucks">
-      <created>1608605622208</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1608605622208</updated>
     </task>
     <task id="LOCAL-00023" summary="js charts react visualization works">
       <created>1608664345641</created>
@@ -887,7 +878,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611566000707</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="added 2 charts - dead &amp; recovered">
+      <created>1611663768695</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1611663768697</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TodoView">
@@ -951,7 +949,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="3000 entries in db" />
     <MESSAGE value="created table vehicles" />
     <MESSAGE value="data inserted into table vehicles" />
     <MESSAGE value="vehicles count years &amp; models" />
@@ -976,7 +973,8 @@
     <MESSAGE value="first graph is done" />
     <MESSAGE value="graphs for all cities work" />
     <MESSAGE value="got data from corona api" />
-    <option name="LAST_COMMIT_MESSAGE" value="got data from corona api" />
+    <MESSAGE value="added 2 charts - dead &amp; recovered" />
+    <option name="LAST_COMMIT_MESSAGE" value="added 2 charts - dead &amp; recovered" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1368,8 +1366,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_country.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3466">
-          <caret line="256" column="39" lean-forward="true" selection-start-line="256" selection-start-column="39" selection-end-line="256" selection-end-column="39" />
+        <state relative-caret-position="405">
+          <caret line="98" column="9" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
         </state>
       </provider>
     </entry>

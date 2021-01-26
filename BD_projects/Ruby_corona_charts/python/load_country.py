@@ -29,9 +29,17 @@ from pyspark.sql.functions import explode, create_map
 
 class Constants:
     db = {}
+    # where: filter by sql query, outFields: filter columns, f: format style
     API_URL = 'https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/' \
-              'ncov_cases2_v1/FeatureServer/2'
-              # '/query?where=1%3D1&outFields=*&outSR=4326&f=json'
+              'ncov_cases2_v1/FeatureServer/2/query?' \
+              'where=Country_Region = \'israel\'' \
+              '&outFields=Country_Region, Last_Update, Confirmed, Deaths, Recovered, Active, Mortality_Rate' \
+              '&outSR=4326' \
+              '&f=json' \
+              # get all:
+              # '&outFields=*' \
+                # 'where=1%3D1' \
+
     SCHEDULER: BlockingScheduler = BlockingScheduler()
     SAVE_TO_HDFS : bool = False
     RUN_SCHEDULER: bool = False
@@ -58,26 +66,38 @@ def firebase_config():
 
 
 def crawl_corona():  # streaming?
-    response = requests.get(
-                         # Incident_Rate,\
-                         # People_Tested, People_Hospitalized, \
-                         # Mortality_Rate
-        url=Constants.API_URL,
-        params={
-            "where=Country_Region": "Israel",
-            "f": "json",
-            # "outFields": "*",
-            # "outFields": [
-            #     "Country_Region", "Last_Update", "Confirmed", "Deaths",
-            #     "Recovered", "Active"
-            # ],
-            "outFields": [
-                "*"
-            ],
-            # "outSR": 4326
+    # response = requests.get(
+    #                      # Incident_Rate,\
+    #                      # People_Tested, People_Hospitalized, \
+    #                      # Mortality_Rate
+    #     url=Constants.API_URL,
+    #     params={
+    #         "where": r'1%3D1',
+    #         "f": "json",
+    #         "outSR": 4326,
+    #         "outFields": "*",
+    #         # "outFields": [
+    #         #     "Country_Region", "Last_Update", "Confirmed", "Deaths",
+    #         #     "Recovered", "Active"
+    #         # ],
+    #         # "outFields": [
+    #         #     "*"
+    #         # ],
+    #         # "returnGeometry": "false",
+    #         # "returnIdsOnly": "true",
+    #         # "returnDistinctValues": "true"
+    #     }
+    # )
+    response = requests.get(url=Constants.API_URL)
+    print(response.text)
+    from testsAndOthers.data_types_and_structures import DataTypesHandler
+    DataTypesHandler.print_data_recursively(data=response.json(), print_dict=DataTypesHandler.PRINT_DICT)
+    print(response.json()["features"][0]["attributes"])
+    Constants.db.update(
+        {
+            "israel_UN_WHO": response.json()["features"][0]["attributes"]
         }
     )
-    print(response.text)
     return
     # TODO: catch if there is no internet connection
     # url = "https://covid-19-data.p.rapidapi.com/report/country/name"
