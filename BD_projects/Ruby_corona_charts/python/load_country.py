@@ -29,7 +29,9 @@ from pyspark.sql.functions import explode, create_map
 
 class Constants:
     db = {}
-    API_URL = "https://covid-19-data.p.rapidapi.com/report/country/name"
+    API_URL = 'https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/' \
+              'ncov_cases2_v1/FeatureServer/2'
+              # '/query?where=1%3D1&outFields=*&outSR=4326&f=json'
     SCHEDULER: BlockingScheduler = BlockingScheduler()
     SAVE_TO_HDFS : bool = False
     RUN_SCHEDULER: bool = False
@@ -56,6 +58,27 @@ def firebase_config():
 
 
 def crawl_corona():  # streaming?
+    response = requests.get(
+                         # Incident_Rate,\
+                         # People_Tested, People_Hospitalized, \
+                         # Mortality_Rate
+        url=Constants.API_URL,
+        params={
+            "where=Country_Region": "Israel",
+            "f": "json",
+            # "outFields": "*",
+            # "outFields": [
+            #     "Country_Region", "Last_Update", "Confirmed", "Deaths",
+            #     "Recovered", "Active"
+            # ],
+            "outFields": [
+                "*"
+            ],
+            # "outSR": 4326
+        }
+    )
+    print(response.text)
+    return
     # TODO: catch if there is no internet connection
     # url = "https://covid-19-data.p.rapidapi.com/report/country/name"
     #
@@ -70,21 +93,61 @@ def crawl_corona():  # streaming?
     #
     # print(response.text)
 
-    response: dict = requests.get(
-        url=Constants.API_URL,
+    result_length: int = 0
+    day: datetime = datetime.now()  # today
+    while result_length == 0:
+        day_str: str = datetime.strftime(day, '%Y-%m-%d')
+        response = requests.get(
+            # url="https://covid-19-data.p.rapidapi.com/report/country/name",
+            url="https://covid-19-data.p.rapidapi.com/report/country",
+            # url="https://covid-19-data.p.rapidapi.com/report/totals",  # corona stats per country for the whole world
+            # url="https://covid-19-data.p.rapidapi.com/totals",  # corona stats per country
+            # url="https://covid-19-data.p.rapidapi.com/country/all",
+            # url="https://covid-19-data.p.rapidapi.com/help/countries",  # get list of countries
+            headers={
+                "x-rapidapi-key": "4cf6cde65amshebec6aca153a547p1f5086jsn4d2c130baaad",
+                "x-rapidapi-host": "covid-19-data.p.rapidapi.com",
+                "useQueryString": 'true'
+            },
+            params={
+                # "date": day_str,
+                "name": "israel",
+                "format": "json"
+            }
+        )
+
+        logging.debug(f'{day_str} {type(day_str)}')
+        # logging.debug("len(response): %s" % (len(response.json()) == 0))
+        day = day - timedelta(1)  # timedelta() indicates how many days ago
+        # result_length = len(response.json())
+        time.sleep(2)
+        print(response.text)
+    print(response.json())
+
+    Constants.db.update(
+        {
+            "WorldWide_stats": {
+                "Israel": response.json().pop()
+            }
+        }
+    )
+    time.sleep(3)
+    response = requests.get(
+        # url="https://covid-19-data.p.rapidapi.com/totals",  # corona stats per country
+        url="https://covid-19-data.p.rapidapi.com/help/countries",  # get list of countries
         headers={
             "x-rapidapi-key": "4cf6cde65amshebec6aca153a547p1f5086jsn4d2c130baaad",
             "x-rapidapi-host": "covid-19-data.p.rapidapi.com",
             "useQueryString": 'true'
         },
-        params={
-            "date": "2020-04-01",
-            "name": "Italy"
-        }
-    ).json()
-
-    print(response)
+        # params={
+        #     "date": "2021-01-24",
+        #     "name": "Israel"
+        # }
+    )
+    print(response.json())
     return
+
     if Constants.SAVE_TO_HDFS:
         save_df_to_hdfs(spark.createDataFrame(data=response["result"]["records"]).toPandas())
         to_spark()

@@ -136,50 +136,55 @@ def to_spark_direct_upside_down(cities: dict):
     filteredDF_ext: DataFrame = get_cities(fullDF=citiesDF)
     filteredDF_ext.cache()
     cities_list: List[Row[str]] = filteredDF_ext.select(filteredDF_ext.City_Name).collect()
-    # citiesDF = citiesDF.select(citiesDF.Date, citiesDF.Cumulative_verified_cases, citiesDF.City_Name)
     citiesDF = citiesDF.select(
         citiesDF.Date, citiesDF.Cumulative_verified_cases, citiesDF.City_Name,
         citiesDF.Cumulated_recovered, citiesDF["Cumulated_deaths"]
     )
+
+    columns_list: list = [
+        "Cumulative_verified_cases", "Cumulated_recovered", "Cumulated_deaths"
+    ]
     all_graphs = {}
-    for city_name in cities_list:
-        # print(city_name, type(city_name))
-        logging.debug(city_name.City_Name)
-        # citiesDF.show()
-        cities_newDF: DataFrame = citiesDF.filter(citiesDF.City_Name == city_name.City_Name) \
-            .filter(citiesDF.Cumulative_verified_cases != "<15") \
-            .filter(citiesDF.Cumulated_recovered != "<15") \
-            .filter(citiesDF.Cumulated_deaths != "<15")
-        cities_newDF.cache()
+    for col in columns_list:
+        col_dict = {}
+        for city_name in cities_list[:3]:
+            # print(city_name, type(city_name))
+            logging.debug(city_name.City_Name)
+            # citiesDF.show()
+            cities_newDF: DataFrame = citiesDF.filter(citiesDF.City_Name == city_name.City_Name) \
+                .filter(citiesDF[col] != "<15")
+            cities_newDF.cache()
 
-        # citiesDF.show()
-        # print(citiesDF.toPandas().to_dict())
-        from datetime import datetime, timedelta
+            # citiesDF.show()
+            # print(citiesDF.toPandas().to_dict())
+            from datetime import datetime, timedelta
 
-        # Last_Update: str = datetime.strftime(datetime.now(), '%Y-%m-%d')
-        Last_Update: str = cities_newDF.toPandas().to_dict()["Date"].pop(cities_newDF.count()-1)
-        # Last_Update: str = cities_newDF.toPandas().to_dict()["Date"].pop(0)
-        City: str = city_name.City_Name
+            # Last_Update: str = datetime.strftime(datetime.now(), '%Y-%m-%d')
+            Last_Update: str = cities_newDF.toPandas().to_dict()["Date"].pop(cities_newDF.count()-1)
+            # Last_Update: str = cities_newDF.toPandas().to_dict()["Date"].pop(0)
+            City: str = city_name.City_Name
 
-        cities_newDF = cities_newDF.drop("City_Name")
-        # all_graphs[city_name.City_Name] = {
-        #     f"חולים לפי תאריך ב{city_name.City_Name}": {
-        #         "data": cities_newDF.toPandas().to_dict(),
-        #         "Last_Update": Last_Update,
-        #         "City": City
-        #     }
-        # }
-        all_graphs[city_name.City_Name] = {
-            "data": cities_newDF.toPandas().to_dict(),
-            "Last_Update": Last_Update,
-            "City": City
-        }
-        # cities_newDF.show()
-        del cities_newDF
+            cities_newDF = cities_newDF.drop("City_Name")
+            # all_graphs[city_name.City_Name] = {
+            #     f"חולים לפי תאריך ב{city_name.City_Name}": {
+            #         "data": cities_newDF.toPandas().to_dict(),
+            #         "Last_Update": Last_Update,
+            #         "City": City
+            #     }
+            # }
+            col_dict[city_name.City_Name] = {
+                    "data": cities_newDF.toPandas().to_dict(),
+                    "Last_Update": Last_Update,
+                    "City": City
+            }
+
+            # cities_newDF.show()
+            del cities_newDF
+        all_graphs[col] = col_dict
 
     Constants.db.update(
         {
-            "graphs_3": {
+            "graphs_2": {
                 "חולים לפי תאריך": all_graphs
             }
         }

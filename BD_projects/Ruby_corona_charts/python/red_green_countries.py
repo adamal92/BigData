@@ -129,6 +129,7 @@ def to_spark_direct_upside_down(countries: dict):
     # TODO: red green bug (firebase 167 keys limit)
     # TODO: get whole country status from api
     # TODO: generate graphs for dead, vaccinated, deadliness
+    # TODO: get vaccinated data
     # print(pyspark.sql.functions.split(cities_final_df, "פקיסטן"))
     Constants.db.update(
         {
