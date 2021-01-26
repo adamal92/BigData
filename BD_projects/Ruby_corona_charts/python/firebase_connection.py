@@ -7,10 +7,43 @@ config = {
     # "storageBucket": "projectId.appspot.com",
     # "serviceAccount": "path/to/serviceAccountCredentials.json"  # (optional)
 
-    "apiKey": "AIzaSyCOt619fNqEuIgFpzf20h2cmC6tFeQYuTE",
-    "authDomain": "corona-charts-33e8a.firebaseapp.com",
-    "databaseURL": "https://corona-charts-33e8a-default-rtdb.firebaseio.com/",
-    "storageBucket": "corona-charts-33e8a.appspot.com"
+    # "apiKey": "AIzaSyCOt619fNqEuIgFpzf20h2cmC6tFeQYuTE",
+    # "authDomain": "corona-charts-33e8a.firebaseapp.com",
+    # "databaseURL": "https://corona-charts-33e8a-default-rtdb.firebaseio.com/",
+    # "storageBucket": "corona-charts-33e8a.appspot.com"
+
+    "apiKey": "AIzaSyDxUQRW2HHezPGylz_bH-7Dh2NawCSDvkE",
+    "authDomain": "rubyadam-df256.firebaseapp.com",
+    "databaseURL": "https://rubyadam-df256.firebaseio.com",
+    "projectId": "rubyadam-df256",
+    "storageBucket": "rubyadam-df256.appspot.com",
+    "messagingSenderId": "67384546234",
+    "appId": "1:67384546234:web:53908c6a4a771ea3834383",
+    "measurementId": "G-9TV8935QHL"
+
+# <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+#
+# <!-- TODO: Add SDKs for Firebase products that you want to use
+#      https://firebase.google.com/docs/web/setup#available-libraries -->
+# <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+#
+# <script>
+#   // Your web app's Firebase configuration
+#   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+#   var firebaseConfig = {
+#     apiKey: "AIzaSyDxUQRW2HHezPGylz_bH-7Dh2NawCSDvkE",
+#     authDomain: "rubyadam-df256.firebaseapp.com",
+#     databaseURL: "https://rubyadam-df256.firebaseio.com",
+#     projectId: "rubyadam-df256",
+#     storageBucket: "rubyadam-df256.appspot.com",
+#     messagingSenderId: "67384546234",
+#     appId: "1:67384546234:web:53908c6a4a771ea3834383",
+#     measurementId: "G-9TV8935QHL"
+#   };
+#   // Initialize Firebase
+#   firebase.initializeApp(firebaseConfig);
+#   firebase.analytics();
+# </script>
 }
 
 firebase = Firebase(config)
