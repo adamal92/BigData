@@ -98,7 +98,7 @@ def crawl_corona():  # streaming?
             "israel_UN_WHO": response.json()["features"][0]["attributes"]
         }
     )
-    return
+    # return
     # TODO: catch if there is no internet connection
     # url = "https://covid-19-data.p.rapidapi.com/report/country/name"
     #
