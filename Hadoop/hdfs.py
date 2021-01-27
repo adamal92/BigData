@@ -24,6 +24,8 @@ class HDFS_handler:
     HELP = "hdfs dfs -help"
     MIN_START_TIME: int = 7  # minimum time that hdfs takes to start
     DEFAULT_CLUSTER_PATH: str = "hdfs://localhost:9820/"
+    # DEFAULT_CLUSTER_WEB_URL: str = f"http://127.0.0.1:9870{HADOOP_USER}"
+    DEFAULT_CLUSTER_WEB_URL: str = f"http://localhost:9870{HADOOP_USER}"
 
     stop = lambda: os.system(HDFS_handler.STOP_HDFS)  # close the hdfs server
     list_all = lambda: os.system(HDFS_handler.LIST_ALL)  # list all users & files
