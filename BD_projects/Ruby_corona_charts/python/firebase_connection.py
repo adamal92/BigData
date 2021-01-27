@@ -48,7 +48,14 @@ config = {
 
 firebase = Firebase(config)
 
+
 db = firebase.database()
+
+db.update(
+    {
+        "test": "ok"
+    }
+)
 # print(db.child("users").get())
 
 # users = db.child("users").get()
@@ -113,6 +120,7 @@ db = firebase.database()
 
 # print database
 # recurse?
+
 stats_list = []
 
 for stat in db.get().val().values():
