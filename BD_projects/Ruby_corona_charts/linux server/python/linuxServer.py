@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import subprocess
 from subprocess import Popen
 
@@ -8,7 +9,7 @@ import json
 import logging
 import os
 import time
-import winsound
+
 from typing import List, Dict, Any, Union
 
 import hdfs
@@ -28,9 +29,10 @@ from pyspark import RDD, Row, Accumulator
 from pyspark.python.pyspark.shell import spark
 from pyspark.sql import SparkSession, DataFrame, Column
 from pyspark.sql.functions import explode, create_map
-import wx
 
-from BD_projects.Ruby_corona_charts.python.linuxServer_Lib import *
+import sys
+sys.path.append(".")
+from linuxServer_Lib import *
 
 
 def firebase_config():
@@ -68,12 +70,12 @@ def scheduled_job():
     print('This job is run every weekday at 7am.')
     firebase_config()
     start_server()
-    print(datetime.datetime.now())
-    winsound.MessageBeep(winsound.MB_OK)
+    print(datetime.now())
 
 
 def main():
-    RUN_SCHEDULER = True
+    RUN_SCHEDULER =True  #  False
+    # kobi@kobi-A1SAi:~/Adam_desk/BigData/BigData-master/BD_projects$ python3 Ruby_corona_charts/python/linuxServer.py 
     st = time.time()
 
     logging.basicConfig(level=logging.DEBUG)
@@ -85,16 +87,17 @@ def main():
 
     try:
         firebase_config()
+        print(datetime.now())
 
         if RUN_SCHEDULER:
+            # pass
+            start_server()
             Constants.SCHEDULER.start()
         else:
             start_server()
     finally:
-        # winsound.MessageBeep(winsound.MB_ICONHAND)
-        from playsound import playsound
-        playsound("arrow_fx.wav", block=True)
-        logging.debug(f"Program Total Time: {time.time() - st} seconds")
+        logging.debug(f"Program Total Time: {time.time() - st} seconds")        
+        logging.debug(f"Program Total Time: {(time.time() - st)//60} minutes")
 
 
 if __name__ == '__main__':

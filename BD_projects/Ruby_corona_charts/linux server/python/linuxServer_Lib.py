@@ -37,9 +37,11 @@ class Constants:
 
 def run_py_file(filename: str):
     process: Popen = subprocess \
-        .Popen([sys.executable, f'{os.getcwd()}\\{filename}.py'], stdout=sys.stdout, shell=True,
-               creationflags=subprocess.CREATE_NEW_PROCESS_GROUP)  # search
+        .Popen(["python3", f'{os.getcwd()}/Ruby_corona_charts/python/{filename}.py'], stdout=sys.stdout)  # search
+        #.Popen([sys.executable, f'{os.getcwd()}\\{filename}.py'], stdout=sys.stdout, shell=True,
+         #      creationflags=subprocess.CREATE_NEW_PROCESS_GROUP)  # search
     # .Popen(["python", f'{os.getcwd()}\\start_search.py'], stdout=sys.stdout)  # search
+    # TODO: print if there was a crush or Error
     process.communicate()  # wait for process to end
 
 
