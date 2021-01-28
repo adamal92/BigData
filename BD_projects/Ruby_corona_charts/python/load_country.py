@@ -140,6 +140,10 @@ def crawl_corona():  # streaming?
         # logging.debug("len(response): %s" % (len(response.json()) == 0))
         day = day - timedelta(1)  # timedelta() indicates how many days ago
         # result_length = len(response.json())
+        try:
+            result_length = len(response.json())
+        finally:
+            time.sleep(2)
         time.sleep(2)
         print(response.text)
     print(response.json())

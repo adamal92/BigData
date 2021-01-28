@@ -2,31 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08479cfc-b3b1-4f27-b904-0ba7322af693" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/Pandas_df_to_Spark.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/data_types_and_structures.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/firebase_connection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/linear_regrresion.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/linuxServer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/linuxServer_Lib.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/load_country.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/load_graph.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/load_graph_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/load_graph_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/load_json.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/load_latest_json.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/load_latest_json_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/load_latest_json_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/load_latest_json_4_hdfs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/load_latest_json_5_cities_israel_redGreen.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/red_green_countries.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/spark.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/sparkML.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/sparkSQL.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/spider.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/arrow_fx.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/arrow_fx.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/data_types_and_structures.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/linuxServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/linuxServer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/load_country.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/load_country.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/load_latest_json_5_cities_israel_redGreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/load_latest_json_5_cities_israel_redGreen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/linuxServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/linuxServer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/linuxServer_Lib.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/linuxServer_Lib.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_country.py" beforeDir="false" afterPath="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_country.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +48,7 @@
           <entry key="log" value="1" />
           <entry key="md" value="4" />
           <entry key="ps1" value="3" />
-          <entry key="py" value="385" />
+          <entry key="py" value="390" />
           <entry key="txt" value="1" />
           <entry key="untitled" value="1" />
         </counts>
@@ -80,7 +63,7 @@
           <entry key="Markdown" value="4" />
           <entry key="PLAIN_TEXT" value="17" />
           <entry key="PowerShell file" value="2" />
-          <entry key="Python" value="385" />
+          <entry key="Python" value="390" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -91,8 +74,8 @@
           <entry key="js" value="189" />
           <entry key="json" value="3" />
           <entry key="md" value="1154" />
-          <entry key="py" value="48507" />
-          <entry key="txt" value="1728" />
+          <entry key="py" value="48540" />
+          <entry key="txt" value="1739" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -101,8 +84,8 @@
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="189" />
           <entry key="Markdown" value="1148" />
-          <entry key="PLAIN_TEXT" value="1833" />
-          <entry key="Python" value="48550" />
+          <entry key="PLAIN_TEXT" value="1844" />
+          <entry key="Python" value="48583" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -119,18 +102,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/sparkML.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4054">
-              <caret line="87" column="43" selection-start-line="87" selection-start-column="43" selection-end-line="87" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/linear_regrresion.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="81">
@@ -139,23 +110,56 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_country.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="783">
-              <caret line="148" column="28" selection-start-line="148" selection-start-column="13" selection-end-line="148" selection-end-column="28" />
+            <state relative-caret-position="321">
+              <caret line="141" column="27" lean-forward="true" selection-start-line="141" selection-start-column="27" selection-end-line="141" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/linuxServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="92" column="28" lean-forward="true" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
+            <state relative-caret-position="509">
+              <caret line="97" column="45" lean-forward="true" selection-start-line="97" selection-start-column="45" selection-end-line="97" selection-end-column="45" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
-                <marker date="1611837241367" expanded="true" signature="2294:2385" ph="..." />
+                <marker date="1611838217813" expanded="true" signature="2296:2387" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/linuxServer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-270">
+              <caret line="32" column="31" lean-forward="true" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/load_country.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="685">
+              <caret line="144" column="25" lean-forward="true" selection-start-line="144" selection-start-column="25" selection-end-line="144" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/load_latest_json_5_cities_israel_redGreen.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="729">
+              <caret line="174" column="43" lean-forward="true" selection-start-line="174" selection-start-column="43" selection-end-line="174" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -238,9 +242,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Web/Gui/first_web_gui/static/visualize_json.jsx" />
-        <option value="$PROJECT_DIR$/Web/Gui/first_web_gui/static/visualize_json.css" />
-        <option value="$PROJECT_DIR$/Web/Gui/first_web_gui/web_gui_main.py" />
         <option value="$PROJECT_DIR$/BD_projects/crawler/crawler_mini_proj_using_libs.py" />
         <option value="$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider.py" />
         <option value="$PROJECT_DIR$/Web/Gui/moto_prices/static/spider/spider.js" />
@@ -284,11 +285,14 @@
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_graph_3.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_graph_2.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_latest_json_5_cities_israel_redGreen.py" />
-        <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_country.py" />
         <option value="$PROJECT_DIR$/Web/Firebase/corona_charts/index.html" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/firebase_connection.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/linuxServer_Lib.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/linuxServer.py" />
+        <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/load_latest_json_5_cities_israel_redGreen.py" />
+        <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/linuxServer.py" />
+        <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/load_country.py" />
+        <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_country.py" />
       </list>
     </option>
   </component>
@@ -452,11 +456,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\Ruby_corona_charts\linux server\python" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\Ruby_corona_charts\python" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\Ruby_corona_charts" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Firebase\corona_charts" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Firebase" />
-      <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\moto_prices" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\Ruby_corona_charts\python" />
@@ -633,13 +637,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604516892326</updated>
-    </task>
-    <task id="LOCAL-00027" summary="minor changes to readme">
-      <created>1609269883573</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1609269883573</updated>
     </task>
     <task id="LOCAL-00028" summary="spider init">
       <created>1609601593575</created>
@@ -977,7 +974,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611784119169</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="arrow sound">
+      <created>1611837398681</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1611837398681</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TodoView">
@@ -995,7 +999,7 @@
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.72993493" side_tool="true" weight="0.12170706" />
       <window_info id="Favorites" order="1" sideWeight="0.72993493" side_tool="true" weight="0.12170706" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.27006507" visible="true" weight="0.117803834" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.27006507" visible="true" weight="0.117803834" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.20824295" />
@@ -1010,7 +1014,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" x="0" y="23" width="1920" height="1017" id="Run" order="3" sideWeight="0.72993493" visible="true" weight="0.22974414" />
+      <window_info anchor="right" x="0" y="23" width="1920" height="1017" id="Run" order="3" sideWeight="0.72993493" visible="true" weight="0.22974414" />
     </layout>
     <layout-to-restore>
       <window_info id="Structure" order="0" sideWeight="0.72993493" side_tool="true" weight="0.12170706" />
@@ -1041,7 +1045,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ruby corona charts init" />
     <MESSAGE value="spider parse to hadoop and spark" />
     <MESSAGE value="load json" />
     <MESSAGE value="scheduled work" />
@@ -1066,7 +1069,8 @@
     <MESSAGE value="linux server" />
     <MESSAGE value="firebase website" />
     <MESSAGE value="firebase website is up" />
-    <option name="LAST_COMMIT_MESSAGE" value="firebase website is up" />
+    <MESSAGE value="arrow sound" />
+    <option name="LAST_COMMIT_MESSAGE" value="arrow sound" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1090,24 +1094,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Web/Gui/moto_prices/vehicles.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="881" column="309" selection-start-line="881" selection-start-column="304" selection-end-line="881" selection-end-column="309" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQL/SQLite.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/load_json_2.py" />
-    <entry file="file://$PROJECT_DIR$/BD_projects/moto_prices/moto_crawler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="126" column="40" selection-start-line="126" selection-start-column="40" selection-end-line="126" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../spotify/python_383/Lib/site-packages/apscheduler/schedulers/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -1380,13 +1366,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_country.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="148" column="28" selection-start-line="148" selection-start-column="13" selection-end-line="148" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/red_green_countries.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -1437,14 +1416,51 @@
     <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/spark.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/data_types_and_structures.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/linuxServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="92" column="28" lean-forward="true" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
+        <state relative-caret-position="509">
+          <caret line="97" column="45" lean-forward="true" selection-start-line="97" selection-start-column="45" selection-end-line="97" selection-end-column="45" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
-            <marker date="1611837241367" expanded="true" signature="2294:2385" ph="..." />
+            <marker date="1611838217813" expanded="true" signature="2296:2387" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/load_latest_json_5_cities_israel_redGreen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="174" column="43" lean-forward="true" selection-start-line="174" selection-start-column="43" selection-end-line="174" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/linuxServer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="32" column="31" lean-forward="true" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/load_country.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="144" column="25" lean-forward="true" selection-start-line="144" selection-start-column="25" selection-end-line="144" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_country.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="141" column="27" lean-forward="true" selection-start-line="141" selection-start-column="27" selection-end-line="141" selection-end-column="27" />
         </state>
       </provider>
     </entry>

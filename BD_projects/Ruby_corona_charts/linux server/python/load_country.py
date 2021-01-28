@@ -98,7 +98,9 @@ def crawl_corona():  # streaming?
             "israel_UN_WHO": response.json()["features"][0]["attributes"]
         }
     )
-    # return
+    return
+
+
     # TODO: catch if there is no internet connection
     # url = "https://covid-19-data.p.rapidapi.com/report/country/name"
     #
@@ -139,8 +141,10 @@ def crawl_corona():  # streaming?
         logging.debug(f'{day_str} {type(day_str)}')
         # logging.debug("len(response): %s" % (len(response.json()) == 0))
         day = day - timedelta(1)  # timedelta() indicates how many days ago
-        # result_length = len(response.json())
-        time.sleep(2)
+        try:
+            result_length = len(response.json())
+        finally:
+            time.sleep(2)
         print(response.text)
     print(response.json())
 

@@ -8,7 +8,7 @@ import json
 import logging
 import os
 import time
-import winsound
+# import winsound
 from typing import List, Dict, Any, Union
 
 import hdfs
@@ -69,7 +69,9 @@ def scheduled_job():
     firebase_config()
     start_server()
     print(datetime.datetime.now())
-    winsound.MessageBeep(winsound.MB_OK)
+    # winsound.MessageBeep(winsound.MB_OK)
+    from playsound import playsound
+    playsound("arrow_fx.wav", block=True)
 
 
 def main():
@@ -95,6 +97,7 @@ def main():
         from playsound import playsound
         playsound("arrow_fx.wav", block=True)
         logging.debug(f"Program Total Time: {time.time() - st} seconds")
+        logging.debug(f"Program Total Time: {(time.time() - st)//60} minutes")
 
 
 if __name__ == '__main__':

@@ -152,7 +152,6 @@ def scheduled_job():
     firebase_config()
     crawl_corona()
     print(datetime.datetime.now())
-    winsound.MessageBeep(winsound.MB_OK)
 
 
 # TODO: load json using spark & save to hdfs, sqlite, elastic & ml? mining? cluster?
@@ -171,6 +170,8 @@ def main():
         firebase_config()
         crawl_corona()
     finally:
+        # from playsound import playsound
+        # playsound("arrow_fx.wav", block=True)
         logging.debug(f"Program Total Time: {time.time() - st} seconds")
 
 

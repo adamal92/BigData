@@ -30,7 +30,9 @@ from pyspark.python.pyspark.shell import spark
 from pyspark.sql import SparkSession, DataFrame, Column
 from pyspark.sql.functions import explode, create_map
 
+from playsound import playsound
 import sys
+
 sys.path.append(".")
 from linuxServer_Lib import *
 
@@ -71,6 +73,7 @@ def scheduled_job():
     firebase_config()
     start_server()
     print(datetime.now())
+    playsound("arrow_fx.wav", block=True)
 
 
 def main():
@@ -96,6 +99,9 @@ def main():
         else:
             start_server()
     finally:
+        from playsound import playsound
+        playsound("/home/kobi/Adam_desk/BigData/BigData-master/BD_projects/Ruby_corona_charts/linux server/python/arrow_fx.wav")
+        # playsound("arrow_fx.wav")
         logging.debug(f"Program Total Time: {time.time() - st} seconds")        
         logging.debug(f"Program Total Time: {(time.time() - st)//60} minutes")
 
