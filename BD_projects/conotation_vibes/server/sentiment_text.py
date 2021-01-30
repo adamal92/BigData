@@ -6,7 +6,6 @@ import os
 import nltk
 from data_types_and_structures import DataTypesHandler
 import os
-from sentiment_text import recognize
 
 
 nltk.download('punkt')

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import platform
 from datetime import datetime, timedelta
 import logging
 import time
@@ -37,14 +38,18 @@ def scheduled_job():
     firebase_config()
     start_server()
     print(datetime.now())
-    playsound(
-        "/home/kobi/Adam_desk/BigData/BigData-master/BD_projects/Ruby_corona_charts/linux server/python/arrow_fx.wav")
+
+    if Constants.CURRENT_PLATFORM == OSPlatform.WINDOWS:
+        playsound("arrow_fx.wav")
+    elif Constants.CURRENT_PLATFORM == OSPlatform.LINUX:
+        playsound("/home/kobi/Adam_desk/BigData/BigData-master/BD_projects/"
+                  "Ruby_corona_charts/linux server/python/arrow_fx.wav")
+
     logging.debug(f"Program Total Time: {time.time() - st} seconds")
     logging.debug(f"Program Total Time: {(time.time() - st)//60} minutes")
 
 
 def main():
-    RUN_SCHEDULER = False  # True
     # kobi@kobi-A1SAi:~/Adam_desk/BigData/BigData-master/BD_projects$ python3 Ruby_corona_charts/python/linuxServer.py
     st = time.time()
 
@@ -55,11 +60,23 @@ def main():
     logging.getLogger('py4j').setLevel(logging.ERROR)
     logging.getLogger('my_log').setLevel(logging.DEBUG)
 
+    def set_scheduler():
+        inp = input("Do you want to start a scheduled server? [y/n]\n")
+        if inp == "y" or inp == "Y":
+            Constants.RUN_SCHEDULER = True
+        elif inp == "n" or inp == "N":
+            Constants.RUN_SCHEDULER = False
+        else:
+            print("Syntax Error. Please enter a valid answer")
+            set_scheduler()
+    set_scheduler()
+
     try:
         firebase_config()
         print(datetime.now())
+        set_current_os(os_type=platform.system())
 
-        if RUN_SCHEDULER:
+        if Constants.RUN_SCHEDULER:
             # pass
             start_server()
             Constants.SCHEDULER.start()
@@ -67,8 +84,12 @@ def main():
             start_server()
     finally:
         from playsound import playsound
-        playsound("/home/kobi/Adam_desk/BigData/BigData-master/BD_projects/Ruby_corona_charts/linux server/python/arrow_fx.wav")
-        # playsound("arrow_fx.wav")
+        if Constants.CURRENT_PLATFORM == OSPlatform.WINDOWS:
+            playsound("arrow_fx.wav")
+        elif Constants.CURRENT_PLATFORM == OSPlatform.LINUX:
+            playsound("/home/kobi/Adam_desk/BigData/BigData-master/BD_projects/"
+                      "Ruby_corona_charts/linux server/python/arrow_fx.wav")
+
         logging.debug(f"Program Total Time: {time.time() - st} seconds")
         logging.debug(f"Program Total Time: {(time.time() - st)//60} minutes")
 
