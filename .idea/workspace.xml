@@ -2,8 +2,134 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08479cfc-b3b1-4f27-b904-0ba7322af693" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/.firebaserc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/.floo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/.flooignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/.idea/conotation_vibes.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/.vscode/launch.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/database.rules.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/firebase.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/.firebaserc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/database.rules.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/firebase.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/firestore.indexes.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/firestore.rules" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/storage.rules" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/css/fontawesome-all.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/css/images/intro.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/css/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/css/images/logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/css/images/logo3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/css/images/new_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/css/noscript.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/js/breakpoints.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/js/browser.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/js/jquery.scrollex.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/js/jquery.scrolly.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/js/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/base/_page.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/base/_reset.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/base/_typography.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/components/_actions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/components/_box.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/components/_button.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/components/_contact.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/components/_features.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/components/_form.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/components/_icon.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/components/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/components/_image.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/components/_list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/components/_menu.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/components/_row.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/components/_section.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/components/_split.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/components/_spotlights.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/components/_table.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/components/_wrapper.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/layout/_footer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/layout/_header.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/layout/_intro.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/layout/_sidebar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/layout/_wrapper.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/libs/_breakpoints.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/libs/_functions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/libs/_html-grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/libs/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/libs/_vars.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/libs/_vendor.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/main.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/sass/noscript.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/webfonts/fa-brands-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/webfonts/fa-brands-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/webfonts/fa-brands-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/webfonts/fa-regular-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/webfonts/fa-regular-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/webfonts/fa-regular-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/webfonts/fa-solid-900.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/webfonts/fa-solid-900.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/webfonts/fa-solid-900.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/assets/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/images/pic01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/images/pic02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/images/pic03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/images/pic04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/images/pic05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/images/pic06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/static/book.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/static/crawler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/static/jquery-3.4.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/static/metro-all.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/static/metro.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/static/react_app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/static/react_app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/static/react_app.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/static/react_json.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/static/scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/static/spider/spider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/static/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/static/visualize_json.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/static/visualize_json.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/templates/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/templates/Error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/templates/chart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/templates/crawler.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/templates/moto_crawler.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/templates/react_app.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/templates/react_json.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/react/firebase/website/templates/visualize_json.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/scraper/scrape.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/server/data_types_and_structures.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/server/sentiment_text.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/server/server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/server/serverLib.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/server/wiki.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/website/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD_projects/conotation_vibes/website/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hive/setup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/pythonVS/pythonVS/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pythonVS/pythonVS/pip-selfcheck.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +159,7 @@
         <counts>
           <entry key="0" value="1" />
           <entry key="css" value="4" />
+          <entry key="floo" value="1" />
           <entry key="html" value="20" />
           <entry key="ipynb" value="6" />
           <entry key="jl" value="11" />
@@ -42,7 +169,7 @@
           <entry key="log" value="1" />
           <entry key="md" value="4" />
           <entry key="ps1" value="3" />
-          <entry key="py" value="393" />
+          <entry key="py" value="399" />
           <entry key="txt" value="1" />
           <entry key="untitled" value="1" />
         </counts>
@@ -55,9 +182,9 @@
           <entry key="JSON" value="17" />
           <entry key="JavaScript" value="16" />
           <entry key="Markdown" value="4" />
-          <entry key="PLAIN_TEXT" value="20" />
+          <entry key="PLAIN_TEXT" value="21" />
           <entry key="PowerShell file" value="2" />
-          <entry key="Python" value="393" />
+          <entry key="Python" value="399" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -69,7 +196,7 @@
           <entry key="json" value="3" />
           <entry key="md" value="1154" />
           <entry key="py" value="48540" />
-          <entry key="txt" value="1751" />
+          <entry key="txt" value="1768" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -78,14 +205,14 @@
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="189" />
           <entry key="Markdown" value="1148" />
-          <entry key="PLAIN_TEXT" value="1856" />
+          <entry key="PLAIN_TEXT" value="1873" />
           <entry key="Python" value="48583" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
         <counts>
           <entry key="git.branch.checkout.local" value="2" />
-          <entry key="git.branch.create.new" value="25" />
+          <entry key="git.branch.create.new" value="26" />
         </counts>
       </usages-collector>
     </session>
@@ -105,20 +232,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/spark.py">
+        <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/linear_regrresion.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Web/Gui/first_web_gui/web_gui_main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-774">
+            <state>
               <folding>
-                <element signature="e#0#14#0" expanded="true" />
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,7 +246,7 @@
         <entry file="file://$PROJECT_DIR$/Web/Gui/first_web_gui/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="243">
-              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -137,7 +255,7 @@
         <entry file="file://$PROJECT_DIR$/Web/Gui/first_web_gui/templates/react_app.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="702">
-              <caret line="32" column="36" lean-forward="true" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+              <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -146,7 +264,7 @@
         <entry file="file://$PROJECT_DIR$/NoSQL/ElasticSearch/start_search.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="505">
-              <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+              <caret line="98" selection-start-line="98" selection-end-line="98" />
             </state>
           </provider>
         </entry>
@@ -154,7 +272,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/linuxServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
+            <state relative-caret-position="1404">
               <caret line="97" column="45" selection-start-line="97" selection-start-column="45" selection-end-line="97" selection-end-column="45" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
@@ -165,37 +283,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/firebase_connection.py">
+        <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/linuxServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1583">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="428">
+              <caret line="100" column="12" selection-start-line="100" selection-start-column="12" selection-end-line="100" selection-end-column="12" />
+              <folding>
+                <element signature="e#24#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/linuxServer_Lib.py">
+        <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/linuxServer_Lib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-243">
-              <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+            <state>
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1611784638563" expanded="true" signature="1355:1707" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/red_green_countries.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="31" column="68" selection-start-line="31" selection-start-column="68" selection-end-line="31" selection-end-column="68" />
-              <folding>
-                <marker date="1611567760227" expanded="true" signature="4003:4008" ph="..." />
-              </folding>
-            </state>
-          </provider>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BD_projects/conotation_vibes/.floo">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -229,14 +341,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="graphs_2" />
+        <entry key="$PROJECT_DIR$" value="graphs_3" />
       </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/BD_projects/crawler/crawler_mini_proj_using_libs.py" />
         <option value="$PROJECT_DIR$/BD_projects/moto_prices/scrapy_spider.py" />
         <option value="$PROJECT_DIR$/Web/Gui/moto_prices/static/spider/spider.js" />
         <option value="$PROJECT_DIR$/Web/Gui/moto_prices/templates/moto_crawler.html" />
@@ -287,12 +398,13 @@
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/linuxServer.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/load_country.py" />
         <option value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_country.py" />
+        <option value="$PROJECT_DIR$/Hive/setup.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1036" />
-    <option name="y" value="27" />
+    <option name="x" value="713" />
+    <option name="y" value="39" />
     <option name="width" value="892" />
     <option name="height" value="1040" />
   </component>
@@ -333,137 +445,14 @@
               <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
               <item name="BigData" type="462c0819:PsiDirectoryNode" />
               <item name="BD_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="Ruby_corona_charts" type="462c0819:PsiDirectoryNode" />
+              <item name="conotation_vibes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
               <item name="BigData" type="462c0819:PsiDirectoryNode" />
               <item name="BD_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="Ruby_corona_charts" type="462c0819:PsiDirectoryNode" />
-              <item name="excel_sheets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="BD_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="Ruby_corona_charts" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="BD_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="Ruby_corona_charts" type="462c0819:PsiDirectoryNode" />
-              <item name="linux server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="BD_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="Ruby_corona_charts" type="462c0819:PsiDirectoryNode" />
-              <item name="linux server" type="462c0819:PsiDirectoryNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="BD_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="Ruby_corona_charts" type="462c0819:PsiDirectoryNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="Hadoop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="NoSQL" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="NoSQL" type="462c0819:PsiDirectoryNode" />
-              <item name="ElasticSearch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="Spark" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="SQL" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="testsAndOthers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="Firebase" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="Firebase" type="462c0819:PsiDirectoryNode" />
-              <item name="corona_charts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="Firebase" type="462c0819:PsiDirectoryNode" />
-              <item name="corona_charts" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="Firebase" type="462c0819:PsiDirectoryNode" />
-              <item name="corona_charts" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="Gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="Gui" type="462c0819:PsiDirectoryNode" />
-              <item name="first_web_gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="Gui" type="462c0819:PsiDirectoryNode" />
-              <item name="first_web_gui" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="Gui" type="462c0819:PsiDirectoryNode" />
-              <item name="first_web_gui" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="conotation_vibes" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -478,18 +467,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\Ruby_corona_charts\linux server" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\Ruby_corona_charts\linux server\python" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\Ruby_corona_charts\python" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\Ruby_corona_charts" />
-      <recent name="C:\Users\adam l\Desktop\python files\BigData\Web\Firebase\corona_charts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\Ruby_corona_charts\python" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\Ruby_corona_charts" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\Ruby_corona_charts\json" />
       <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\moto_prices" />
-      <recent name="C:\Users\adam l\Desktop\python files\BigData\BD_projects\jupyter_notebooks" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -504,7 +493,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.web_gui_main">
+  <component name="RunManager" selected="Python.setup">
     <configuration name="firebase_connection" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="BigData" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -568,7 +557,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="load_country" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="setup" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="BigData" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -576,11 +565,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Hive" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_country.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Hive/setup.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -633,19 +622,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.hdfs_try_powershell" />
-      <item itemvalue="Python.load_country" />
       <item itemvalue="Python.firebase_connection" />
       <item itemvalue="Python.linuxServer" />
       <item itemvalue="Python.web_gui_main" />
       <item itemvalue="Python.start_search" />
+      <item itemvalue="Python.setup" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.setup" />
         <item itemvalue="Python.start_search" />
         <item itemvalue="Python.web_gui_main" />
         <item itemvalue="Python.linuxServer" />
         <item itemvalue="Python.firebase_connection" />
-        <item itemvalue="Python.load_country" />
       </list>
     </recent_temporary>
   </component>
@@ -659,13 +648,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604516892326</updated>
-    </task>
-    <task id="LOCAL-00029" summary="spider got price &amp; name">
-      <created>1609606200636</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1609606200636</updated>
     </task>
     <task id="LOCAL-00030" summary="spider works">
       <created>1609607582732</created>
@@ -1003,7 +985,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611844841064</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="linux arrow sound &amp; server running">
+      <created>1612020866831</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1612020866832</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1017,7 +1006,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.72993493" side_tool="true" weight="0.12170706" />
       <window_info id="Favorites" order="1" sideWeight="0.72993493" side_tool="true" weight="0.12170706" />
@@ -1067,7 +1055,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="load json" />
     <MESSAGE value="scheduled work" />
     <MESSAGE value="spark sql" />
     <MESSAGE value="spark sql works - got cities by date" />
@@ -1092,7 +1079,8 @@
     <MESSAGE value="firebase website is up" />
     <MESSAGE value="arrow sound" />
     <MESSAGE value="linux arrow sound" />
-    <option name="LAST_COMMIT_MESSAGE" value="linux arrow sound" />
+    <MESSAGE value="linux arrow sound &amp; server running" />
+    <option name="LAST_COMMIT_MESSAGE" value="linux arrow sound &amp; server running" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1116,42 +1104,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_latest_json_4_hdfs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="96" column="6" selection-start-line="96" selection-start-column="6" selection-end-line="96" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Spark/Spark_handler_class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-759">
-          <caret line="56" column="22" lean-forward="true" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/json/city_json.json">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="216">
-          <caret column="942" selection-start-column="942" selection-end-column="942" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_latest_json.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1099">
-          <caret line="77" column="26" lean-forward="true" selection-start-line="77" selection-start-column="26" selection-end-line="78" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../spotify/python_383/Lib/site-packages/hdfs/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="208" selection-start-line="208" selection-end-line="208" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../spotify/python_383/Lib/site-packages/requests/sessions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-6921">
@@ -1362,26 +1314,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/firebase_connection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1583">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/data_types_and_structures.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/linuxServer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="97" column="45" selection-start-line="97" selection-start-column="45" selection-end-line="97" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-            <marker date="1611838217813" expanded="true" signature="2296:2387" ph="..." />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/load_latest_json_5_cities_israel_redGreen.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1393,13 +1327,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/linuxServer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-270">
-          <caret line="32" column="31" lean-forward="true" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/load_country.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="685">
@@ -1407,13 +1334,6 @@
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_country.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="141" column="27" selection-start-line="141" selection-start-column="27" selection-end-line="141" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1441,6 +1361,27 @@
         <state relative-caret-position="-6987" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NoSQL/ElasticSearch/start_search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/Gui/first_web_gui/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/Gui/first_web_gui/templates/react_app.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/spark.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
@@ -1448,24 +1389,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NoSQL/ElasticSearch/start_search.py">
+    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/sparkML.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+        <state relative-caret-position="-6885">
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/Gui/first_web_gui/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/Hive/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/Gui/first_web_gui/templates/react_app.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="32" column="36" lean-forward="true" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+        <state>
+          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1477,6 +1413,62 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/load_country.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="141" column="27" selection-start-line="141" selection-start-column="27" selection-end-line="141" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/linear_regrresion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/firebase_connection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/python/linuxServer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1404">
+          <caret line="97" column="45" selection-start-line="97" selection-start-column="45" selection-end-line="97" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+            <marker date="1611838217813" expanded="true" signature="2296:2387" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/linuxServer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="100" column="12" selection-start-line="100" selection-start-column="12" selection-end-line="100" selection-end-column="12" />
+          <folding>
+            <element signature="e#24#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/Ruby_corona_charts/linux server/python/linuxServer_Lib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD_projects/conotation_vibes/.floo">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
